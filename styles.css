@@ -236,3 +236,59 @@ section h2 {
 .benefits-list .benefit-item:last-child {  
     border-bottom: none;  
 }  
+/* Community Section */  
+.community {  
+    background: var(--primary-color);  
+    color: var(--text-light);  
+    padding: 60px 20px;  
+    text-align: center;  
+}  
+  
+.community-container {  
+    max-width: 600px;  
+    margin: 0 auto;  
+}  
+  
+.community h2 {  
+    font-size: 2.5rem;  
+    margin-bottom: 20px;  
+    color: var(--secondary-color);  
+}  
+  
+.cta-discord {  
+    padding: 15px 30px;  
+    background: #5865F2; /* Discord blue */  
+    color: white;  
+    border: none;  
+    border-radius: 5px;  
+    font-size: 1.1rem;  
+    font-weight: bold;  
+    cursor: pointer;  
+    margin-top: 20px;  
+}  
+  
+.cta-discord:hover {  
+    background: #4752C4;  
+}  
+/* Footer */  
+.footer {  
+    background: #000;  
+    color: white;  
+    padding: 30px 20px;  
+    text-align: center;  
+}  
+  
+.social-links {  
+    margin-bottom: 20px;  
+}  
+  
+.social-links a {  
+    color: var(--secondary-color);  
+    text-decoration: none;  
+    margin: 0 15px;  
+    font-weight: bold;  
+}  
+  
+.social-links a:hover {  
+    color: var(--text-light);  
+}  
