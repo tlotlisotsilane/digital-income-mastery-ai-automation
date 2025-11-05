@@ -156,3 +156,83 @@ section h2 {
         font-size: 2rem;  
     }  
 }  
+/* Lead Magnet Section */  
+.lead-magnet {  
+    background: linear-gradient(135deg, var(--primary-color), #002855);  
+    color: var(--text-light);  
+    padding: 60px 20px;  
+    text-align: center;  
+}  
+  
+.lead-magnet-container {  
+    max-width: 600px;  
+    margin: 0 auto;  
+}  
+  
+.lead-magnet h2 {  
+    font-size: 2.5rem;  
+    margin-bottom: 20px;  
+    color: var(--secondary-color);  
+}  
+  
+.email-form {  
+    display: flex;  
+    flex-direction: column;  
+    gap: 15px;  
+    margin-top: 30px;  
+}  
+  
+.email-form input {  
+    padding: 15px;  
+    border: none;  
+    border-radius: 5px;  
+    font-size: 1.1rem;  
+}  
+  
+.email-form button {  
+    padding: 15px;  
+    background: var(--secondary-color);  
+    color: var(--primary-color);  
+    border: none;  
+    border-radius: 5px;  
+    font-size: 1.1rem;  
+    font-weight: bold;  
+    cursor: pointer;  
+}  
+  
+.privacy-text {  
+    margin-top: 20px;  
+    font-size: 0.9rem;  
+    opacity: 0.8;  
+}  
+  
+/* Free Benefits Section */  
+.free-benefits {  
+    margin-top: 30px;  
+    text-align: left;  
+    background: rgba(255, 255, 255, 0.1);  
+    padding: 20px;  
+    border-radius: 10px;  
+}  
+  
+.free-benefits h3 {  
+    color: var(--secondary-color);  
+    margin-bottom: 15px;  
+    text-align: center;  
+}  
+  
+.benefits-list {  
+    display: grid;  
+    gap: 10px;  
+}  
+  
+.benefits-list .benefit-item {  
+    background: transparent;  
+    color: var(--text-light);  
+    padding: 10px 0;  
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);  
+}  
+  
+.benefits-list .benefit-item:last-child {  
+    border-bottom: none;  
+}  
