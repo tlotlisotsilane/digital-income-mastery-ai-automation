@@ -14,6 +14,14 @@
             box-sizing: border-box;  
         }  
   
+        :root {  
+            --primary-color: #001f3f;  
+            --secondary-color: #ffd700;  
+            --text-light: #ffffff;  
+            --text-dark: #333333;  
+            --accent-color: #3b82f6;  
+        }  
+  
         body {  
             font-family: 'Inter', sans-serif;  
             background-color: #0a0a0a;  
@@ -59,7 +67,7 @@
         }  
   
         .nav-logo i {  
-            color: #3b82f6;  
+            color: var(--accent-color);  
             font-size: 2rem;  
             animation: pulse 2s infinite;  
         }  
@@ -85,7 +93,7 @@
             left: 0;  
             width: 0;  
             height: 2px;  
-            background: #3b82f6;  
+            background: var(--accent-color);  
             transition: width 0.3s ease;  
         }  
   
@@ -96,7 +104,7 @@
   
         .nav-menu a:hover,  
         .nav-menu a.active {  
-            color: #3b82f6;  
+            color: var(--accent-color);  
         }  
   
         .nav-social {  
@@ -119,7 +127,7 @@
         }  
   
         .nav-social a:hover {  
-            background: #3b82f6;  
+            background: var(--accent-color);  
             transform: translateY(-3px) rotate(360deg);  
         }  
   
@@ -129,7 +137,7 @@
             position: relative;  
             display: flex;  
             align-items: center;  
-            margin-top: 80px;  
+            justify-content: center;  
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);  
             overflow: hidden;  
         }  
@@ -141,7 +149,7 @@
             left: 0;  
             right: 0;  
             bottom: 0;  
-            background: url('https://picsum.photos/seed/ai-automation-bg/1920/1080.jpg') center/cover;  
+            background: url('https://picsum.photos/seed/ai-automation-hero/1920/1080.jpg') center/cover;  
             opacity: 0.1;  
             animation: backgroundMove 20s ease-in-out infinite;  
         }  
@@ -156,33 +164,24 @@
         }  
   
         .hero-title {  
-            font-size: 5rem;  
+            font-size: 4.5rem;  
             font-weight: 900;  
             line-height: 1.1;  
             margin-bottom: 1.5rem;  
             text-transform: uppercase;  
             letter-spacing: 3px;  
-            background: linear-gradient(45deg, #ffffff, #3b82f6, #60a5fa);  
+            background: linear-gradient(45deg, #ffffff, var(--accent-color), var(--secondary-color));  
             background-clip: text;  
             -webkit-background-clip: text;  
             -webkit-text-fill-color: transparent;  
             animation: titleGlow 3s ease-in-out infinite;  
         }  
   
-        .hero-title .highlight {  
-            color: #3b82f6;  
-            font-weight: 900;  
-            text-shadow: 0 0 30px rgba(59, 130, 246, 0.5);  
-        }  
-  
         .hero-subtitle {  
-            font-size: 1.5rem;  
+            font-size: 1.4rem;  
             line-height: 1.6;  
-            margin-bottom: 2rem;  
             opacity: 0.9;  
-            max-width: 700px;  
-            margin-left: auto;  
-            margin-right: auto;  
+            margin-bottom: 2rem;  
             animation: fadeInUp 1s ease-out 0.5s both;  
         }  
   
@@ -190,502 +189,230 @@
             display: flex;  
             gap: 1rem;  
             justify-content: center;  
-            margin-bottom: 3rem;  
             flex-wrap: wrap;  
             animation: fadeInUp 1s ease-out 0.7s both;  
         }  
   
-        .hero-stats {  
-            display: flex;  
-            justify-content: center;  
-            gap: 4rem;  
-            margin-top: 3rem;  
-            animation: fadeInUp 1s ease-out 0.9s both;  
-        }  
-  
-        .stat-item {  
+        /* Problem Section */  
+        .problem {  
+            padding: 80px 20px;  
+            background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%);  
             text-align: center;  
-            padding: 1rem;  
-            background: rgba(255, 255, 255, 0.05);  
-            border-radius: 15px;  
-            border: 1px solid rgba(255, 255, 255, 0.1);  
-            transition: all 0.3s ease;  
         }  
   
-        .stat-item:hover {  
-            transform: translateY(-5px);  
-            background: rgba(59, 130, 246, 0.1);  
-            border-color: #3b82f6;  
-        }  
-  
-        .stat-item h3 {  
+        .problem h2 {  
             font-size: 3rem;  
-            font-weight: 800;  
-            color: #3b82f6;  
-            margin-bottom: 0.5rem;  
-            animation: countUp 2s ease-out;  
-        }  
-  
-        .stat-item p {  
-            font-size: 1rem;  
-            opacity: 0.8;  
+            font-weight: 900;  
+            margin-bottom: 2rem;  
+            color: var(--accent-color);  
             text-transform: uppercase;  
-            letter-spacing: 1px;  
+            letter-spacing: 2px;  
         }  
   
-        /* Buttons */  
-        .btn {  
-            display: inline-block;  
-            padding: 1.2rem 2.5rem;  
-            text-decoration: none;  
-            font-weight: 700;  
-            border-radius: 50px;  
+        .problem p {  
+            font-size: 1.3rem;  
+            opacity: 0.9;  
+            max-width: 700px;  
+            margin: 0 auto;  
+            line-height: 1.7;  
+        }  
+  
+        /* Solution Section */  
+        .solution {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
+            text-align: center;  
+        }  
+  
+        .solution h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 2rem;  
+            color: var(--secondary-color);  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+        }  
+  
+        .solution p {  
+            font-size: 1.3rem;  
+            opacity: 0.9;  
+            max-width: 700px;  
+            margin: 0 auto;  
+            line-height: 1.7;  
+        }  
+  
+        /* Benefits Section */  
+        .benefits {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);  
+        }  
+  
+        .benefits h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 3rem;  
+            text-align: center;  
+            color: var(--secondary-color);  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+        }  
+  
+        .benefits-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+            gap: 2rem;  
+            max-width: 1000px;  
+            margin: 0 auto;  
+        }  
+  
+        .benefit-item {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 15px;  
+            padding: 2rem;  
+            text-align: center;  
             transition: all 0.3s ease;  
+            cursor: pointer;  
+        }  
+  
+        .benefit-item:hover {  
+            transform: translateY(-10px);  
+            border-color: var(--accent-color);  
+            background: rgba(59, 130, 246, 0.1);  
+        }  
+  
+        .benefit-icon {  
+            font-size: 3rem;  
+            color: var(--accent-color);  
+            margin-bottom: 1rem;  
+        }  
+  
+        .benefit-item h3 {  
+            font-size: 1.3rem;  
+            font-weight: 700;  
+            margin-bottom: 1rem;  
+            color: var(--secondary-color);  
+        }  
+  
+        /* Pricing Section */  
+        .pricing {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);  
+            text-align: center;  
+        }  
+  
+        .pricing h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 3rem;  
+            color: #ffffff;  
             text-transform: uppercase;  
-            letter-spacing: 1px;  
-            font-size: 0.9rem;  
+            letter-spacing: 2px;  
+        }  
+  
+        .pricing-card {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 2px solid var(--accent-color);  
+            border-radius: 20px;  
+            padding: 3rem;  
+            max-width: 450px;  
+            margin: 0 auto;  
             position: relative;  
             overflow: hidden;  
+            transition: all 0.3s ease;  
         }  
   
-        .btn::before {  
-            content: '';  
-            position: absolute;  
-            top:             left: -100%;  
-            width: 100%;  
-            height: 100%;  
-            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);  
-            left 0.5s;  
+        .pricing-card:hover {  
+            transform: translateY(-10px);  
+            box-shadow: 0 25px 60px rgba(59, 130, 246, 0.3);  
         }  
   
-        .btn:hover::before {  
-            left: 100%;  
-        }  
-  
-        .btn-primary {  
-            background: linear-gradient(135deg, #3b82f6  #1d4ed8 100%);  
-            color: #ffffff;  
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);  
-            animation:s infinite;  
-        }  
-  
-        .btn-primary:hover {  
-            transform: translateY(-3px);  
-            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.6);  
-        }  
-  
-       -secondary {  
-            background: transparent;  
-            color: #ffffff;  
-            border: 2px solid #ffffff;  
-        }  
-  
-        .btn-secondary:hover {  
-            background: #ffffff;  
-            color: #0a0a0            transform: translateY(-3px);  
-        }  
-  
-        /* Features Section */  
-        .features {  
-            padding: 6rem 0;  
-            background: linear-gradient(180deg, #111111 0%, #1a1a1a  position: relative;  
-        }  
-  
-        .features::before {  
+        .pricing-card::before {  
             content: '';  
             position: absolute;  
             top: 0;  
             left: 0;  
             right: 0;  
-            height: 1px;  
- linear-gradient(90deg, transparent, #3b82f6, transparent);  
+            height: 5px;  
+            background: linear-gradient(90deg, var(--accent-color), var(--secondary-color), var(--accent-color));  
             animation: shimmer 3s ease-in-out infinite;  
         }  
   
-        .section-header {  
-            text-align: center;  
-            margin-bottom: ;  
-        }  
-  
-        .section-header h2 {  
-            font-size: 3.5rem;  
+        .pricing-card h3 {  
+            font-size: 2rem;  
             font-weight: 900;  
             margin-bottom: 1rem;  
-            text-transform: uppercase;  
-            letter-spacing:px;  
-            background: linear-gradient(45deg, #ffffff, #3b82f6);  
-            background-clip: text;  
-            -webkit-background-clip: text;  
-            -webkit-text-fill-color: transparent;  
-        .section-header p {  
-            font-size: 1.3rem;  
+            color: var(--secondary-color);  
+        }  
+  
+        .price {  
+            font-size: 4rem;  
+            font-weight: 900;  
+            color: var(--secondary-color);  
+            margin-bottom: 0.5rem;  
+            line-height: 1;  
+        }  
+  
+        .price-period {  
+            font-size: 1.2rem;  
             opacity: 0.8;  
+            margin-bottom: 2rem;  
+        }  
+  
+        .pricing-card ul {  
+            list-style: none;  
+            text-align: left;  
+            margin-bottom: 2rem;  
+        }  
+  
+        .pricing-card li {  
+            padding: 0.8rem 0;  
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
+            display: flex;  
+            align-items: center;  
+            gap: 1rem;  
+        }  
+  
+        .pricing-card li:last-child {  
+            border-bottom: none;  
+        }  
+  
+        .pricing-card li i {  
+            color: var(--accent-color);  
+            font-size: 1.2rem;  
+        }  
+  
+        /* Community Section */  
+        .community {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
+            text-align: center;  
+        }  
+  
+        .community-container {  
             max-width: 600px;  
             margin: 0 auto;  
         }  
   
-        .features-grid {  
-            grid;  
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
-            gap: 2rem;  
-        }  
-  
-        .feature-card {  
-            background: rgba(255, 255, 255, 05);  
-            border: 1px solid rgba(255, 255, 255, 0.1);  
-            border-radius: 20px;  
-            padding: 2.5rem;  
-            text-align:            transition: all 0.3s ease;  
-            position: relative;  
-            overflow: hidden;  
-        }  
-  
-        .feature-card::before {  
-            content: '';  
-            position: absolute;  
-            top: -2px;  
-            left:px;  
-            right: -2px;  
-            bottom: -2px;  
-            background: linear-gradient(45deg, #3b82f6, #60a5fa, #3b82f6);  
-            border-radius:px;  
-            opacity: 0;  
-            z-index: -1;  
-            transition: opacity 0.3s ease;  
-            animation: borderRotate 3s linear infinite;  
-        }  
-  
-        .feature-card:hover::before {  
-: 1;  
-        }  
-  
-        .feature-card:hover {  
-            transform: translateY(-10px);  
-            border-color: transparent;  
-            background: rgba(59, 130, 246, 0.1 }  
-  
-        .feature-icon {  
-            width: 100px;  
-            height: 100px;  
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
-            50%;  
-            display: flex;  
-            align-items: center;  
-            justify-content: center;  
-            margin: 0 auto 2rem;  
-            font-size: 2.5rem;  
-            color: #ffffff;  
-            animation:3s ease-in-out infinite;  
-        }  
-  
-        .feature-card h3 {  
-            font-size: 1.8rem;  
-            font-weight: 700;  
-            margin-bottom: 1.5rem;  
-        }  
-  
-        . p {  
-            opacity: 0.9;  
-            line-height: 1.7;  
-            font-size: 1.1rem;  
-        }  
-  
-        /* Success Stories with AI Money Making */  
-        .success-st            padding6rem 0;  
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);  
-            position: relative;  
-        }  
-  
-        .stories-grid {  
-            display;  
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  
-            gap: 2rem;  
-            margin-bottom: 3rem;  
-        }  
-  
-        .story-card {  
-            background: rgba( 255, 255, 0.05);  
-            border: 1px solid rgba(255, 255, 255, 0.1);  
-            border-radius: 20px;  
-            overflow: hidden;  
-            transition: all 3s ease;  
-            position: relative;  
-        }  
-  
-        .story-card::after {  
-            content: '';  
-            position: absolute;  
-            top: 0;  
-            left: 0;  
-: 0;  
-            bottom: 0;  
-            background: linear-gradient(45deg, transparent, rgba(59, 130, 246, 0.1), transparent);  
-            opacity: 0;  
-            transition:0.3s ease;  
-        }  
-  
-        .story-card:hover::after {  
-            opacity: 1;  
-        }  
-  
-        .story-card:hover {  
-            transform: translateY(-10px);  
-            border-color: #3b82f6;  
--shadow: 0 15px 40px rgba(59, 130, 246, 0.3);  
-        }  
-  
-        .story-card img {  
-            width: 100%;  
-            height: 280px object-fit: cover;  
-            transition: transform 0.3s ease;  
-        }  
-  
-        .story-card:hover img {  
-            transform: scale(1.1);  
-        }  
-  
-        .story-content {  
-            2rem;  
-            position: relative;  
-            z-index: 1;  
-        }  
-  
-        .story-content h4 {  
-            font-size: 1.8rem;  
-            font-weight: 700;  
-            margin-bottom: 1        }  
-  
-        .story-result {  
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
-            color: #ffffff;  
-            padding: 0.8rem 1rem;  
-            border-radius: 25px;  
-            font-size: 1.3rem;  
-            font-weight: 700;  
-            display: inline-block;  
-            margin-bottom: 1.5rem;  
-            animation: pulse 2s        }  
-  
-        .story-content p {  
-            opacity: 0.9;  
-            line-height: 1.7;  
-            font-size: 1.1rem;  
-        }  
-  
-        .stories {  
-            text-align: center;  
-            margin-top: 3rem;  
-        }  
-  
-        /* Course Overview */  
-        .course-overview {  
-            padding: 6rem 0;  
-            background: linear-gradient(180deg, #1a2e 0%, #16213e 100%);  
-        }  
-  
-        .course-content {  
-            display: grid;  
-            grid-template-columns: 1fr 1fr;  
-            gap: 4rem;  
-            align-items:        }  
-  
-        .course-text h2 {  
-            font-size: 4rem;  
+        .community h2 {  
+            font-size: 3rem;  
             font-weight: 900;  
             margin-bottom: 2rem;  
-            text-transform: uppercase;  
-            letter-spacing: 2px;  
-: linear-gradient(45deg, #ffffff, #3b82f6);  
-            background-clip: text;  
-            -webkit-background-clip: text;  
-            -webkit-text-fill-color: transparent;  
-        .course-text p {  
-            font-size: 1.3rem;  
-            opacity: 0.9;  
-            line-height: 1.7;  
-            margin-bottom: 2rem;  
-        }  
-  
-        .course-list {  
--style: none;  
-            margin-bottom: 2rem;  
-        }  
-  
-        .course-list li {  
-            display: flex;  
-            align-items: center;  
-            gap: 1rem;  
-            margin-bottom: 1.2rem font-size: 1.2rem;  
-            transition: transform 0.3s ease;  
-        }  
-  
-        .course-list li:hover {  
-            transform: translateX(10px);  
-        }  
-  
-        .course-list i {  
-            color:b82f6;  
-            font-size: 1.3rem;  
-            animation: checkBounce 1s ease-in-out infinite;  
-        }  
-  
-        .course-price {  
-            margin-bottom: 2rem;  
-            display: flex;  
-            align-items: baseline;  
-            gap: 1rem;  
-        }  
-  
-        .price-amount {  
-            font-size: 4rem;  
-            font-weight: 900;  
-            color: #3f6;  
-            animation: priceGlow 2s ease-in-out infinite;  
-        }  
-  
-        .price-period {  
-            font-size: 1.3rem;  
-            opacity: 0.8;  
-        }  
-  
-        . {  
-            position: relative;  
-            overflow: hidden;  
-            border-radius: 20px;  
-        }  
-  
-        .course-image img {  
-            width: 100%;  
-            border-radius: 20px;  
-            box-shadow: 0px 50px rgba(0, 0, 0, 0.5);  
-            transition: transform 0.3s ease;  
-        }  
-  
-        .course-image:hover img {  
-            transform:1.        }  
-  
-        /* Community Section */  
-        .community {  
-            padding: 6rem 0;  
-            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);  
-            position;  
-        }  
-  
-        .community::before {  
-            content: '';  
-            position: absolute;  
-            top: 0;  
-            left: 0;  
-            right: 0;  
-            bottom: 0;  
-            background: url('picsum.photos/seed/community-bg/1920/800.jpg') center/cover;  
-            opacity: 0.05;  
-            animation: backgroundMove 15s ease-in-out infinite reverse;  
-        }  
-  
-        .community-content {  
-: grid;  
-            grid-template-columns: 1fr 1fr;  
-            gap: 4rem;  
-            align-items: center;  
-            position: relative;  
-            z-index: 1;  
-        .community-text h2 {  
-            font-size: 4rem;  
-            font-weight: 900;  
-            margin-bottom: 2rem;  
+            color: var(--secondary-color);  
             text-transform: uppercase;  
             letter-spacing: 2px;  
         }  
   
-       -text p {  
+        .community p {  
             font-size: 1.3rem;  
             opacity: 0.9;  
-            line-height: 1.7;  
             margin-bottom: 2rem;  
-        }  
-  
-        .community-stats {  
-            display;  
-            grid-template-columns: repeat(3, 1fr);  
-            gap: 1.5rem;  
-        }  
-  
-        .community-stat {  
-            text-align: center;  
-            padding: 2rem;  
-            background: rgba, 255, 255, 0.05);  
-            border-radius: 15px;  
-            border: 1px solid rgba(255, 255, 255, 0.1);  
-            transition 0.3s ease;  
-        }  
-  
-        .community-stat:hover {  
-            transform: translateY(-5px);  
-            background: rgba(59, 130, 246, 0.1);  
-            border-color: #82f6;  
-        }  
-  
-        .community-stat h3 {  
-            font-size: 2.5rem;  
-            font-weight: 800;  
-            color: #3b82f6;  
-            margin-bottom: 0.5 animation: countUp 2s ease-out;  
-        }  
-  
-        .community-stat p {  
-            opacity: 0.8;  
-            text-transform: uppercase;  
-            letter-spacing: 1px;  
-        }  
-  
-        /* CTA        .cta {  
-            padding: 8rem 0;  
-            background: linear-gradient(135deg, #0f3460 0%, #16213e 50%, #1a1a2100%);  
-            position: relative;  
-            overflow: hidden;  
-        }  
-  
-        .cta::before {  
-            content: '';  
-            position: absolute;  
-            top: -50%;  
-            left: -50%;  
-            width: 200%;  
-            200%;  
-            background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);  
-            animation: rotate 20s linear infinite;  
-        }  
-  
-        .cta            text-align: center;  
-            max-width: 900px;  
-            margin: 0 auto;  
-            position: relative;  
-            z-index: 1;  
-        }  
-  
-        .cta-content h2 {  
-            font-size: 4rem;  
-            font-weight: 900;  
-            margin-bottom: 2rem;  
-            text-transform: uppercase;  
-            letter-spacing: 3px;  
-            background: linear-gradient(45deg, #ffffff,b82f6, #60a5fa);  
-            background-clip: text;  
-            -webkit-background-clip: text;  
-            -webkit-text-fill-color: transparent;  
-            animation: titleGlow 3s ease-in;  
-        }  
-  
-        .cta-content p {  
-            font-size: 1.5rem;  
-            opacity: 0.9;  
             line-height: 1.7;  
-            margin-bottom: 3rem;  
         }  
   
-        .cta            display: flex;  
-            gap: 1.5rem;  
+        .community-buttons {  
+            display: flex;  
+            gap: 1rem;  
             justify-content: center;  
             flex-wrap: wrap;  
         }  
@@ -693,20 +420,23 @@
         /* Footer */  
         .footer {  
             background: #0a0a0a;  
-: 4rem 0 2rem;  
+            padding: 4rem 0 2rem;  
             border-top: 1px solid rgba(255, 255, 255, 0.1);  
         }  
   
         .footer-content {  
-            display;  
+            display: grid;  
             grid-template-columns: 2fr 1fr 1fr 1fr;  
             gap: 2rem;  
             margin-bottom: 3rem;  
+            max-width: 1200px;  
+            margin: 0 auto 3rem;  
+            padding: 0 20px;  
         }  
   
         .footer-logo {  
             display: flex;  
-            align-items;  
+            align-items: center;  
             gap: 0.5rem;  
             font-size: 1.8rem;  
             font-weight: 700;  
@@ -714,15 +444,15 @@
             margin-bottom: 1.5rem;  
         }  
   
-       -logo i {  
-            color: #3b82f6;  
+        .footer-logo i {  
+            color: var(--accent-color);  
             font-size: 2rem;  
         }  
   
         .footer-section p {  
             opacity: 0.8;  
             line-height: 1.7;  
--bottom: 1.5rem;  
+            margin-bottom: 1.5rem;  
             font-size: 1.1rem;  
         }  
   
@@ -745,7 +475,7 @@
         }  
   
         .footer-social a:hover {  
-            background: #3b82f6;  
+            background: var(--accent-color);  
             transform: translateY(-3px) rotate(360deg);  
         }  
   
@@ -776,7 +506,7 @@
   
         .footer-section ul li a:hover {  
             opacity: 1;  
-            color: #3b82f6;  
+            color: var(--accent-color);  
             transform: translateX(5px);  
             display: inline-block;  
         }  
@@ -786,6 +516,94 @@
             padding-top: 2rem;  
             border-top: 1px solid rgba(255, 255, 255, 0.1);  
             opacity: 0.8;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 2rem 20px 0;  
+        }  
+  
+        /* Buttons */  
+        .btn {  
+            display: inline-block;  
+            padding: 1.2rem 2.5rem;  
+            text-decoration: none;  
+            font-weight: 700;  
+            border-radius: 50px;  
+            transition: all 0.3s ease;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+            font-size: 0.9rem;  
+            position: relative;  
+            overflow: hidden;  
+            margin: 0.5rem;  
+        }  
+  
+        .btn::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: -100%;  
+            width: 100%;  
+            height: 100%;  
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);  
+            transition: left 0.5s;  
+        }  
+  
+        .btn:hover::before {  
+            left: 100%;  
+        }  
+  
+        .btn-primary {  
+            background: linear-gradient(135deg, var(--accent-color) 0%, #1d4ed8 100%);  
+            color: #ffffff;  
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);  
+            animation: pulse 2s infinite;  
+        }  
+  
+        .btn-primary:hover {  
+            transform: translateY(-3px);  
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.6);  
+        }  
+  
+        .btn-secondary {  
+            background: transparent;  
+            color: #ffffff;  
+            border: 2px solid var(--secondary-color);  
+        }  
+  
+        .btn-secondary:hover {  
+            background: var(--secondary-color);  
+            color: #000000;  
+            transform: translateY(-3px);  
+        }  
+  
+        .btn-discord {  
+            background: #5865F2;  
+            color: #ffffff;  
+        }  
+  
+        .btn-discord:hover {  
+            background: #4752C4;  
+            transform: translateY(-3px);  
+        }  
+  
+        .btn-instagram {  
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);  
+            color: #ffffff;  
+        }  
+  
+        .btn-instagram:hover {  
+            transform: translateY(-3px);  
+            box-shadow: 0 8px 25px rgba(252, 175, 69, 0.4);  
+        }  
+  
+        .btn-youtube {  
+            background: #FF0000;  
+            color: #ffffff;  
+        }  
+  
+        .btn-youtube:hover {  
+            background: #CC0000;  
+            transform: translateY(-3px);  
         }  
   
         /* Responsive Design */  
@@ -799,31 +617,21 @@
             }  
   
             .hero-title {  
-                font-size: 3rem;  
+                font-size: 2.5rem;  
             }  
   
             .hero-subtitle {  
-                font-size: 1.2rem;  
+                font-size: 1.1rem;  
             }  
   
-            .hero-stats {  
+            .hero-buttons,  
+            .community-buttons {  
                 flex-direction: column;  
-                gap: 1.5rem;  
+                align-items: center;  
             }  
   
-            .course-content {  
+            .benefits-grid {  
                 grid-template-columns: 1fr;  
-                gap: 2rem;  
-            }  
-  
-            .community-content {  
-                grid-template-columns: 1fr;  
-                gap: 2rem;  
-            }  
-  
-            .community-stats {  
-                grid-template-columns: 1fr;  
-                gap: 1rem;  
             }  
   
             .footer-content {  
@@ -831,23 +639,16 @@
                 gap: 2rem;  
             }  
   
-            .features-grid {  
-                grid-template-columns: 1fr;  
+            .problem h2,  
+            .solution h2,  
+            .benefits h2,  
+            .pricing h2,  
+            .community h2 {  
+                font-size: 2rem;  
             }  
   
-            .stories-grid {  
-                grid-template-columns: 1fr;  
-            }  
-  
-            .course-text h2,  
-            .community-text h2,  
-            .cta-content h2 {  
-                font-size: 2.5rem;  
-            }  
-  
-            .cta-buttons {  
-                flex-direction: column;  
-                align-items: center;  
+            .price {  
+                font-size: 3rem;  
             }  
         }  
   
@@ -912,44 +713,6 @@
             }  
         }  
   
-        @keyframes countUp {  
-            from {  
-                opacity: 0;  
-                transform: translateY(20px);  
-            }  
-            to {  
-                opacity: 1;  
-                transform: translateY(0);  
-            }  
-        }  
-  
-        @keyframes iconFloat {  
-            0%, 100% {  
-                transform: translateY(0);  
-            }  
-            50% {  
-                transform: translateY(-10px);  
-            }  
-        }  
-  
-        @keyframes checkBounce {  
-            0%, 100% {  
-                transform: scale(1);  
-            }  
-            50% {  
-                transform: scale(1.2);  
-            }  
-        }  
-  
-        @keyframes priceGlow {  
-            0%, 100% {  
-                text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);  
-            }  
-            50% {  
-                text-shadow: 0 0 20px rgba(59, 130, 246, 0.8);  
-            }  
-        }  
-  
         @keyframes backgroundMove {  
             0%, 100% {  
                 transform: scale(1) translate(0, 0);  
@@ -959,44 +722,18 @@
             }  
         }  
   
-        @keyframes borderRotate {  
-            0% {  
-                transform: rotate(0deg);  
-            }  
-            100% {  
-                transform: rotate(360deg);  
-            }  
-        }  
-  
         @keyframes shimmer {  
             0%, 100% {  
-                opacity: 0.3;  
+                transform: translateX(-100%);  
             }  
             50% {  
-                opacity: 1;  
-            }  
-        }  
-  
-        @keyframes rotate {  
-            0% {  
-                transform: rotate(0deg);  
-            }  
-            100% {  
-                transform: rotate(360deg);  
+                transform: translateX(100%);  
             }  
         }  
   
         /* Utility Classes */  
-        .animate-fade-in {  
-            animation: fadeIn 0.8s ease-out;  
-        }  
-  
-        .animate-slide-in {  
-            animation: slideInLeft 0.8s ease-out;  
-        }  
-  
         .text-gradient {  
-            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background: linear-gradient(45deg, #ffffff, var(--accent-color));  
             background-clip: text;  
             -webkit-background-clip: text;  
             -webkit-text-fill-color: transparent;  
@@ -1006,6 +743,11 @@
             background: rgba(255, 255, 255, 0.05);  
             backdrop-filter: blur(10px);  
             border: 1px solid rgba(255, 255, 255, 0.1);  
+        }  
+  
+        .section-header {  
+            text-align: center;  
+            margin-bottom: 4rem;  
         }  
     </style>  
 </head>  
@@ -1027,9 +769,8 @@
             </ul>  
             <div class="nav-social">  
                 <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>  
-                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>  
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>  
+                <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
+                <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
             </div>  
         </div>  
     </nav>  
@@ -1037,144 +778,94 @@
     <!-- Hero Section -->  
     <section class="hero">  
         <div class="hero-content">  
-            <h1 class="hero-title">  
-                START YOUR <span class="highlight">AI JOURNEY</span> TODAY  
-            </h1>  
+            <h1 class="hero-title">Digital Income Mastery</h1>  
             <p class="hero-subtitle">  
-                Digital Income Mastery: AI & Automation is your gateway to building automated income streams. Learn how AI systems can transform your business and generate income while you sleep.  
+                Stop trading time for money. This AI automation system is changing everything...  
             </p>  
             <div class="hero-buttons">  
-                <a href="course.html" class="btn btn-primary">  
-                    Enroll Now  
+                <a href="https://whop.com/digital-income-mastery-ai-a/digital-income-mastery-ai-a-07" target="_blank" class="btn btn-primary">  
+                    Enroll Now - $100  
                 </a>  
                 <a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank" class="btn btn-secondary">  
-                    Free Module  
-                </a>  
-            </div>  
-            <div class="hero-stats">  
-                <div class="stat-item">  
-                    <h3>2,500+</h3>  
-                    <p>Students Enrolled</p>  
-                </div>  
-                <div class="stat-item">  
-                    <h3>95%</h3>  
-                    <p>Success Rate</p>  
-                </div>  
-                <div class="stat-item">  
-                    <h3>$100K+</h3>  
-                    <p>Student Earnings</p>  
-                </div>  
-            </div>  
-        </div>  
-    </section>  
-  
-    <!-- Features Section -->  
-    <section class="features">  
-        <div class="container">  
-            <div class="section-header">  
-                <h2>What You'll Learn</h2>  
-                <p>Master AI-powered automation systems that build income while you sleep</p>  
-            </div>  
-            <div class="features-grid">  
-                <div class="feature-card" data-aos="fade-up">  
-                    <div class="feature-icon">  
-                        <i class="fas fa-brain"></i>  
-                    </div>  
-                    <h3>AI Mindset Foundation</h3>  
-                    <p>Develop the thinking patterns that leverage AI for maximum income generation and business transformation</p>  
-                </div>  
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">  
-                    <div class="feature-icon">  
-                        <i class="fas fa-store"></i>  
-                    </div>  
-                    <h3>Automated E-commerce</h3>  
-                    <p>Build AI-powered stores that run themselves with smart inventory management and predictive analytics</p>  
-                </div>  
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">  
-                    <div class="feature-icon">  
-                        <i class="fas fa-chart-line"></i>  
-                    </div>  
-                    <h3>Smart Marketing</h3>  
-                    <p>Automate customer acquisition and retention with AI-driven campaigns and personalized strategies</p>  
-                </div>  
-                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">  
-                    <div class="feature-icon">  
-                        <i class="fas fa-cogs"></i>  
-                    </div>  
-                    <h3>Business Automation</h3>  
-                    <p>Streamline operations with AI systems that handle repetitive tasks and optimize workflows</p>  
-                </div>  
-            </div>  
-        </div>  
-    </section>  
-  
-    <!-- Success Stories with AI Money Making -->  
-    <section class="success-stories">  
-        <div class="container">  
-            <div class="section-header">  
-                <h2>AI Success Stories</h2>  
-                <p>Real people making real money with AI automation</p>  
-            </div>  
-            <div class="stories-grid">  
-                <div class="story-card" data-aos="fade-up">  
-                    <img src="https://picsum.photos/seed/ai-entrepreneur-sarah/400/300.jpg" alt="Sarah AI Success">  
-                    <div class="story-content">  
-                        <h4>Sarah M.</h4>  
-                        <div class="story-result">$15K/Month</div>  
-                        <p>"From $0 to $15K/month in 6 months using AI automation. My AI-powered dropshipping store now runs itself while I travel the world!"</p>  
-                    </div>  
-                </div>  
-                <div class="story-card" data-aos="fade-up" data-aos-delay="100">  
-                    <img src="https://picsum.photos/seed/ai-freelancer-mike/400/300.jpg" alt="Mike AI Success">  
-                    <div class="story-content">  
-                        <h4>Mike R.</h4>  
-                        <div class="story-result">$8.5K/Month</div>  
-                        <p>"AI transformed my freelance business. Automated chatbots handle client communication while AI tools create content and manage projects."</p>  
-                    </div>  
-                </div>  
-                <div class="story-card" data-aos="fade-up" data-aos-delay="200">  
-                    <img src="https://picsum.photos/seed/ai-content-creator-emma/400/300.jpg" alt="Emma AI Success">  
-                    <div class="story-content">  
-                        <h4>Emma L.</h4>  
-                        <div class="story-result">$22K/Month</div>  
-                        <p>"Built an AI-powered content empire. AI generates video scripts, social media posts, and email campaigns while I focus on strategy!"</p>  
-                    </div>  
-                </div>  
-            </div>  
-            <div class="stories-cta" data-aos="fade-up">  
-                <a href="testimonials.html" class="btn btn-primary">  
-                    View All Success Stories  
+                    Try Free Module  
                 </a>  
             </div>  
         </div>  
     </section>  
   
-    <!-- Course Overview -->  
-    <section class="course-overview">  
+    <!-- Problem Section -->  
+    <section class="problem" data-aos="fade-up">  
         <div class="container">  
-            <div class="course-content">  
-                <div class="course-text" data-aos="fade-right">  
-                    <h2>Complete AI Automation Course</h2>  
-                    <p>Our comprehensive program takes you from zero to building automated income streams using cutting-edge AI technology and proven business strategies.</p>  
-                    <ul class="course-list">  
-                        <li><i class="fas fa-check"></i> Complete AI automation system implementation</li>  
-                        <li><i class="fas fa-check"></i> Step-by-step video training with real-world examples</li>  
-                        <li><i class="fas fa-check"></i> AI tool stack recommendations and setup guides</li>  
-                        <li><i class="fas fa-check"></i> Community access & 24/7 expert support</li>  
-                        <li><i class="fas fa-check"></i> Lifetime updates & new content releases</li>  
-                        <li><i class="fas fa-check"></i> Personal mentorship and coaching sessions</li>  
-                    </ul>  
-                    <div class="course-price">  
-                        <span class="price-amount">$100</span>  
-                        <span class="price-period">One-time payment</span>  
-                    </div>  
-                    <a href="course.html" class="btn btn-primary">  
-                        Get Instant Access  
-                    </a>  
+            <h2>Working 80 hours a week?</h2>  
+            <p>Still not hitting your income goals? The old way is broken. Traditional businesses demand too much time for too little return.</p>  
+        </div>  
+    </section>  
+  
+    <!-- Solution Section -->  
+    <section class="solution" data-aos="fade-up">  
+        <div class="container">  
+            <h2>What if AI could run your business while you sleep?</h2>  
+            <p>Discover the AI-powered income systems that 6-figure earners are using to scale in 2024.</p>  
+        </div>  
+    </section>  
+  
+    <!-- Benefits Section -->  
+    <section class="benefits">  
+        <div class="container">  
+            <h2 data-aos="fade-up">What You'll Master</h2>  
+            <div class="benefits-grid">  
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="100">  
+                    <div class="benefit-icon">🤖</div>  
+                    <h3>Automate Your E-commerce Store</h3>  
+                    <p>Build AI-powered stores that manage inventory, pricing, and customer service automatically</p>  
                 </div>  
-                <div class="course-image" data-aos="fade-left">  
-                    <img src="https://picsum.photos/seed/course-overview-ai/600/400.jpg" alt="AI Course Overview">  
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="200">  
+                    <div class="benefit-icon">🧠</div>  
+                    <h3>AI Product Research & Selection</h3>  
+                    <p>Use AI to identify trending products and optimize pricing for maximum profitability</p>  
                 </div>  
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="300">  
+                    <div class="benefit-icon">💬</div>  
+                    <h3>Smart Customer Service Bots</h3>  
+                    <p>Deploy AI chatbots that handle customer inquiries 24/7 across multiple languages</p>  
+                </div>  
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="400">  
+                    <div class="benefit-icon">📊</div>  
+                    <h3>Predictive Analytics & Optimization</h3>  
+                    <p>Leverage AI for data-driven decisions and automated business optimization</p>  
+                </div>  
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="500">  
+                    <div class="benefit-icon">⚡</div>  
+                    <h3>Streamlined Business Operations</h3>  
+                    <p>Automate repetitive tasks and focus on high-value strategic activities</p>  
+                </div>  
+                <div class="benefit-item" data-aos="fade-up" data-aos-delay="600">  
+                    <div class="benefit-icon">🚀</div>  
+                    <h3>Scalable Growth Systems</h3>  
+                    <p>Build AI-driven systems that scale your business without increasing workload</p>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Pricing Section -->  
+    <section class="pricing">  
+        <div class="container">  
+            <h2 data-aos="fade-up">Complete AI Automation Course</h2>  
+            <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">  
+                <h3>Digital Income Mastery</h3>  
+                <div class="price">$100</div>  
+                <p class="price-period">One-time payment - Lifetime access</p>  
+                <ul>  
+                    <li><i class="fas fa-check"></i> Complete AI automation system</li>  
+                    <li><i class="fas fa-check"></i> Step-by-step video training</li>  
+                    <li><i class="fas fa-check"></i> AI tool stack recommendations</li>  
+                    <li><i class="fas fa-check"></i> Community access</li>  
+                    <li><i class="fas fa-check"></i> Lifetime updates</li>  
+                </ul>  
+                <a href="https://whop.com/digital-income-mastery-ai-a/digital-income-mastery-ai-a-07" target="_blank" class="btn btn-primary">  
+                    Get Instant Access  
+                </a>  
             </div>  
         </div>  
     </section>  
@@ -1182,44 +873,18 @@
     <!-- Community Section -->  
     <section class="community">  
         <div class="container">  
-            <div class="community-content">  
-                <div class="community-text" data-aos="fade-right">  
-                    <h2>Join Our AI Community</h2>  
-                    <p>Connect with fellow entrepreneurs and AI enthusiasts. Get support, share insights, collaborate on projects, and grow together in our exclusive community.</p>  
-                    <a href="https://discord.gg/yc2ha9BU" target="_blank" class="btn btn-primary">  
-                        <i class="fab fa-discord"></i> Join Discord Community  
+            <div class="community-container" data-aos="fade-up">  
+                <h2>Join Our AI Automation Community</h2>  
+                <p>Connect with fellow entrepreneurs and get support on your journey to financial freedom through AI automation.</p>  
+                <div class="community-buttons">  
+                    <a href="https://discord.gg/yc2ha9BU" target="_blank" class="btn btn-discord">  
+                        <i class="fab fa-discord"></i> Join Discord  
                     </a>  
-                </div>  
-                <div class="community-stats" data-aos="fade-left">  
-                    <div class="community-stat">  
-                        <h3>5,000+</h3>  
-                        <p>Active Members</p>  
-                    </div>  
-                    <div class="community-stat">  
-                        <h3>24/7</h3>  
-                        <p>Community Support</p>  
-                    </div>  
-                    <div class="community-stat">  
-                        <h3>50+</h3>  
-                        <p>Expert Mentors</p>  
-                    </div>  
-                </div>  
-            </div>  
-        </div>  
-    </section>  
-  
-    <!-- CTA Section -->  
-    <section class="cta">  
-        <div class="container">  
-            <div class="cta-content" data-aos="fade-up">  
-                <h2>Ready to Transform Your Income?</h2>  
-                <p>Join thousands of successful students who are already building AI-powered income streams and achieving financial freedom through automation.</p>  
-                <div class="cta-buttons">  
-                    <a href="course.html" class="btn btn-primary btn-large">  
-                        Start Your AI Journey Today  
+                    <a href="https://instagram.com/fromzerotoprofit" target="_blank" class="btn btn-instagram">  
+                        <i class="fab fa-instagram"></i> Follow Instagram  
                     </a>  
-                    <a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank" class="btn btn-secondary btn-large">  
-                        Try Free Module  
+                    <a href="https://youtube.com/@zerotoprofitacademy" target="_blank" class="btn btn-youtube">  
+                        <i class="fab fa-youtube"></i> Subscribe YouTube  
                     </a>  
                 </div>  
             </div>  
@@ -1228,53 +893,49 @@
   
     <!-- Footer -->  
     <footer class="footer">  
-        <div class="container">  
-            <div class="footer-content">  
-                <div class="footer-section">  
-                    <div class="footer-logo">  
-                        <i class="fas fa-robot"></i>  
-                        <span>Digital Income Mastery</span>  
-                    </div>  
-                    <p>Transform your income with AI-powered automation systems that work while you sleep. Join the revolution of smart entrepreneurs leveraging artificial intelligence for financial freedom.</p>  
-                    <div class="footer-social">  
-                        <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>  
-                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>  
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>  
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>  
-                    </div>  
+        <div class="footer-content">  
+            <div class="footer-section">  
+                <div class="footer-logo">  
+                    <i class="fas fa-robot"></i>  
+                    <span>Digital Income Mastery</span>  
                 </div>  
-                <div class="footer-section">  
-                    <h4>Quick Links</h4>  
-                    <ul>  
-                        <li><a href="course.html">Course Overview</a></li>  
-                        <li><a href="testimonials.html">Success Stories</a></li>  
-                        <li><a href="blog.html">Blog</a></li>  
-                        <li><a href="about.html">About Us</a></li>  
-                    </ul>  
-                </div>  
-                <div class="footer-section">  
-                    <h4>Resources</h4>  
-                    <ul>  
-                        <li><a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank">Free Module</a></li>  
-                        <li><a href="#">AI Tools Directory</a></li>  
-                        <li><a href="#">Success Blueprint</a></li>  
-                        <li><a href="#">Community Forum</a></li>  
-                    </ul>  
-                </div>  
-                <div class="footer-section">  
-                    <h4>Support</h4>  
-                    <ul>  
-                        <li><a href="contact.html">Contact Us</a></li>  
-                        <li><a href="#">Help Center</a></li>  
-                        <li><a href="#">Privacy Policy</a></li>  
-                        <li><a href="#">Terms of Service</a></li>  
-                    </ul>  
+                <p>Transform your income with AI-powered automation systems that work while you sleep. Join the revolution of smart entrepreneurs leveraging artificial intelligence for financial freedom.</p>  
+                <div class="footer-social">  
+                    <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                    <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
+                    <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
                 </div>  
             </div>  
-            <div class="footer-bottom">  
-                <p>&copy; 2024 Digital Income Mastery. All rights reserved. | Empowering entrepreneurs through AI automation</p>  
+            <div class="footer-section">  
+                <h4>Quick Links</h4>  
+                <ul>  
+                    <li><a href="index.html">Home</a></li>  
+                    <li><a href="about.html">About Us</a></li>  
+                    <li><a href="course.html">Course Overview</a></li>  
+                    <li><a href="testimonials.html">Success Stories</a></li>  
+                </ul>  
             </div>  
+            <div class="footer-section">  
+                <h4>Resources</h4>  
+                <ul>  
+                    <li><a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank">Free Module</a></li>  
+                    <li><a href="#">AI Tools Directory</a></li>  
+                    <li><a href="#">Success Blueprint</a></li>  
+                    <li><a href="#">Community Forum</a></li>  
+                </ul>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Support</h4>  
+                <ul>  
+                    <li><a href="contact.html">Contact Us</a></li>  
+                    <li><a href="#">Help Center</a></li>  
+                    <li><a href="#">Privacy Policy</a></li>  
+                    <li><a href="#">Terms of Service</a></li>  
+                </ul>  
+            </div>  
+        </div>  
+        <div class="footer-bottom">  
+            <p>&copy; 2024 Digital Income Mastery. All rights reserved. | Empowering entrepreneurs through AI automation</p>  
         </div>  
     </footer>  
   
@@ -1313,52 +974,19 @@
             });  
         });  
   
+        // Benefit item click interaction  
+        document.querySelectorAll('.benefit-item').forEach(item => {  
+            item.addEventListener('click', function() {  
+                // Placeholder for benefit detail expansion  
+                const title = this.querySelector('h3').textContent;  
+                console.log('Benefit clicked:', title);  
+            });  
+        });  
+  
         // Add loading animation  
         window.addEventListener('load', function() {  
             document.body.classList.add('loaded');  
         });  
-  
-        // Counter animation for stats  
-        function animateCounter(element, target, duration = 2000) {  
-            let start = 0;  
-            const increment = target / (duration / 16);  
-            const timer = setInterval(() => {  
-                start += increment;  
-                if (start >= target) {  
-                    element.textContent = target.toLocaleString() + (element.parentElement.querySelector('p').textContent.includes('K') ? 'K+' : '+');  
-                    clearInterval(timer);  
-                } else {  
-                    element.textContent = Math.floor(start).toLocaleString() + (element.parentElement.querySelector('p').textContent.includes('K') ? 'K+' : '+');  
-                }  
-            }, 16);  
-        }  
-  
-        // Trigger counter animation when stats are visible  
-        const observerOptions = {  
-            threshold: 0.5,  
-            rootMargin: '0px 0px -100px 0px'  
-        };  
-  
-        const observer = new IntersectionObserver((entries) => {  
-            entries.forEach(entry => {  
-                if (entry.isIntersecting) {  
-                    const statElements = entry.target.querySelectorAll('.stat-item h3');  
-                    statElements.forEach((el, index) => {  
-                        setTimeout(() => {  
-                            const text = el.textContent;  
-                            const number = parseInt(text.replace(/[^0-9]/g, ''));  
-                            animateCounter(el, number);  
-                        }, index * 200);  
-                    });  
-                    observer.unobserve(entry.target);  
-                }  
-            });  
-        }, observerOptions);  
-  
-        const heroStats = document.querySelector('.hero-stats');  
-        if (heroStats) {  
-            observer.observe(heroStats);  
-        }  
     </script>  
 </body>  
 </html>  
