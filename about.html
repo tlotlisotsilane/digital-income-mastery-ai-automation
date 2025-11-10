@@ -162,7 +162,7 @@
             margin-bottom: 1.5rem;  
             text-transform: uppercase;  
             letter-spacing: 3px;  
-            background: linear-gradient(45deg, #ffffff, #3b82f6, #60a5fa);  
+            background: linear-gradient(45deg, #ffffff, #3b82f6, #ffd700);  
             background-clip: text;  
             -webkit-background-clip: text;  
             -webkit-text-fill-color: transparent;  
@@ -173,144 +173,62 @@
             font-size: 1.3rem;  
             line-height: 1.6;  
             opacity: 0.9;  
-            max-width: 600px;  
-            margin-left: auto;  
-            margin-right: auto;  
             animation: fadeInUp 1s ease-out 0.5s both;  
         }  
   
-        /* About Story Section */  
-        .about-story {  
-            padding: 6rem 0;  
+        /* Story Section */  
+        .story-section {  
+            padding: 80px 20px;  
             background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%);  
-            position: relative;  
         }  
   
-        .about-content {  
+        .story-content {  
             display: grid;  
             grid-template-columns: 1fr 1fr;  
             gap: 4rem;  
             align-items: center;  
+            max-width: 1000px;  
+            margin: 0 auto;  
         }  
   
-        .about-text h2 {  
-            font-size: 3.5rem;  
+        .story-text h2 {  
+            font-size: 3rem;  
             font-weight: 900;  
             margin-bottom: 2rem;  
+            color: #3b82f6;  
             text-transform: uppercase;  
             letter-spacing: 2px;  
-            background: linear-gradient(45deg, #ffffff, #3b82f6);  
-            background-clip: text;  
-            -webkit-background-clip: text;  
-            -webkit-text-fill-color: transparent;  
         }  
   
-        .about-text p {  
-            font-size: 1.2rem;  
-            opacity: 0.9;  
+        .story-text p {  
+            font-size: 1.1rem;  
             line-height: 1.7;  
+            opacity: 0.9;  
             margin-bottom: 1.5rem;  
         }  
   
-        .about-image {  
+        .story-image {  
             position: relative;  
-            overflow: hidden;  
             border-radius: 20px;  
+            overflow: hidden;  
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);  
         }  
   
-        .about-image img {  
+        .story-image img {  
             width: 100%;  
-            border-radius: 20px;  
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);  
+            height: 400px;  
+            object-fit: cover;  
             transition: transform 0.3s ease;  
         }  
   
-        .about-image:hover img {  
+        .story-image:hover img {  
             transform: scale(1.05);  
-        }  
-  
-        /* Video Section */  
-        .video-section {  
-            padding: 6rem 0;  
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
-            position: relative;  
-        }  
-  
-        .video-container {  
-            max-width: 900px;  
-            margin: 0 auto;  
-            text-align: center;  
-        }  
-  
-        .video-title {  
-            font-size: 3rem;  
-            font-weight: 900;  
-            margin-bottom: 1rem;  
-            text-transform: uppercase;  
-            letter-spacing: 2px;  
-            background: linear-gradient(45deg, #ffffff, #3b82f6);  
-            background-clip: text;  
-            -webkit-background-clip: text;  
-            -webkit-text-fill-color: transparent;  
-        }  
-  
-        .video-subtitle {  
-            font-size: 1.2rem;  
-            opacity: 0.9;  
-            margin-bottom: 3rem;  
-            max-width: 600px;  
-            margin-left: auto;  
-            margin-right: auto;  
-        }  
-  
-        .video-wrapper {  
-            position: relative;  
-            border-radius: 20px;  
-            overflow: hidden;  
-            box-shadow: 0 25px 60px rgba(59, 130, 246, 0.3);  
-            background: #000;  
-            aspect-ratio: 16/9;  
-        }  
-  
-        .video-placeholder {  
-            width: 100%;  
-            height: 100%;  
-            background: url('https://picsum.photos/seed/ai-automation-video/900/506.jpg') center/cover;  
-            position: relative;  
-            display: flex;  
-            align-items: center;  
-            justify-content: center;  
-        }  
-  
-        .video-play-button {  
-            width: 100px;  
-            height: 100px;  
-            background: rgba(59, 130, 246, 0.9);  
-            border-radius: 50%;  
-            display: flex;  
-            align-items: center;  
-            justify-content: center;  
-            cursor: pointer;  
-            transition: all 0.3s ease;  
-            animation: pulse 2s infinite;  
-        }  
-  
-        .video-play-button:hover {  
-            transform: scale(1.1);  
-            background: #3b82f6;  
-        }  
-  
-        .video-play-button i {  
-            font-size: 3rem;  
-            color: #ffffff;  
-            margin-left: 5px;  
         }  
   
         /* Mission Section */  
         .mission-section {  
-            padding: 6rem 0;  
-            background: linear-gradient(180deg, #16213e 0%, #0f3460 100%);  
-            position: relative;  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
         }  
   
         .mission-content {  
@@ -319,29 +237,80 @@
             margin: 0 auto;  
         }  
   
-        .mission-title {  
+        .mission-content h2 {  
             font-size: 3rem;  
             font-weight: 900;  
             margin-bottom: 2rem;  
+            color: #ffd700;  
             text-transform: uppercase;  
             letter-spacing: 2px;  
         }  
   
-        .mission-text {  
+        .mission-content p {  
             font-size: 1.3rem;  
-            opacity: 0.9;  
             line-height: 1.7;  
-            margin-bottom: 3rem;  
+            opacity: 0.9;  
+            margin-bottom: 2rem;  
         }  
   
-        .mission-cards {  
+        .mission-values {  
             display: grid;  
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
             gap: 2rem;  
-            margin-top: 4rem;  
+            margin-top: 3rem;  
         }  
   
-        .mission-card {  
+        .value-item {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 15px;  
+            padding: 2rem;  
+            text-align: center;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .value-item:hover {  
+            transform: translateY(-10px);  
+            border-color: #3b82f6;  
+            background: rgba(59, 130, 246, 0.1);  
+        }  
+  
+        .value-icon {  
+            width: 60px;  
+            height: 60px;  
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            margin: 0 auto 1.5rem;  
+            font-size: 1.5rem;  
+            color: #ffffff;  
+        }  
+  
+        .value-item h3 {  
+            font-size: 1.3rem;  
+            font-weight: 700;  
+            margin-bottom: 1rem;  
+            color: #ffd700;  
+        }  
+  
+        /* Team Section */  
+        .team-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(180deg, #16213e 0%, #0f3460 100%);  
+        }  
+  
+        .team-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+            gap: 3rem;  
+            margin-top: 4rem;  
+            max-width: 1000px;  
+            margin: 4rem auto 0;  
+        }  
+  
+        .team-member {  
             background: rgba(255, 255, 255, 0.05);  
             border: 1px solid rgba(255, 255, 255, 0.1);  
             border-radius: 20px;  
@@ -350,77 +319,22 @@
             transition: all 0.3s ease;  
         }  
   
-        .mission-card:hover {  
+        .team-member:hover {  
             transform: translateY(-10px);  
             border-color: #3b82f6;  
             background: rgba(59, 130, 246, 0.1);  
         }  
   
-        .mission-icon {  
-            width: 80px;  
-            height: 80px;  
-            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
-            border-radius: 50%;  
-            display: flex;  
-            align-items: center;  
-            justify-content: center;  
-            margin: 0 auto 1.5rem;  
-            font-size: 2rem;  
-            color: #ffffff;  
-            animation: iconFloat 3s ease-in-out infinite;  
-        }  
-  
-        .mission-card h3 {  
-            font-size: 1.5rem;  
-            font-weight: 700;  
-            margin-bottom: 1rem;  
-        }  
-  
-        .mission-card p {  
-            opacity: 0.9;  
-            line-height: 1.6;  
-        }  
-  
-        /* Team Section */  
-        .team-section {  
-            padding: 6rem 0;  
-            background: linear-gradient(180deg, #0f3460 0%, #1a1a2e 100%);  
-            position: relative;  
-        }  
-  
-        .team-grid {  
-            display: grid;  
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
-            gap: 3rem;  
-            margin-top: 3rem;  
-        }  
-  
-        .team-member {  
-            text-align: center;  
-            transition: all 0.3s ease;  
-        }  
-  
-        .team-member:hover {  
-            transform: translateY(-10px);  
-        }  
-  
-        .member-image {  
-            width: 200px;  
-            height: 200px;  
+        .member-avatar {  
+            width: 120px;  
+            height: 120px;  
             border-radius: 50%;  
             margin: 0 auto 1.5rem;  
             overflow: hidden;  
             border: 4px solid #3b82f6;  
-            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);  
-            transition: all 0.3s ease;  
         }  
   
-        .member-image:hover {  
-            transform: scale(1.05);  
-            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);  
-        }  
-  
-        .member-image img {  
+        .member-avatar img {  
             width: 100%;  
             height: 100%;  
             object-fit: cover;  
@@ -430,31 +344,32 @@
             font-size: 1.5rem;  
             font-weight: 700;  
             margin-bottom: 0.5rem;  
+            color: #ffd700;  
         }  
   
         .member-role {  
+            font-size: 1rem;  
             color: #3b82f6;  
-            font-weight: 600;  
             margin-bottom: 1rem;  
-            text-transform: uppercase;  
-            letter-spacing: 1px;  
+            font-weight: 600;  
         }  
   
         .member-bio {  
-            opacity: 0.9;  
+            font-size: 0.95rem;  
             line-height: 1.6;  
-            margin-bottom: 1.5rem;  
+            opacity: 0.9;  
         }  
   
         .member-social {  
             display: flex;  
             justify-content: center;  
             gap: 1rem;  
+            margin-top: 1.5rem;  
         }  
   
         .member-social a {  
-            width: 40px;  
-            height: 40px;  
+            width: 35px;  
+            height: 35px;  
             background: rgba(255, 255, 255, 0.1);  
             border-radius: 50%;  
             display: flex;  
@@ -467,12 +382,55 @@
   
         .member-social a:hover {  
             background: #3b82f6;  
-            transform: translateY(-3px) rotate(360deg);  
+            transform: translateY(-3px);  
+        }  
+  
+        /* Stats Section */  
+        .stats-section {  
+            padding: 60px 20px;  
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);  
+        }  
+  
+        .stats-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+            gap: 2rem;  
+            text-align: center;  
+            max-width: 800px;  
+            margin: 0 auto;  
+        }  
+  
+        .stat-item {  
+            padding: 2rem;  
+            background: rgba(255, 255, 255, 0.05);  
+            border-radius: 15px;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .stat-item:hover {  
+            transform: translateY(-10px);  
+            background: rgba(59, 130, 246, 0.1);  
+            border: 1px solid rgba(59, 130, 246, 0.3);  
+        }  
+  
+        .stat-number {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            color: #ffd700;  
+            display: block;  
+            margin-bottom: 0.5rem;  
+        }  
+  
+        .stat-label {  
+            font-size: 1rem;  
+            opacity: 0.8;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
         }  
   
         /* CTA Section */  
         .cta-section {  
-            padding: 6rem 0;  
+            padding: 80px 20px;  
             background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
             text-align: center;  
         }  
@@ -506,6 +464,9 @@
             grid-template-columns: 2fr 1fr 1fr 1fr;  
             gap: 2rem;  
             margin-bottom: 3rem;  
+            max-width: 1200px;  
+            margin: 0 auto 3rem;  
+            padding: 0 20px;  
         }  
   
         .footer-logo {  
@@ -590,6 +551,9 @@
             padding-top: 2rem;  
             border-top: 1px solid rgba(255, 255, 255, 0.1);  
             opacity: 0.8;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 2rem 20px 0;  
         }  
   
         /* Buttons */  
@@ -605,6 +569,7 @@
             font-size: 0.9rem;  
             position: relative;  
             overflow: hidden;  
+            margin: 0.5rem;  
         }  
   
         .btn::before {  
@@ -637,12 +602,12 @@
         .btn-secondary {  
             background: transparent;  
             color: #ffffff;  
-            border: 2px solid #ffffff;  
+            border: 2px solid #ffd700;  
         }  
   
         .btn-secondary:hover {  
-            background: #ffffff;  
-            color: #0a0a0a;  
+            background: #ffd700;  
+            color: #000000;  
             transform: translateY(-3px);  
         }  
   
@@ -660,16 +625,18 @@
                 font-size: 2.5rem;  
             }  
   
-            .about-content {  
+            .story-content {  
                 grid-template-columns: 1fr;  
                 gap: 2rem;  
             }  
   
-            .mission-cards {  
-                grid-template-columns: 1fr;  
+            .story-image img {  
+                height: 250px;  
             }  
   
-            .team-grid {  
+            .mission-values,  
+            .team-grid,  
+            .stats-grid {  
                 grid-template-columns: 1fr;  
             }  
   
@@ -678,9 +645,8 @@
                 gap: 2rem;  
             }  
   
-            .about-text h2,  
-            .video-title,  
-            .mission-title,  
+            .story-text h2,  
+            .mission-content h2,  
             .cta-content h2 {  
                 font-size: 2rem;  
             }  
@@ -747,15 +713,6 @@
             }  
         }  
   
-        @keyframes iconFloat {  
-            0%, 100% {  
-                transform: translateY(0);  
-            }  
-            50% {  
-                transform: translateY(-10px);  
-            }  
-        }  
-  
         @keyframes backgroundMove {  
             0%, 100% {  
                 transform: scale(1) translate(0, 0);  
@@ -785,7 +742,7 @@
         }  
   
         .section-header h2 {  
-            font-size: 3.5rem;  
+            font-size: 3rem;  
             font-weight: 900;  
             margin-bottom: 1rem;  
             text-transform: uppercase;  
@@ -797,7 +754,7 @@
         }  
   
         .section-header p {  
-            font-size: 1.3rem;  
+            font-size: 1.2rem;  
             opacity: 0.8;  
             max-width: 600px;  
             margin: 0 auto;  
@@ -822,9 +779,8 @@
             </ul>  
             <div class="nav-social">  
                 <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
-                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>  
-                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>  
-                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>  
+                <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
+                <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
             </div>  
         </div>  
     </nav>  
@@ -834,48 +790,29 @@
         <div class="hero-content">  
             <h1 class="hero-title">About Us</h1>  
             <p class="hero-subtitle">  
-                We're pioneering the future of income generation through AI and automation, empowering entrepreneurs worldwide to achieve financial freedom.  
+                Empowering entrepreneurs worldwide with AI automation systems that transform businesses and create financial freedom  
             </p>  
         </div>  
     </section>  
   
-    <!-- About Story Section -->  
-    <section class="about-story">  
+    <!-- Our Story Section -->  
+    <section class="story-section">  
         <div class="container">  
-            <div class="about-content">  
-                <div class="about-text" data-aos="fade-right">  
+            <div class="story-content">  
+                <div class="story-text" data-aos="fade-right">  
                     <h2>Our Story</h2>  
                     <p>  
-                        Founded in 2023, Digital Income Mastery emerged from a simple yet powerful vision: to democratize AI-powered income generation. Our founder, a former tech executive, discovered the transformative potential of AI automation while building multiple successful businesses.  
+                        Founded in 2023, Digital Income Mastery emerged from a simple observation: traditional business models were broken. Entrepreneurs were working harder than ever, trading time for money in an endless cycle that left little room for growth or personal freedom.  
                     </p>  
                     <p>  
-                        After seeing friends and colleagues struggle with traditional business models, we made it our mission to create accessible, practical training that anyone could use to build automated income streams. Today, we've helped thousands of students worldwide achieve financial independence through AI.  
+                        Our founder, after spending years in the corporate world and building multiple online businesses, discovered the transformative power of AI automation. What started as personal experiments quickly evolved into proven systems that could generate income while you sleep.  
                     </p>  
                     <p>  
-                        Our approach combines cutting-edge technology with proven business strategies, ensuring our students not only learn the tools but understand how to apply them strategically for maximum impact.  
+                        Today, we've helped over 5,000 students worldwide break free from the time-for-money trap and build sustainable, automated businesses that serve them, not the other way around.  
                     </p>  
                 </div>  
-                <div class="about-image" data-aos="fade-left">  
-                    <img src="https://picsum.photos/seed/about-story-image/600/400.jpg" alt="Our Story">  
-                </div>  
-            </div>  
-        </div>  
-    </section>  
-  
-    <!-- Video Section -->  
-    <section class="video-section">  
-        <div class="container">  
-            <div class="video-container" data-aos="fade-up">  
-                <h2 class="video-title">Watch Our Story</h2>  
-                <p class="video-subtitle">  
-                    Discover how we're revolutionizing income generation through AI and automation  
-                </p>  
-                <div class="video-wrapper">  
-                    <div class="video-placeholder">  
-                        <div class="video-play-button" onclick="alert('Video player would launch here. This is a placeholder for your mini video about our journey and mission.')">  
-                            <i class="fas fa-play"></i>  
-                        </div>  
-                    </div>  
+                <div class="story-image" data-aos="fade-left">  
+                    <img src="https://picsum.photos/seed/ai-automation-story/600/400.jpg" alt="Our Story">  
                 </div>  
             </div>  
         </div>  
@@ -884,32 +821,39 @@
     <!-- Mission Section -->  
     <section class="mission-section">  
         <div class="container">  
-            <div class="mission-content">  
-                <h2 class="mission-title text-gradient">Our Mission</h2>  
-                <p class="mission-text">  
-                    We're committed to empowering entrepreneurs with the knowledge and tools to build sustainable, automated income streams using artificial intelligence.  
+            <div class="mission-content" data-aos="fade-up">  
+                <h2>Our Mission</h2>  
+                <p>  
+                    To democratize AI automation and make it accessible to every entrepreneur, regardless of technical background or starting capital. We believe that artificial intelligence should be a tool for empowerment, not exclusion.  
                 </p>  
-                <div class="mission-cards">  
-                    <div class="mission-card" data-aos="fade-up">  
-                        <div class="mission-icon">  
-                            <i class="fas fa-graduation-cap"></i>  
-                        </div>  
-                        <h3>Education</h3>  
-                        <p>Providing comprehensive, accessible training on AI automation and income generation strategies</p>  
-                    </div>  
-                    <div class="mission-card" data-aos="fade-up" data-aos-delay="100">  
-                        <div class="mission-icon">  
-                            <i class="fas fa-users"></i>  
-                        </div>  
-                        <h3>Community</h3>  
-                        <p>Building a supportive network of AI entrepreneurs sharing knowledge and success</p>  
-                    </div>  
-                    <div class="mission-card" data-aos="fade-up" data-aos-delay="200">  
-                        <div class="mission-icon">  
+                <div class="mission-values">  
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="100">  
+                        <div class="value-icon">  
                             <i class="fas fa-lightbulb"></i>  
                         </div>  
                         <h3>Innovation</h3>  
-                        <p>Continuously evolving our curriculum with the latest AI technologies and strategies</p>  
+                        <p>Constantly pushing the boundaries of what's possible with AI automation</p>  
+                    </div>  
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="200">  
+                        <div class="value-icon">  
+                            <i class="fas fa-users"></i>  
+                        </div>  
+                        <h3>Community</h3>  
+                        <p>Building a supportive network of like-minded entrepreneurs</p>  
+                    </div>  
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="300">  
+                        <div class="value-icon">  
+                            <i class="fas fa-chart-line"></i>  
+                        </div>  
+                        <h3>Results</h3>  
+                        <p>Focused on delivering tangible, measurable outcomes for our students</p>  
+                    </div>  
+                    <div class="value-item" data-aos="fade-up" data-aos-delay="400">  
+                        <div class="value-icon">  
+                            <i class="fas fa-globe"></i>  
+                        </div>  
+                        <h3>Accessibility</h3>  
+                        <p>Making advanced AI technology simple and affordable for everyone</p>  
                     </div>  
                 </div>  
             </div>  
@@ -919,52 +863,78 @@
     <!-- Team Section -->  
     <section class="team-section">  
         <div class="container">  
-            <div class="section-header">  
+            <div class="section-header" data-aos="fade-up">  
                 <h2>Meet Our Team</h2>  
-                <p>The experts behind your success</p>  
+                <p>The experts behind Digital Income Mastery</p>  
             </div>  
             <div class="team-grid">  
-                <div class="team-member" data-aos="fade-up">  
-                    <div class="member-image">  
-                        <img src="https://picsum.photos/seed/founder-alex/400/400.jpg" alt="Alex Chen">  
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">  
+                    <div class="member-avatar">  
+                        <img src="https://picsum.photos/seed/founder-alex/200/200.jpg" alt="Alex Chen">  
                     </div>  
                     <h3 class="member-name">Alex Chen</h3>  
                     <p class="member-role">Founder & CEO</p>  
                     <p class="member-bio">  
-                        Former tech executive with 15+ years in AI and automation. Built multiple 7-figure businesses using AI systems.  
+                        Former tech executive turned AI automation expert. Alex has built multiple 7-figure automated businesses and is passionate about helping others achieve financial freedom through technology.  
                     </p>  
                     <div class="member-social">  
-                        <a href="#"><i class="fab fa-linkedin"></i></a>  
-                        <a href="#"><i class="fab fa-twitter"></i></a>  
+                        <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                        <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
                     </div>  
                 </div>  
-                <div class="team-member" data-aos="fade-up" data-aos-delay="100">  
-                    <div class="member-image">  
-                        <img src="https://picsum.photos/seed/ai-expert-sarah/400/400.jpg" alt="Sarah Johnson">  
+  
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">  
+                    <div class="member-avatar">  
+                        <img src="https://picsum.photos/seed/cxo-sarah/200/200.jpg" alt="Sarah Johnson">  
                     </div>  
                     <h3 class="member-name">Sarah Johnson</h3>  
-                    <p class="member-role">AI Strategy Director</p>  
+                    <p class="member-role">Chief Learning Officer</p>  
                     <p class="member-bio">  
-                        PhD in Machine Learning with expertise in practical AI applications for business automation and scaling.  
+                        Educational technology expert with 15+ years of experience in course development. Sarah ensures our curriculum is cutting-edge, practical, and delivers real results.  
                     </p>  
                     <div class="member-social">  
-                        <a href="#"><i class="fab fa-linkedin"></i></a>  
-                        <a href="#"><i class="fab fa-twitter"></i></a>  
+                        <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                        <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
                     </div>  
                 </div>  
-                <div class="team-member" data-aos="fade-up" data-aos-delay="200">  
-                    <div class="member-image">  
-                        <img src="https://picsum.photos/seed/marketing-director-mike/400/400.jpg" alt="Mike Rodriguez">  
+  
+                <div class="team-member" data-aos="fade-up" data-aos-delay="300">  
+                    <div class="member-avatar">  
+                        <img src="https://picsum.photos/seed/tech-lead-mike/200/200.jpg" alt="Mike Rodriguez">  
                     </div>  
                     <h3 class="member-name">Mike Rodriguez</h3>  
-                    <p class="member-role">Marketing Director</p>  
+                    <p class="member-role">Head of Technology</p>  
                     <p class="member-bio">  
-                        Digital marketing expert specializing in AI-powered customer acquisition and retention strategies.  
+                        AI engineer and automation specialist who has worked with Fortune 500 companies. Mike ensures our students have access to the latest and most effective AI tools and systems.  
                     </p>  
                     <div class="member-social">  
-                        <a href="#"><i class="fab fa-linkedin"></i></a>  
-                        <a href="#"><i class="fab fa-twitter"></i></a>  
+                        <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                        <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
                     </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Stats Section -->  
+    <section class="stats-section">  
+        <div class="container">  
+            <div class="stats-grid">  
+                <div class="stat-item" data-aos="fade-up">  
+                    <span class="stat-number">5,000+</span>  
+                    <span class="stat-label">Students</span>  
+                </div>  
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">  
+                    <span class="stat-number">127</span>  
+                    <span class="stat-label">Countries</span>  
+                </div>  
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">  
+                    <span class="stat-number">$2.5M+</span>  
+                    <span class="stat-label">Income Generated</span>  
+                </div>  
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">  
+                    <span class="stat-number">95%</span>  
+                    <span class="stat-label">Success Rate</span>  
                 </div>  
             </div>  
         </div>  
@@ -974,71 +944,65 @@
     <section class="cta-section">  
         <div class="container">  
             <div class="cta-content" data-aos="fade-up">  
-                <h2>Ready to Start Your AI Journey?</h2>  
+                <h2>Join Our Movement</h2>  
                 <p>  
-                    Join thousands of successful entrepreneurs who have transformed their income with our proven AI automation systems.  
+                    Ready to transform your business with AI automation? Join thousands of entrepreneurs who have already taken the leap toward financial freedom.  
                 </p>  
-                <div class="cta-buttons">  
-                    <a href="course.html" class="btn btn-primary">  
-                        Enroll Now  
-                    </a>  
-                    <a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank" class="btn btn-secondary">  
-                        Try Free Module  
-                    </a>  
-                </div>  
+                <a href="https://whop.com/digital-income-mastery-ai-a/digital-income-mastery-ai-a-07" target="_blank" class="btn btn-primary">  
+                    Start Your Journey - $100  
+                </a>  
+                <a href="https://discord.gg/yc2ha9BU" target="_blank" class="btn btn-secondary">  
+                    Join Community  
+                </a>  
             </div>  
         </div>  
     </section>  
   
     <!-- Footer -->  
     <footer class="footer">  
-        <div class="container">  
-            <div class="footer-content">  
-                <div class="footer-section">  
-                    <div class="footer-logo">  
-                        <i class="fas fa-robot"></i>  
-                        <span>Digital Income Mastery</span>  
-                    </div>  
-                    <p>Transform your income with AI-powered automation systems that work while you sleep. Join the revolution of smart entrepreneurs leveraging artificial intelligence for financial freedom.</p>  
-                    <div class="footer-social">  
-                        <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
-                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>  
-                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>  
-                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>  
-                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>  
-                    </div>  
+        <div class="footer-content">  
+            <div class="footer-section">  
+                <div class="footer-logo">  
+                    <i class="fas fa-robot"></i>  
+                    <span>Digital Income Mastery</span>  
                 </div>  
-                <div class="footer-section">  
-                    <h4>Quick Links</h4>  
-                    <ul>  
-                        <li><a href="course.html">Course Overview</a></li>  
-                        <li><a href="testimonials.html">Success Stories</a></li>  
-                        <li><a href="blog.html">Blog</a></li>  
-                        <li><a href="about.html">About Us</a></li>  
-                    </ul>  
-                </div>  
-                <div class="footer-section">  
-                    <h4>Resources</h4>  
-                    <ul>  
-                        <li><a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank">Free Module</a></li>  
-                        <li><a href="#">AI Tools Directory</a></li>  
-                        <li><a href="#">Success Blueprint</a></li>  
-                        <li><a href="#">Community Forum</a></li>  
-                    </ul>  
-                </div>  
-                <div class="footer-section">  
-                    <h4>Support</h4>  
-                    <ul>  
-                        <li><a href="contact.html">Contact Us</a></li>  
-                        <li><a href="#">Help Center</a></li>  
-                        <li><a href="#">Privacy Policy</a></li>  
-                        <li><a href="#">Terms of Service</a></li>  
-                    </ul>  
+                <p>Transform your income with AI-powered automation systems that work while you sleep. Join the revolution of smart entrepreneurs leveraging artificial intelligence for financial freedom.</p>  
+                <div class="footer-social">  
+                    <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                    <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
+                    <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
                 </div>  
             </div>  
-            <div class="footer-bottom">  
-                <p>&copy; 2024 Digital Income Mastery. All rights reserved. | Empowering entrepreneurs through AI automation</p>  
+            <div class="footer-section">  
+                <h4>Quick Links</h4>  
+                <ul>  
+                    <li><a href="index.html">Home</a></li>  
+                    <li><a href="about.html">About Us</a></li>  
+                    <li><a href="course.html">Course Overview</a></li>  
+                    <li><a href="testimonials.html">Success Stories</a></li>  
+                </ul>  
             </div>  
+            <div class="footer-section">  
+                <h4>Resources</h4>  
+                <ul>  
+                    <li><a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank">Free Module</a></li>  
+                    <li><a href="#">AI Tools Directory</a></li>  
+                    <li><a href="#">Success Blueprint</a></li>  
+                    <li><a href="#">Community Forum</a></li>  
+                </ul>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Support</h4>  
+                <ul>  
+                    <li><a href="contact.html">Contact Us</a></li>  
+                    <li><a href="#">Help Center</a></li>  
+                    <li><a href="#">Privacy Policy</a></li>  
+                    <li><a href="#">Terms of Service</a></li>  
+                </ul>  
+            </div>  
+        </div>  
+        <div class="footer-bottom">  
+            <p>&copy; 2024 Digital Income Mastery. All rights reserved. | Empowering entrepreneurs through AI automation</p>  
         </div>  
     </footer>  
   
@@ -1074,6 +1038,25 @@
                         block: 'start'  
                     });  
                 }  
+            });  
+        });  
+  
+        // Team member card hover effect  
+        document.querySelectorAll('.team-member').forEach(member => {  
+            member.addEventListener('mouseenter', function() {  
+                this.style.transform = 'translateY(-10px) scale(1.02)';  
+            });  
+              
+            member.addEventListener('mouseleave', function() {  
+                this.style.transform = 'translateY(0) scale(1)';  
+            });  
+        });  
+  
+        // Value item click interaction  
+        document.querySelectorAll('.value-item').forEach(item => {  
+            item.addEventListener('click', function() {  
+                const title = this.querySelector('h3').textContent;  
+                console.log('Value clicked:', title);  
             });  
         });  
   
