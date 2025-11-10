@@ -1,1 +1,1462 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Course - Digital Income Mastery: AI & Automation</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+    <style>  
+        * {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+        }  
+  
+        body {  
+            font-family: 'Inter', sans-serif;  
+            background-color: #0a0a0a;  
+            color: #ffffff;  
+            overflow-x: hidden;  
+        }  
+  
+        .container {  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 0 20px;  
+        }  
+  
+        /* Navigation */  
+        .navbar {  
+            position: fixed;  
+            top: 0;  
+            width: 100%;  
+            background: rgba(10, 10, 10, 0.95);  
+            backdrop-filter: blur(10px);  
+            z-index: 1000;  
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
+            transition: all 0.3s ease;  
+        }  
+  
+        .nav-container {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            padding: 1rem 2rem;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+        }  
+  
+        .nav-logo {  
+            display: flex;  
+            align-items: center;  
+            gap: 0.5rem;  
+            font-size: 1.5rem;  
+            font-weight: 700;  
+            color: #ffffff;  
+            animation: slideInLeft 1s ease-out;  
+        }  
+  
+        .nav-logo i {  
+            color: #3b82f6;  
+            font-size: 2rem;  
+            animation: pulse 2s infinite;  
+        }  
+  
+        .nav-menu {  
+            display: flex;  
+            list-style: none;  
+            gap: 2rem;  
+        }  
+  
+        .nav-menu a {  
+            color: #ffffff;  
+            text-decoration: none;  
+            font-weight: 500;  
+            transition: all 0.3s ease;  
+            position: relative;  
+        }  
+  
+        .nav-menu a::after {  
+            content: '';  
+            position: absolute;  
+            bottom: -5px;  
+            left: 0;  
+            width: 0;  
+            height: 2px;  
+            background: #3b82f6;  
+            transition: width 0.3s ease;  
+        }  
+  
+        .nav-menu a:hover::after,  
+        .nav-menu a.active::after {  
+            width: 100%;  
+        }  
+  
+        .nav-menu a:hover,  
+        .nav-menu a.active {  
+            color: #3b82f6;  
+        }  
+  
+        .nav-social {  
+            display: flex;  
+            gap: 1rem;  
+        }  
+  
+        .nav-social a {  
+            width: 40px;  
+            height: 40px;  
+            background: rgba(255, 255, 255, 0.1);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #ffffff;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+            animation: fadeInUp 1s ease-out 0.5s both;  
+        }  
+  
+        .nav-social a:hover {  
+            background: #3b82f6;  
+            transform: translateY(-3px) rotate(360deg);  
+        }  
+  
+        /* Hero Section */  
+        .hero {  
+            min-height: 70vh;  
+            position: relative;  
+            display: flex;  
+            align-items: center;  
+            margin-top: 80px;  
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);  
+            overflow: hidden;  
+        }  
+  
+        .hero::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+            right: 0;  
+            bottom: 0;  
+            background: url('https://picsum.photos/seed/ai-course-hero/1920/800.jpg') center/cover;  
+            opacity: 0.1;  
+            animation: backgroundMove 20s ease-in-out infinite;  
+        }  
+  
+        .hero-content {  
+            text-align: center;  
+            max-width: 900px;  
+            margin: 0 auto;  
+            padding: 2rem;  
+            position: relative;  
+            z-index: 1;  
+        }  
+  
+        .hero-title {  
+            font-size: 4rem;  
+            font-weight: 900;  
+            line-height: 1.1;  
+            margin-bottom: 1.5rem;  
+            text-transform: uppercase;  
+            letter-spacing: 3px;  
+            background: linear-gradient(45deg, #ffffff, #3b82f6, #ffd700);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+            animation: titleGlow 3s ease-in-out infinite;  
+        }  
+  
+        .hero-subtitle {  
+            font-size: 1.4rem;  
+            line-height: 1.6;  
+            opacity: 0.9;  
+            margin-bottom: 2rem;  
+            animation: fadeInUp 1s ease-out 0.5s both;  
+        }  
+  
+        .hero-buttons {  
+            display: flex;  
+            gap: 1rem;  
+            justify-content: center;  
+            flex-wrap: wrap;  
+            animation: fadeInUp 1s ease-out 0.7s both;  
+        }  
+  
+        /* Course Overview */  
+        .overview-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%);  
+        }  
+  
+        .overview-content {  
+            display: grid;  
+            grid-template-columns: 1fr 1fr;  
+            gap: 4rem;  
+            align-items: center;  
+            max-width: 1000px;  
+            margin: 0 auto;  
+        }  
+  
+        .overview-text h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 2rem;  
+            color: #3b82f6;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+        }  
+  
+        .overview-text p {  
+            font-size: 1.1rem;  
+            line-height: 1.7;  
+            opacity: 0.9;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .overview-features {  
+            list-style: none;  
+            margin-top: 2rem;  
+        }  
+  
+        .overview-features li {  
+            padding: 0.8rem 0;  
+            display: flex;  
+            align-items: center;  
+            gap: 1rem;  
+            font-size: 1.1rem;  
+        }  
+  
+        .overview-features li i {  
+            color: #ffd700;  
+            font-size: 1.2rem;  
+        }  
+  
+        .overview-image {  
+            position: relative;  
+            border-radius: 20px;  
+            overflow: hidden;  
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);  
+        }  
+  
+        .overview-image img {  
+            width: 100%;  
+            height: 400px;  
+            object-fit: cover;  
+            transition: transform 0.3s ease;  
+        }  
+  
+        .overview-image:hover img {  
+            transform: scale(1.05);  
+        }  
+  
+        /* Course Modules */  
+        .modules-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
+        }  
+  
+        .modules-grid {  
+            display: grid;  
+            gap: 2rem;  
+            margin-top: 4rem;  
+        }  
+  
+        .module-card {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 15px;  
+            padding: 2.5rem;  
+            transition: all 0.3s ease;  
+            cursor: pointer;  
+        }  
+  
+        .module-card:hover {  
+            transform: translateY(-10px);  
+            border-color: #3b82f6;  
+            background: rgba(59, 130, 246, 0.1);  
+        }  
+  
+        .module-header {  
+            display: flex;  
+            align-items: center;  
+            gap: 1.5rem;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .module-number {  
+            width: 60px;  
+            height: 60px;  
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            font-size: 1.5rem;  
+            font-weight: 900;  
+            color: #ffffff;  
+            flex-shrink: 0;  
+        }  
+  
+        .module-title {  
+            flex: 1;  
+        }  
+  
+        .module-title h3 {  
+            font-size: 1.5rem;  
+            font-weight: 800;  
+            margin-bottom: 0.5rem;  
+            color: #ffd700;  
+        }  
+  
+        .module-duration {  
+            font-size: 0.9rem;  
+            opacity: 0.8;  
+            display: flex;  
+            align-items: center;  
+            gap: 0.5rem;  
+        }  
+  
+        .module-duration i {  
+            color: #3b82f6;  
+        }  
+  
+        .module-content {  
+            display: grid;  
+            grid-template-columns: 1fr 1fr;  
+            gap: 1rem;  
+            margin-top: 1.5rem;  
+        }  
+  
+        .lesson-item {  
+            display: flex;  
+            align-items: center;  
+            gap: 0.8rem;  
+            padding: 0.8rem;  
+            background: rgba(255, 255, 255, 0.03);  
+            border-radius: 8px;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .lesson-item:hover {  
+            background: rgba(59, 130, 246, 0.1);  
+        }  
+  
+        .lesson-item i {  
+            color: #3b82f6;  
+            font-size: 0.9rem;  
+        }  
+  
+        .lesson-item span {  
+            font-size: 0.95rem;  
+            opacity: 0.9;  
+        }  
+  
+        /* What You'll Learn */  
+        .learn-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(180deg, #16213e 0%, #0f3460 100%);  
+        }  
+  
+        .learn-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+            gap: 2rem;  
+            margin-top: 4rem;  
+        }  
+  
+        .learn-item {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 15px;  
+            padding: 2rem;  
+            text-align: center;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .learn-item:hover {  
+            transform: translateY(-10px);  
+            border-color: #ffd700;  
+            background: rgba(255, 215, 0, 0.1);  
+        }  
+  
+        .learn-icon {  
+            font-size: 3rem;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .learn-item h3 {  
+            font-size: 1.3rem;  
+            font-weight: 700;  
+            margin-bottom: 1rem;  
+            color: #3b82f6;  
+        }  
+  
+        /* Pricing Section */  
+        .pricing-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);  
+        }  
+  
+        .pricing-content {  
+            max-width: 500px;  
+            margin: 0 auto;  
+        }  
+  
+        .pricing-card {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 2px solid #3b82f6;  
+            border-radius: 20px;  
+            padding: 3rem;  
+            position: relative;  
+            overflow: hidden;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .pricing-card:hover {  
+            transform: translateY(-10px);  
+            box-shadow: 0 25px 60px rgba(59, 130, 246, 0.3);  
+        }  
+  
+        .pricing-card::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+            right: 0;  
+            height: 5px;  
+            background: linear-gradient(90deg, #3b82f6, #ffd700, #3b82f6);  
+            animation: shimmer 3s ease-in-out infinite;  
+        }  
+  
+        .pricing-badge {  
+            position: absolute;  
+            top: 1rem;  
+            right: 1rem;  
+            background: #ffd700;  
+            color: #000000;  
+            padding: 0.3rem 1rem;  
+            border-radius: 20px;  
+            font-size: 0.8rem;  
+            font-weight: 700;  
+            text-transform: uppercase;  
+        }  
+  
+        .pricing-card h3 {  
+            font-size: 2rem;  
+            font-weight: 900;  
+            margin-bottom: 1rem;  
+            color: #ffd700;  
+            text-align: center;  
+        }  
+  
+        .price {  
+            text-align: center;  
+            margin-bottom: 2rem;  
+        }  
+  
+        .price-amount {  
+            font-size: 4rem;  
+            font-weight: 900;  
+            color: #ffffff;  
+            line-height: 1;  
+        }  
+  
+        .price-period {  
+            font-size: 1.2rem;  
+            opacity: 0.8;  
+            margin-top: 0.5rem;  
+        }  
+  
+        .pricing-features {  
+            list-style: none;  
+            margin-bottom: 2rem;  
+        }  
+  
+        .pricing-features li {  
+            padding: 1rem 0;  
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
+            display: flex;  
+            align-items: center;  
+            gap: 1rem;  
+        }  
+  
+        .pricing-features li:last-child {  
+            border-bottom: none;  
+        }  
+  
+        .pricing-features li i {  
+            color: #3b82f6;  
+            font-size: 1.2rem;  
+        }  
+  
+        /* FAQ Section */  
+        .faq-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);  
+        }  
+  
+        .faq-grid {  
+            max-width: 800px;  
+            margin: 4rem auto 0;  
+        }  
+  
+        .faq-item {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 15px;  
+            margin-bottom: 1rem;  
+            overflow: hidden;  
+        }  
+  
+        .faq-question {  
+            padding: 1.5rem;  
+            cursor: pointer;  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .faq-question:hover {  
+            background: rgba(59, 130, 246, 0.1);  
+        }  
+  
+        .faq-question h3 {  
+            font-size: 1.2rem;  
+            font-weight: 600;  
+            color: #ffffff;  
+        }  
+  
+        .faq-question i {  
+            color: #3b82f6;  
+            transition: transform 0.3s ease;  
+        }  
+  
+        .faq-answer {  
+            padding: 0 1.5rem;  
+            max-height: 0;  
+            overflow: hidden;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .faq-answer.active {  
+            padding: 0 1.5rem 1.5rem;  
+            max-height: 500px;  
+        }  
+  
+        .faq-answer p {  
+            padding: 1rem 0;  
+            line-height: 1.7;  
+            opacity: 0.9;  
+        }  
+  
+        .faq-item.active .faq-question i {  
+            transform: rotate(180deg);  
+        }  
+  
+        /* CTA Section */  
+        .cta-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);  
+            text-align: center;  
+        }  
+  
+        .cta-content h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 1.5rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+        }  
+  
+        .cta-content p {  
+            font-size: 1.3rem;  
+            opacity: 0.9;  
+            margin-bottom: 2rem;  
+            max-width: 600px;  
+            margin-left: auto;  
+            margin-right: auto;  
+        }  
+  
+        /* Footer */  
+        .footer {  
+            background: #0a0a0a;  
+            padding: 4rem 0 2rem;  
+            border-top: 1px solid rgba(255, 255, 255, 0.1);  
+        }  
+  
+        .footer-content {  
+            display: grid;  
+            grid-template-columns: 2fr 1fr 1fr 1fr;  
+            gap: 2rem;  
+            margin-bottom: 3rem;  
+            max-width: 1200px;  
+            margin: 0 auto 3rem;  
+            padding: 0 20px;  
+        }  
+  
+        .footer-logo {  
+            display: flex;  
+            align-items: center;  
+            gap: 0.5rem;  
+            font-size: 1.8rem;  
+            font-weight: 700;  
+            color: #ffffff;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .footer-logo i {  
+            color: #3b82f6;  
+            font-size: 2rem;  
+        }  
+  
+        .footer-section p {  
+            opacity: 0.8;  
+            line-height: 1.7;  
+            margin-bottom: 1.5rem;  
+            font-size: 1.1rem;  
+        }  
+  
+        .footer-social {  
+            display: flex;  
+            gap: 1rem;  
+        }  
+  
+        .footer-social a {  
+            width: 45px;  
+            height: 45px;  
+            background: rgba(255, 255, 255, 0.1);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #ffffff;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .footer-social a:hover {  
+            background: #3b82f6;  
+            transform: translateY(-3px) rotate(360deg);  
+        }  
+  
+        .footer-section h4 {  
+            font-size: 1.3rem;  
+            font-weight: 700;  
+            margin-bottom: 1.5rem;  
+            color: #ffffff;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+        }  
+  
+        .footer-section ul {  
+            list-style: none;  
+        }  
+  
+        .footer-section ul li {  
+            margin-bottom: 0.8rem;  
+        }  
+  
+        .footer-section ul li a {  
+            color: #ffffff;  
+            opacity: 0.8;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+            font-size: 1rem;  
+        }  
+  
+        .footer-section ul li a:hover {  
+            opacity: 1;  
+            color: #3b82f6;  
+            transform: translateX(5px);  
+            display: inline-block;  
+        }  
+  
+        .footer-bottom {  
+            text-align: center;  
+            padding-top: 2rem;  
+            border-top: 1px solid rgba(255, 255, 255, 0.1);  
+            opacity: 0.8;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 2rem 20px 0;  
+        }  
+  
+        /* Buttons */  
+        .btn {  
+            display: inline-block;  
+            padding: 1.2rem 2.5rem;  
+            text-decoration: none;  
+            font-weight: 700;  
+            border-radius: 50px;  
+            transition: all 0.3s ease;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+            font-size: 0.9rem;  
+            position: relative;  
+            overflow: hidden;  
+            margin: 0.5rem;  
+        }  
+  
+        .btn::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: -100%;  
+            width: 100%;  
+            height: 100%;  
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);  
+            transition: left 0.5s;  
+        }  
+  
+        .btn:hover::before {  
+            left: 100%;  
+        }  
+  
+        .btn-primary {  
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
+            color: #ffffff;  
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);  
+            animation: pulse 2s infinite;  
+        }  
+  
+        .btn-primary:hover {  
+            transform: translateY(-3px);  
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.6);  
+        }  
+  
+        .btn-secondary {  
+            background: transparent;  
+            color: #ffffff;  
+            border: 2px solid #ffd700;  
+        }  
+  
+        .btn-secondary:hover {  
+            background: #ffd700;  
+            color: #000000;  
+            transform: translateY(-3px);  
+        }  
+  
+        /* Responsive Design */  
+        @media (max-width: 768px) {  
+            .nav-menu {  
+                display: none;  
+            }  
+  
+            .nav-social {  
+                display: none;  
+            }  
+  
+            .hero-title {  
+                font-size: 2.5rem;  
+            }  
+  
+            .hero-subtitle {  
+                font-size: 1.1rem;  
+            }  
+  
+            .hero-buttons {  
+                flex-direction: column;  
+                align-items: center;  
+            }  
+  
+            .overview-content {  
+                grid-template-columns: 1fr;  
+                gap: 2rem;  
+            }  
+  
+            .overview-image img {  
+                height: 250px;  
+            }  
+  
+            .module-content {  
+                grid-template-columns: 1fr;  
+            }  
+  
+            .learn-grid {  
+                grid-template-columns: 1fr;  
+            }  
+  
+            .footer-content {  
+                grid-template-columns: 1fr;  
+                gap: 2rem;  
+            }  
+  
+            .overview-text h2,  
+            .pricing-content h2,  
+            .cta-content h2 {  
+                font-size: 2rem;  
+            }  
+  
+            .price-amount {  
+                font-size: 3rem;  
+            }  
+        }  
+  
+        /* Animations */  
+        @keyframes fadeIn {  
+            from {  
+                opacity: 0;  
+            }  
+            to {  
+                opacity: 1;  
+            }  
+        }  
+  
+        @keyframes fadeInUp {  
+            from {  
+                opacity: 0;  
+                transform: translateY(30px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateY(0);  
+            }  
+        }  
+  
+        @keyframes slideInLeft {  
+            from {  
+                opacity: 0;  
+                transform: translateX(-50px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateX(0);  
+            }  
+        }  
+  
+        @keyframes slideInRight {  
+            from {  
+                opacity: 0;  
+                transform: translateX(50px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateX(0);  
+            }  
+        }  
+  
+        @keyframes pulse {  
+            0%, 100% {  
+                transform: scale(1);  
+            }  
+            50% {  
+                transform: scale(1.05);  
+            }  
+        }  
+  
+        @keyframes titleGlow {  
+            0%, 100% {  
+                filter: brightness(1);  
+            }  
+            50% {  
+                filter: brightness(1.2);  
+            }  
+        }  
+  
+        @keyframes backgroundMove {  
+            0%, 100% {  
+                transform: scale(1) translate(0, 0);  
+            }  
+            50% {  
+                transform: scale(1.1) translate(-5%, -5%);  
+            }  
+        }  
+  
+        @keyframes shimmer {  
+            0%, 100% {  
+                transform: translateX(-100%);  
+            }  
+            50% {  
+                transform: translateX(100%);  
+            }  
+        }  
+  
+        /* Utility Classes */  
+        .text-gradient {  
+            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+  
+        .glass-effect {  
+            background: rgba(255, 255, 255, 0.05);  
+            backdrop-filter: blur(10px);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+        }  
+  
+        .section-header {  
+            text-align: center;  
+            margin-bottom: 4rem;  
+        }  
+  
+        .section-header h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 1rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+  
+        .section-header p {  
+            font-size: 1.2rem;  
+            opacity: 0.8;  
+            max-width: 600px;  
+            margin: 0 auto;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <!-- Navigation -->  
+    <nav class="navbar">  
+        <div class="nav-container">  
+            <div class="nav-logo">  
+                <i class="fas fa-robot"></i>  
+                <span>Digital Income Mastery</span>  
+            </div>  
+            <ul class="nav-menu">  
+                <li><a href="index.html">Home</a></li>  
+                <li><a href="about.html">About Us</a></li>  
+                <li><a href="course.html" class="active">Course</a></li>  
+                <li><a href="testimonials.html">Success Stories</a></li>  
+                <li><a href="blog.html">Blog</a></li>  
+                <li><a href="contact.html">Contact</a></li>  
+            </ul>  
+            <div class="nav-social">  
+                <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
+                <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
+            </div>  
+        </div>  
+    </nav>  
+  
+    <!-- Hero Section -->  
+    <section class="hero">  
+        <div class="hero-content">  
+            <h1 class="hero-title">Course Curriculum</h1>  
+            <p class="hero-subtitle">  
+                Master AI automation and build systems that generate income while you sleep. Complete step-by-step training for entrepreneurs ready to scale.  
+            </p>  
+            <div class="hero-buttons">  
+                <a href="https://whop.com/digital-income-mastery-ai-a/digital-income-mastery-ai-a-07" target="_blank" class="btn btn-primary">  
+                    Enroll Now - $100  
+                </a>  
+                <a href="#modules" class="btn btn-secondary">  
+                    View Modules  
+                </a>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Course Overview -->  
+    <section class="overview-section">  
+        <div class="container">  
+            <div class="overview-content">  
+                <div class="overview-text" data-aos="fade-right">  
+                    <h2>What You'll Get</h2>  
+                    <p>  
+                        Our comprehensive AI automation course gives you everything you need to transform your business and achieve financial freedom through artificial intelligence.  
+                    </p>  
+                    <ul class="overview-features">  
+                        <li><i class="fas fa-check-circle"></i> Complete AI automation systems</li>  
+                        <li><i class="fas fa-check-circle"></i> Step-by-step video training</li>  
+                        <li><i class="fas fa-check-circle"></i> AI tool stack recommendations</li>  
+                        <li><i class="fas fa-check-circle"></i> Lifetime community access</li>  
+                        <li><i class="fas fa-check-circle"></i> Regular course updates</li>  
+                        <li><i class="fas fa-check-circle"></i> Downloadable resources</li>  
+                    </ul>  
+                </div>  
+                <div class="overview-image" data-aos="fade-left">  
+                    <img src="https://picsum.photos/seed/ai-course-overview/600/400.jpg" alt="Course Overview">  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Course Modules -->  
+    <section class="modules-section" id="modules">  
+        <div class="container">  
+            <div class="section-header" data-aos="fade-up">  
+                <h2>Course Modules</h2>  
+                <p>6 comprehensive modules covering everything you need to master AI automation</p>  
+            </div>  
+            <div class="modules-grid">  
+                <div class="module-card" data-aos="fade-up">  
+                    <div class="module-header">  
+                        <div class="module-number">1</div>  
+                        <div class="module-title">  
+                            <h3>AI Mindset Foundation</h3>  
+                            <div class="module-duration">  
+                                <i class="fas fa-clock"></i>  
+                                <span>2 hours</span>  
+                            </div>  
+                        </div>  
+                    </div>  
+                    <div class="module-content">  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Introduction to AI Automation</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>The Global Opportunity Mindset</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Setting Financial Goals</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Overcoming Technical Barriers</span>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="module-card" data-aos="fade-up" data-aos-delay="100">  
+                    <div class="module-header">  
+                        <div class="module-number">2</div>  
+                        <div class="module-title">  
+                            <h3>E-commerce Store Automation</h3>  
+                            <div class="module-duration">  
+                                <i class="fas fa-clock"></i>  
+                                <span>3 hours</span>  
+                            </div>  
+                        </div>  
+                    </div>  
+                    <div class="module-content">  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>AI Store Builders</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Automated Product Sourcing</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>AI-Powered Store Design</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Legal Compliance Setup</span>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="module-card" data-aos="fade-up" data-aos-delay="200">  
+                    <div class="module-header">  
+                        <div class="module-number">3</div>  
+                        <div class="module-title">  
+                            <h3>AI Product Research & Selection</h3>  
+                            <div class="module-duration">  
+                                <i class="fas fa-clock"></i>  
+                                <span>2.5 hours</span>  
+                            </div>  
+                        </div>  
+                    </div>  
+                    <div class="module-content">  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Trend Prediction AI</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Competitor Analysis Tools</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Pricing Optimization</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Product Description Generation</span>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="module-card" data-aos="fade-up" data-aos-delay="300">  
+                    <div class="module-header">  
+                        <div class="module-number">4</div>  
+                        <div class="module-title">  
+                            <h3>AI Inventory & Supply Chain</h3>  
+                            <div class="module-duration">  
+                                <i class="fas fa-clock"></i>  
+                                <span>2 hours</span>  
+                            </div>  
+                        </div>  
+                    </div>  
+                    <div class="module-content">  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Automated Inventory Management</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Supplier Relationship AI</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Shipping Optimization</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Demand Forecasting</span>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="module-card" data-aos="fade-up" data-aos-delay="400">  
+                    <div class="module-header">  
+                        <div class="module-number">5</div>  
+                        <div class="module-title">  
+                            <h3>AI Marketing & Customer Acquisition</h3>  
+                            <div class="module-duration">  
+                                <i class="fas fa-clock"></i>  
+                                <span>3 hours</span>  
+                            </div>  
+                        </div>  
+                    </div>  
+                    <div class="module-content">  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>AI Ad Creation</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Target Audience Optimization</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Email Marketing Automation</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Social Media Content AI</span>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="module-card" data-aos="fade-up" data-aos-delay="500">  
+                    <div class="module-header">  
+                        <div class="module-number">6</div>  
+                        <div class="module-title">  
+                            <h3>Advanced AI Integration</h3>  
+                            <div class="module-duration">  
+                                <i class="fas fa-clock"></i>  
+                                <span>2.5 hours</span>  
+                            </div>  
+                        </div>  
+                    </div>  
+                    <div class="module-content">  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Multi-Channel Expansion</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>International Scaling</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Advanced Analytics & ROI</span>  
+                        </div>  
+                        <div class="lesson-item">  
+                            <i class="fas fa-play-circle"></i>  
+                            <span>Future-Proofing Your Business</span>  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- What You'll Learn -->  
+    <section class="learn-section">  
+        <div class="container">  
+            <div class="section-header" data-aos="fade-up">  
+                <h2>What You'll Master</h2>  
+                <p>Essential skills for building automated income streams</p>  
+            </div>  
+            <div class="learn-grid">  
+                <div class="learn-item" data-aos="fade-up" data-aos-delay="100">  
+                    <div class="learn-icon">🤖</div>  
+                    <h3>AI Tool Mastery</h3>  
+                    <p>Learn to use cutting-edge AI tools for business automation and income generation</p>  
+                </div>  
+                <div class="learn-item" data-aos="fade-up" data-aos-delay="200">  
+                    <div class="learn-icon">💰</div>  
+                    <h3>Passive Income Systems</h3>  
+                    <p>Build automated systems that generate income 24/7 without constant oversight</p>  
+                </div>  
+                <div class="learn-item" data-aos="fade-up" data-aos-delay="300">  
+                    <div class="learn-icon">📈</div>  
+                    <h3>Business Scaling</h3>  
+                    <p>Scale your business exponentially while working fewer hours</p>  
+                </div>  
+                <div class="learn-item" data-aos="fade-up" data-aos-delay="400">  
+                    <div class="learn-icon">🌍</div>  
+                    <h3>Global Markets</h3>  
+                    <p>Tap into international markets and earn in stronger currencies</p>  
+                </div>  
+                <div class="learn-item" data-aos="fade-up" data-aos-delay="500">  
+                    <div class="learn-icon">⚡</div>  
+                    <h3>Time Freedom</h3>  
+                    <p>Reclaim your time and focus on high-value activities you love</p>  
+                </div>  
+                <div class="learn-item" data-aos="fade-up" data-aos-delay="600">  
+                    <div class="learn-icon">🚀</div>  
+                    <h3>Future-Proof Skills</h3>  
+                    <p>Develop skills that will be valuable for decades to come</p>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Pricing Section -->  
+    <section class="pricing-section">  
+        <div class="container">  
+            <div class="section-header" data-aos="fade-up">  
+                <h2>Investment</h2>  
+                <p>One-time payment for lifetime access</p>  
+            </div>  
+            <div class="pricing-content" data-aos="fade-up" data-aos-delay="100">  
+                <div class="pricing-card">  
+                    <div class="pricing-badge">Limited Time</div>  
+                    <h3>Digital Income Mastery</h3>  
+                    <div class="price">  
+                        <div class="price-amount">$100</div>  
+                        <div class="price-period">One-time payment</div>  
+                    </div>  
+                    <ul class="pricing-features">  
+                        <li><i class="fas fa-check"></i> Complete 6-module course</li>  
+                        <li><i class="fas fa-check"></i> 15+ hours of video training</li>  
+                        <li><i class="fas fa-check"></i> AI tool stack guide</li>  
+                        <li><i class="fas fa-check"></i> Lifetime community access</li>  
+                        <li><i class="fas fa-check"></i> Downloadable templates</li>  
+                        <li><i class="fas fa-check"></i> Regular course updates</li>  
+                        <li><i class="fas fa-check"></i> Priority support</li>  
+                    </ul>  
+                    <a href="https://whop.com/digital-income-mastery-ai-a/digital-income-mastery-ai-a-07" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;">  
+                        Get Instant Access  
+                    </a>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- FAQ Section -->  
+    <section class="faq-section">  
+        <div class="container">  
+            <div class="section-header" data-aos="fade-up">  
+                <h2>Frequently Asked Questions</h2>  
+                <p>Everything you need to know about the course</p>  
+            </div>  
+            <div class="faq-grid">  
+                <div class="faq-item" data-aos="fade-up">  
+                    <div class="faq-question">  
+                        <h3>Do I need technical skills to take this course?</h3>  
+                        <i class="fas fa-chevron-down"></i>  
+                    </div>  
+                    <div class="faq-answer">  
+                        <p>No technical skills required! We designed this course for complete beginners. We'll guide you step-by-step through every process, assuming no prior knowledge of AI or automation.</p>  
+                    </div>  
+                </div>  
+  
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">  
+                    <div class="faq-question">  
+                        <h3>How long do I have access to the course?</h3>  
+                        <i class="fas fa-chevron-down"></i>  
+                    </div>  
+                    <div class="faq-answer">  
+                        <p>You get lifetime access to all course materials, including all future updates. Once you enroll, the course is yours forever, with no recurring fees or subscription costs.</p>  
+                    </div>  
+                </div>  
+  
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">  
+                    <div class="faq-question">  
+                        <h3>What AI tools are included in the course?</h3>  
+                        <i class="fas fa-chevron-down"></i>  
+                    </div>  
+                    <div class="faq-answer">  
+                        <p>We cover a comprehensive range of AI tools including ChatGPT, AI marketing platforms, automation software, analytics tools, and more. We provide recommendations for both free and paid options to fit any budget.</p>  
+                    </div>  
+                </div>  
+  
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">  
+                    <div class="faq-question">  
+                        <h3>How quickly can I expect results?</h3>  
+                        <i class="fas fa-chevron-down"></i>  
+                    </div>  
+                    <div class="faq-answer">  
+                        <p>Most students see their first automated systems working within 30 days. Significant income results typically appear between 60-90 days as you implement and optimize the systems.</p>  
+                    </div>  
+                </div>  
+  
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="400">  
+                    <div class="faq-question">  
+                        <h3>Is there a money-back guarantee?</h3>  
+                        <i class="fas fa-chevron-down"></i>  
+                    </div>  
+                    <div class="faq-answer">  
+                        <p>Yes! We offer a 30-day money-back guarantee. If you're not satisfied with the course for any reason, simply contact us within 30 days of purchase for a full refund.</p>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- CTA Section -->  
+    <section class="cta-section">  
+        <div class="container">  
+            <div class="cta-content" data-aos="fade-up">  
+                <h2>Ready to Transform Your Income?</h2>  
+                <p>  
+                    Join thousands of entrepreneurs who have already started their AI automation journey. Your future self will thank you for taking this step today.  
+                </p>  
+                <a href="https://whop.com/digital-income-mastery-ai-a/digital-income-mastery-ai-a-07" target="_blank" class="btn btn-primary">  
+                    Enroll Now - $100  
+                </a>  
+                <a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank" class="btn btn-secondary">  
+                    Try Free Module  
+                </a>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Footer -->  
+    <footer class="footer">  
+        <div class="footer-content">  
+            <div class="footer-section">  
+                <div class="footer-logo">  
+                    <i class="fas fa-robot"></i>  
+                    <span>Digital Income Mastery</span>  
+                </div>  
+                <p>Transform your income with AI-powered automation systems that work while you sleep. Join the revolution of smart entrepreneurs leveraging artificial intelligence for financial freedom.</p>  
+                <div class="footer-social">  
+                    <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                    <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
+                    <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
+                </div>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Quick Links</h4>  
+                <ul>  
+                    <li><a href="index.html">Home</a></li>  
+                    <li><a href="about.html">About Us</a></li>  
+                    <li><a href="course.html">Course Overview</a></li>  
+                    <li><a href="testimonials.html">Success Stories</a></li>  
+                </ul>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Resources</h4>  
+                <ul>  
+                    <li><a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank">Free Module</a></li>  
+                    <li><a href="#">AI Tools Directory</a></li>  
+                    <li><a href="#">Success Blueprint</a></li>  
+                    <li><a href="#">Community Forum</a></li>  
+                </ul>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Support</h4>  
+                <ul>  
+                    <li><a href="contact.html">Contact Us</a></li>  
+                    <li><a href="#">Help Center</a></li>  
+                    <li><a href="#">Privacy Policy</a></li>  
+                    <li><a href="#">Terms of Service</a></li>  
+                </ul>  
+            </div>  
+        </div>  
+        <div class="footer-bottom">  
+            <p>&copy; 2024 Digital Income Mastery. All rights reserved. | Empowering entrepreneurs through AI automation</p>  
+        </div>  
+    </footer>  
+  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+    <script>  
+        // Initialize AOS (Animate On Scroll)  
+        AOS.init({  
+            duration: 1000,  
+            once: true,  
+            offset: 100  
+        });  
+  
+        // Navbar scroll effect  
+        window.addEventListener('scroll', function() {  
+            const navbar = document.querySelector('.navbar');  
+            if (window.scrollY > 100) {  
+                navbar.style.background = 'rgba(10, 10, 10, 0.98)';  
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';  
+            } else {  
+                navbar.style.background = 'rgba(10, 10, 10, 0.95)';  
+                navbar.style.boxShadow = 'none';  
+            }  
+        });  
+  
+        // Smooth scrolling for navigation links  
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {  
+            anchor.addEventListener('click', function (e) {  
+                e.preventDefault();  
+                const target = document.querySelector(this.getAttribute('href'));  
+                if (target) {  
+                    target.scrollIntoView({  
+                        behavior: 'smooth',  
+                        block: 'start'  
+                    });  
+                }  
+            });  
+        });  
+  
+        // FAQ accordion functionality  
+        document.querySelectorAll('.faq-question').forEach(question => {  
+            question.addEventListener('click', function() {  
+                const faqItem = this.parentElement;  
+                const answer = faqItem.querySelector('.faq-answer');  
+                const allItems = document.querySelectorAll('.faq-item');  
+                  
+                // Close all other FAQ items  
+                allItems.forEach(item => {  
+                    if (item !== faqItem) {  
+                        item.classList.remove('active');  
+                        item.querySelector('.faq-answer').classList.remove('active');  
+                    }  
+                });  
+                  
+                // Toggle current FAQ item  
+                faqItem.classList.toggle('active');  
+                answer.classList.toggle('active');  
+            });  
+        });  
+  
+        // Module card interaction  
+        document.querySelectorAll('.module-card').forEach(card => {  
+            card.addEventListener('click', function() {  
+                const moduleNumber = this.querySelector('.module-number').textContent;  
+                const moduleName = this.querySelector('h3').textContent;  
+                console.log('Module clicked:', moduleNumber, moduleName);  
+            });  
+        });  
+  
+        // Learn item interaction  
+        document.querySelectorAll('.learn-item').forEach(item => {  
+            item.addEventListener('click', function() {  
+                const skill = this.querySelector('h3').textContent;  
+                console.log('Skill clicked:', skill);  
+            });  
+        });  
+  
+        // Add loading animation  
+        window.addEventListener('load', function() {  
+            document.body.classList.add('loaded');  
+        });  
+    </script>  
+</body>  
+</html>  
 
