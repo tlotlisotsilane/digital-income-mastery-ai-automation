@@ -1,0 +1,1244 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Success Stories - Digital Income Mastery: AI & Automation</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+    <style>  
+        * {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+        }  
+  
+        body {  
+            font-family: 'Inter', sans-serif;  
+            background-color: #0a0a0a;  
+            color: #ffffff;  
+            overflow-x: hidden;  
+        }  
+  
+        .container {  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 0 20px;  
+        }  
+  
+        /* Navigation */  
+        .navbar {  
+            position: fixed;  
+            top: 0;  
+            width: 100%;  
+            background: rgba(10, 10, 10, 0.95);  
+            backdrop-filter: blur(10px);  
+            z-index: 1000;  
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
+            transition: all 0.3s ease;  
+        }  
+  
+        .nav-container {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            padding: 1rem 2rem;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+        }  
+  
+        .nav-logo {  
+            display: flex;  
+            align-items: center;  
+            gap: 0.5rem;  
+            font-size: 1.5rem;  
+            font-weight: 700;  
+            color: #ffffff;  
+            animation: slideInLeft 1s ease-out;  
+        }  
+  
+        .nav-logo i {  
+            color: #3b82f6;  
+            font-size: 2rem;  
+            animation: pulse 2s infinite;  
+        }  
+  
+        .nav-menu {  
+            display: flex;  
+            list-style: none;  
+            gap: 2rem;  
+        }  
+  
+        .nav-menu a {  
+            color: #ffffff;  
+            text-decoration: none;  
+            font-weight: 500;  
+            transition: all 0.3s ease;  
+            position: relative;  
+        }  
+  
+        .nav-menu a::after {  
+            content: '';  
+            position: absolute;  
+            bottom: -5px;  
+            left: 0;  
+            width: 0;  
+            height: 2px;  
+            background: #3b82f6;  
+            transition: width 0.3s ease;  
+        }  
+  
+        .nav-menu a:hover::after,  
+        .nav-menu a.active::after {  
+            width: 100%;  
+        }  
+  
+        .nav-menu a:hover,  
+        .nav-menu a.active {  
+            color: #3b82f6;  
+        }  
+  
+        .nav-social {  
+            display: flex;  
+            gap: 1rem;  
+        }  
+  
+        .nav-social a {  
+            width: 40px;  
+            height: 40px;  
+            background: rgba(255, 255, 255, 0.1);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #ffffff;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+            animation: fadeInUp 1s ease-out 0.5s both;  
+        }  
+  
+        .nav-social a:hover {  
+            background: #3b82f6;  
+            transform: translateY(-3px) rotate(360deg);  
+        }  
+  
+        /* Hero Section */  
+        .hero {  
+            min-height: 60vh;  
+            position: relative;  
+            display: flex;  
+            align-items: center;  
+            margin-top: 80px;  
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);  
+            overflow: hidden;  
+        }  
+  
+        .hero::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+            right: 0;  
+            bottom: 0;  
+            background: url('https://picsum.photos/seed/success-stories-hero/1920/800.jpg') center/cover;  
+            opacity: 0.1;  
+            animation: backgroundMove 20s ease-in-out infinite;  
+        }  
+  
+        .hero-content {  
+            text-align: center;  
+            max-width: 900px;  
+            margin: 0 auto;  
+            padding: 2rem;  
+            position: relative;  
+            z-index: 1;  
+        }  
+  
+        .hero-title {  
+            font-size: 4rem;  
+            font-weight: 900;  
+            line-height: 1.1;  
+            margin-bottom: 1.5rem;  
+            text-transform: uppercase;  
+            letter-spacing: 3px;  
+            background: linear-gradient(45deg, #ffffff, #3b82f6, #ffd700);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+            animation: titleGlow 3s ease-in-out infinite;  
+        }  
+  
+        .hero-subtitle {  
+            font-size: 1.4rem;  
+            line-height: 1.6;  
+            opacity: 0.9;  
+            animation: fadeInUp 1s ease-out 0.5s both;  
+        }  
+  
+        /* Stats Section */  
+        .stats-section {  
+            padding: 60px 20px;  
+            background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%);  
+        }  
+  
+        .stats-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+            gap: 2rem;  
+            text-align: center;  
+            max-width: 800px;  
+            margin: 0 auto;  
+        }  
+  
+        .stat-item {  
+            padding: 2rem;  
+            background: rgba(255, 255, 255, 0.05);  
+            border-radius: 15px;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .stat-item:hover {  
+            transform: translateY(-10px);  
+            background: rgba(59, 130, 246, 0.1);  
+            border: 1px solid rgba(59, 130, 246, 0.3);  
+        }  
+  
+        .stat-number {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            color: #ffd700;  
+            display: block;  
+            margin-bottom: 0.5rem;  
+        }  
+  
+        .stat-label {  
+            font-size: 1rem;  
+            opacity: 0.8;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+        }  
+  
+        /* Testimonials Section */  
+        .testimonials-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
+        }  
+  
+        .testimonials-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));  
+            gap: 3rem;  
+            margin-top: 4rem;  
+        }  
+  
+        .testimonial-card {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 20px;  
+            padding: 2.5rem;  
+            transition: all 0.3s ease;  
+            position: relative;  
+        }  
+  
+        .testimonial-card:hover {  
+            transform: translateY(-10px);  
+            border-color: #3b82f6;  
+            background: rgba(59, 130, 246, 0.1);  
+            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.2);  
+        }  
+  
+        .quote-icon {  
+            position: absolute;  
+            top: 1rem;  
+            right: 1rem;  
+            font-size: 2rem;  
+            color: rgba(255, 215, 0, 0.3);  
+        }  
+  
+        .testimonial-content {  
+            font-size: 1.1rem;  
+            line-height: 1.7;  
+            opacity: 0.9;  
+            margin-bottom: 2rem;  
+            font-style: italic;  
+        }  
+  
+        .testimonial-author {  
+            display: flex;  
+            align-items: center;  
+            gap: 1rem;  
+        }  
+  
+        .author-avatar {  
+            width: 60px;  
+            height: 60px;  
+            border-radius: 50%;  
+            overflow: hidden;  
+            flex-shrink: 0;  
+        }  
+  
+        .author-avatar img {  
+            width: 100%;  
+            height: 100%;  
+            object-fit: cover;  
+        }  
+  
+        .author-info h4 {  
+            font-size: 1.2rem;  
+            font-weight: 700;  
+            margin-bottom: 0.3rem;  
+            color: #ffd700;  
+        }  
+  
+        .author-info p {  
+            font-size: 0.95rem;  
+            opacity: 0.8;  
+        }  
+  
+        .result-badge {  
+            position: absolute;  
+            top: -1rem;  
+            left: 2rem;  
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
+            color: #ffffff;  
+            padding: 0.5rem 1rem;  
+            border-radius: 20px;  
+            font-size: 0.8rem;  
+            font-weight: 700;  
+            text-transform: uppercase;  
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);  
+        }  
+  
+        /* Video Testimonials Section */  
+        .video-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(180deg, #16213e 0%, #0f3460 100%);  
+        }  
+  
+        .video-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+            gap: 2rem;  
+            margin-top: 4rem;  
+        }  
+  
+        .video-card {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 15px;  
+            overflow: hidden;  
+            transition: all 0.3s ease;  
+            cursor: pointer;  
+        }  
+  
+        .video-card:hover {  
+            transform: translateY(-10px);  
+            border-color: #ffd700;  
+            box-shadow: 0 20px 50px rgba(255, 215, 0, 0.2);  
+        }  
+  
+        .video-thumbnail {  
+            position: relative;  
+            height: 200px;  
+            overflow: hidden;  
+        }  
+  
+        .video-thumbnail img {  
+            width: 100%;  
+            height: 100%;  
+            object-fit: cover;  
+            transition: transform 0.3s ease;  
+        }  
+  
+        .video-card:hover .video-thumbnail img {  
+            transform: scale(1.05);  
+        }  
+  
+        .play-button {  
+            position: absolute;  
+            top: 50%;  
+            left: 50%;  
+            transform: translate(-50%, -50%);  
+            width: 60px;  
+            height: 60px;  
+            background: rgba(255, 255, 255, 0.9);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #000000;  
+            font-size: 1.5rem;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .video-card:hover .play-button {  
+            transform: translate(-50%, -50%) scale(1.1);  
+            background: #ffd700;  
+        }  
+  
+        .video-info {  
+            padding: 1.5rem;  
+        }  
+  
+        .video-info h3 {  
+            font-size: 1.2rem;  
+            font-weight: 700;  
+            margin-bottom: 0.5rem;  
+            color: #ffffff;  
+        }  
+  
+        .video-info p {  
+            font-size: 0.95rem;  
+            opacity: 0.8;  
+        }  
+  
+        /* Featured Story Section */  
+        .featured-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);  
+        }  
+  
+        .featured-content {  
+            display: grid;  
+            grid-template-columns: 1fr 1fr;  
+            gap: 4rem;  
+            align-items: center;  
+            max-width: 1000px;  
+            margin: 0 auto;  
+        }  
+  
+        .featured-text h2 {  
+            font-size: 2.5rem;  
+            font-weight: 900;  
+            margin-bottom: 2rem;  
+            color: #ffd700;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+        }  
+  
+        .featured-text p {  
+            font-size: 1.1rem;  
+            line-height: 1.7;  
+            opacity: 0.9;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .featured-stats {  
+            display: grid;  
+            grid-template-columns: repeat(2, 1fr);  
+            gap: 1rem;  
+            margin: 2rem 0;  
+        }  
+  
+        .featured-stat {  
+            background: rgba(255, 255, 255, 0.05);  
+            padding: 1rem;  
+            border-radius: 10px;  
+            text-align: center;  
+        }  
+  
+        .featured-stat h4 {  
+            font-size: 1.5rem;  
+            font-weight: 900;  
+            color: #3b82f6;  
+            margin-bottom: 0.3rem;  
+        }  
+  
+        .featured-stat p {  
+            font-size: 0.9rem;  
+            opacity: 0.8;  
+            margin: 0;  
+        }  
+  
+        .featured-image {  
+            position: relative;  
+            border-radius: 20px;  
+            overflow: hidden;  
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);  
+        }  
+  
+        .featured-image img {  
+            width: 100%;  
+            height: 400px;  
+            object-fit: cover;  
+            transition: transform 0.3s ease;  
+        }  
+  
+        .featured-image:hover img {  
+            transform: scale(1.05);  
+        }  
+  
+        /* CTA Section */  
+        .cta-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);  
+            text-align: center;  
+        }  
+  
+        .cta-content h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 1.5rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+        }  
+  
+        .cta-content p {  
+            font-size: 1.3rem;  
+            opacity: 0.9;  
+            margin-bottom: 2rem;  
+            max-width: 600px;  
+            margin-left: auto;  
+            margin-right: auto;  
+        }  
+  
+        /* Footer */  
+        .footer {  
+            background: #0a0a0a;  
+            padding: 4rem 0 2rem;  
+            border-top: 1px solid rgba(255, 255, 255, 0.1);  
+        }  
+  
+        .footer-content {  
+            display: grid;  
+            grid-template-columns: 2fr 1fr 1fr 1fr;  
+            gap: 2rem;  
+            margin-bottom: 3rem;  
+            max-width: 1200px;  
+            margin: 0 auto 3rem;  
+            padding: 0 20px;  
+        }  
+  
+        .footer-logo {  
+            display: flex;  
+            align-items: center;  
+            gap: 0.5rem;  
+            font-size: 1.8rem;  
+            font-weight: 700;  
+            color: #ffffff;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .footer-logo i {  
+            color: #3b82f6;  
+            font-size: 2rem;  
+        }  
+  
+        .footer-section p {  
+            opacity: 0.8;  
+            line-height: 1.7;  
+            margin-bottom: 1.5rem;  
+            font-size: 1.1rem;  
+        }  
+  
+        .footer-social {  
+            display: flex;  
+            gap: 1rem;  
+        }  
+  
+        .footer-social a {  
+            width: 45px;  
+            height: 45px;  
+            background: rgba(255, 255, 255, 0.1);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #ffffff;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .footer-social a:hover {  
+            background: #3b82f6;  
+            transform: translateY(-3px) rotate(360deg);  
+        }  
+  
+        .footer-section h4 {  
+            font-size: 1.3rem;  
+            font-weight: 700;  
+            margin-bottom: 1.5rem;  
+            color: #ffffff;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+        }  
+  
+        .footer-section ul {  
+            list-style: none;  
+        }  
+  
+        .footer-section ul li {  
+            margin-bottom: 0.8rem;  
+        }  
+  
+        .footer-section ul li a {  
+            color: #ffffff;  
+            opacity: 0.8;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+            font-size: 1rem;  
+        }  
+  
+        .footer-section ul li a:hover {  
+            opacity: 1;  
+            color: #3b82f6;  
+            transform: translateX(5px);  
+            display: inline-block;  
+        }  
+  
+        .footer-bottom {  
+            text-align: center;  
+            padding-top: 2rem;  
+            border-top: 1px solid rgba(255, 255, 255, 0.1);  
+            opacity: 0.8;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 2rem 20px 0;  
+        }  
+  
+        /* Buttons */  
+        .btn {  
+            display: inline-block;  
+            padding: 1.2rem 2.5rem;  
+            text-decoration: none;  
+            font-weight: 700;  
+            border-radius: 50px;  
+            transition: all 0.3s ease;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+            font-size: 0.9rem;  
+            position: relative;  
+            overflow: hidden;  
+            margin: 0.5rem;  
+        }  
+  
+        .btn::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: -100%;  
+            width: 100%;  
+            height: 100%;  
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);  
+            transition: left 0.5s;  
+        }  
+  
+        .btn:hover::before {  
+            left: 100%;  
+        }  
+  
+        .btn-primary {  
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
+            color: #ffffff;  
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);  
+            animation: pulse 2s infinite;  
+        }  
+  
+        .btn-primary:hover {  
+            transform: translateY(-3px);  
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.6);  
+        }  
+  
+        .btn-secondary {  
+            background: transparent;  
+            color: #ffffff;  
+            border: 2px solid #ffd700;  
+        }  
+  
+        .btn-secondary:hover {  
+            background: #ffd700;  
+            color: #000000;  
+            transform: translateY(-3px);  
+        }  
+  
+        /* Responsive Design */  
+        @media (max-width: 768px) {  
+            .nav-menu {  
+                display: none;  
+            }  
+  
+            .nav-social {  
+                display: none;  
+            }  
+  
+            .hero-title {  
+                font-size: 2.5rem;  
+            }  
+  
+            .hero-subtitle {  
+                font-size: 1.1rem;  
+            }  
+  
+            .stats-grid,  
+            .testimonials-grid,  
+            .video-grid {  
+                grid-template-columns: 1fr;  
+            }  
+  
+            .featured-content {  
+                grid-template-columns: 1fr;  
+                gap: 2rem;  
+            }  
+  
+            .featured-image img {  
+                height: 250px;  
+            }  
+  
+            .featured-stats {  
+                grid-template-columns: 1fr;  
+            }  
+  
+            .footer-content {  
+                grid-template-columns: 1fr;  
+                gap: 2rem;  
+            }  
+  
+            .cta-content h2 {  
+                font-size: 2rem;  
+            }  
+        }  
+  
+        /* Animations */  
+        @keyframes fadeIn {  
+            from {  
+                opacity: 0;  
+            }  
+            to {  
+                opacity: 1;  
+            }  
+        }  
+  
+        @keyframes fadeInUp {  
+            from {  
+                opacity: 0;  
+                transform: translateY(30px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateY(0);  
+            }  
+        }  
+  
+        @keyframes slideInLeft {  
+            from {  
+                opacity: 0;  
+                transform: translateX(-50px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateX(0);  
+            }  
+        }  
+  
+        @keyframes slideInRight {  
+            from {  
+                opacity: 0;  
+                transform: translateX(50px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateX(0);  
+            }  
+        }  
+  
+        @keyframes pulse {  
+            0%, 100% {  
+                transform: scale(1);  
+            }  
+            50% {  
+                transform: scale(1.05);  
+            }  
+        }  
+  
+        @keyframes titleGlow {  
+            0%, 100% {  
+                filter: brightness(1);  
+            }  
+            50% {  
+                filter: brightness(1.2);  
+            }  
+        }  
+  
+        @keyframes backgroundMove {  
+            0%, 100% {  
+                transform: scale(1) translate(0, 0);  
+            }  
+            50% {  
+                transform: scale(1.1) translate(-5%, -5%);  
+            }  
+        }  
+  
+        /* Utility Classes */  
+        .text-gradient {  
+            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+  
+        .glass-effect {  
+            background: rgba(255, 255, 255, 0.05);  
+            backdrop-filter: blur(10px);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+        }  
+  
+        .section-header {  
+            text-align: center;  
+            margin-bottom: 4rem;  
+        }  
+  
+        .section-header h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 1rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+  
+        .section-header p {  
+            font-size: 1.2rem;  
+            opacity: 0.8;  
+            max-width: 600px;  
+            margin: 0 auto;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <!-- Navigation -->  
+    <nav class="navbar">  
+        <div class="nav-container">  
+            <div class="nav-logo">  
+                <i class="fas fa-robot"></i>  
+                <span>Digital Income Mastery</span>  
+            </div>  
+            <ul class="nav-menu">  
+                <li><a href="index.html">Home</a></li>  
+                <li><a href="about.html">About Us</a></li>  
+                <li><a href="course.html">Course</a></li>  
+                <li><a href="testimonials.html" class="active">Success Stories</a></li>  
+                <li><a href="blog.html">Blog</a></li>  
+                <li><a href="contact.html">Contact</a></li>  
+            </ul>  
+            <div class="nav-social">  
+                <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
+                <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
+            </div>  
+        </div>  
+    </nav>  
+  
+    <!-- Hero Section -->  
+    <section class="hero">  
+        <div class="hero-content">  
+            <h1 class="hero-title">Success Stories</h1>  
+            <p class="hero-subtitle">  
+                Real results from real entrepreneurs who transformed their businesses with AI automation  
+            </p>  
+        </div>  
+    </section>  
+  
+    <!-- Stats Section -->  
+    <section class="stats-section">  
+        <div class="container">  
+            <div class="stats-grid">  
+                <div class="stat-item" data-aos="fade-up">  
+                    <span class="stat-number">5,000+</span>  
+                    <span class="stat-label">Students</span>  
+                </div>  
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="100">  
+                    <span class="stat-number">$2.5M+</span>  
+                    <span class="stat-label">Income Generated</span>  
+                </div>  
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="200">  
+                    <span class="stat-number">95%</span>  
+                    <span class="stat-label">Success Rate</span>  
+                </div>  
+                <div class="stat-item" data-aos="fade-up" data-aos-delay="300">  
+                    <span class="stat-number">127</span>  
+                    <span class="stat-label">Countries</span>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Featured Story Section -->  
+    <section class="featured-section">  
+        <div class="container">  
+            <div class="featured-content">  
+                <div class="featured-text" data-aos="fade-right">  
+                    <h2>Maria's Journey: From $0 to $50K/Month</h2>  
+                    <p>  
+                        Maria, a former teacher from Spain, joined our course with no technical background. Within 6 months, she built an automated e-commerce empire that generates $50,000 monthly while she travels the world.  
+                    </p>  
+                    <div class="featured-stats">  
+                        <div class="featured-stat">  
+                            <h4>6 Months</h4>  
+                            <p>Time to Success</p>  
+                        </div>  
+                        <div class="featured-stat">  
+                            <h4>$50K</h4>  
+                            <p>Monthly Income</p>  
+                        </div>  
+                        <div class="featured-stat">  
+                            <h4>15 Hours</h4>  
+                            <p>Weekly Work</p>  
+                        </div>  
+                        <div class="featured-stat">  
+                            <h4>12 Countries</h4>  
+                            <p>Visited Since</p>  
+                        </div>  
+                    </div>  
+                    <p>  
+                        "The AI automation systems I learned in this course completely changed my life. I went from working 60 hours a week as a teacher to working just 15 hours a week while earning 10x more. The best part? I can work from anywhere in the world."  
+                    </p>  
+                </div>  
+                <div class="featured-image" data-aos="fade-left">  
+                    <img src="https://picsum.photos/seed/maria-success-story/600/400.jpg" alt="Maria's Success Story">  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Testimonials Section -->  
+    <section class="testimonials-section">  
+        <div class="container">  
+            <div class="section-header" data-aos="fade-up">  
+                <h2>Student Testimonials</h2>  
+                <p>Hear what our students have to say about their transformation</p>  
+            </div>  
+            <div class="testimonials-grid">  
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">  
+                    <div class="result-badge">$25K/Month</div>  
+                    <i class="fas fa-quote-right quote-icon"></i>  
+                    <p class="testimonial-content">  
+                        "This course is a game-changer! I was struggling with my online store, working 80 hours a week. After implementing the AI automation systems, my income jumped to $25,000 monthly, and I now work just 20 hours. The ROI is incredible!"  
+                    </p>  
+                    <div class="testimonial-author">  
+                        <div class="author-avatar">  
+                            <img src="https://picsum.photos/seed/david-chen/100/100.jpg" alt="David Chen">  
+                        </div>  
+                        <div class="author-info">  
+                            <h4>David Chen</h4>  
+                            <p>E-commerce Entrepreneur</p>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">  
+                    <div class="result-badge">$15K/Month</div>  
+                    <i class="fas fa-quote-right quote-icon"></i>  
+                    <p class="testimonial-content">  
+                        "As a complete beginner, I was intimidated by AI technology. The step-by-step approach made everything easy to understand. Within 4 months, I built an automated affiliate marketing business that generates $15,000 monthly. Life-changing!"  
+                    </p>  
+                    <div class="testimonial-author">  
+                        <div class="author-avatar">  
+                            <img src="https://picsum.photos/seed/sarah-johnson/100/100.jpg" alt="Sarah Johnson">  
+                        </div>  
+                        <div class="author-info">  
+                            <h4>Sarah Johnson</h4>  
+                            <p>Affiliate Marketer</p>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">  
+                    <div class="result-badge">$35K/Month</div>  
+                    <i class="fas fa-quote-right quote-icon"></i>  
+                    <p class="testimonial-content">  
+                        "I've tried many courses, but this one actually delivers. The AI automation systems are practical and work immediately. I scaled my digital products business from $5K to $35K monthly in just 3 months. Best investment ever!"  
+                    </p>  
+                    <div class="testimonial-author">  
+                        <div class="author-avatar">  
+                            <img src="https://picsum.photos/seed/mike-rodriguez/100/100.jpg" alt="Mike Rodriguez">  
+                        </div>  
+                        <div class="author-info">  
+                            <h4>Mike Rodriguez</h4>  
+                            <p>Digital Products Creator</p>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="400">  
+                    <div class="result-badge">$18K/Month</div>  
+                    <i class="fas fa-quote-right quote-icon"></i>  
+                    <p class="testimonial-content">  
+                        "The customer service automation module alone was worth the investment. I reduced my support tickets by 80% while improving customer satisfaction. Now I earn $18,000 monthly with minimal daily involvement."  
+                    </p>  
+                    <div class="testimonial-author">  
+                        <div class="author-avatar">  
+                            <img src="https://picsum.photos/seed/emma-wilson/100/100.jpg" alt="Emma Wilson">  
+                        </div>  
+                        <div class="author-info">  
+                            <h4>Emma Wilson</h4>  
+                            <p>Online Coach</p>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="500">  
+                    <div class="result-badge">$42K/Month</div>  
+                    <i class="fas fa-quote-right quote-icon"></i>  
+                    <p class="testimonial-content">  
+                        "Coming from a corporate background, I was skeptical about AI automation. This course proved me wrong. I built a multi-channel automated business that now generates $42,000 monthly. I quit my 6-figure job and never looked back!"  
+                    </p>  
+                    <div class="testimonial-author">  
+                        <div class="author-avatar">  
+                            <img src="https://picsum.photos/seed/alex-kumar/100/100.jpg" alt="Alex Kumar">  
+                        </div>  
+                        <div class="author-info">  
+                            <h4>Alex Kumar</h4>  
+                            <p>Former Corporate Executive</p>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="600">  
+                    <div class="result-badge">$28K/Month</div>  
+                    <i class="fas fa-quote-right quote-icon"></i>  
+                    <p class="testimonial-content">  
+                        "The international scaling strategies are pure gold. I started locally and now serve customers in 23 countries. My automated business generates $28,000 monthly, and I've built a team of 5 AI assistants who handle everything."  
+                    </p>  
+                    <div class="testimonial-author">  
+                        <div class="author-avatar">  
+                            <img src="https://picsum.photos/seed/lisa-thompson/100/100.jpg" alt="Lisa Thompson">  
+                        </div>  
+                        <div class="author-info">  
+                            <h4>Lisa Thompson</h4>  
+                            <p>Global Entrepreneur</p>  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Video Testimonials Section -->  
+    <section class="video-section">  
+        <div class="container">  
+            <div class="section-header" data-aos="fade-up">  
+                <h2>Video Success Stories</h2>  
+                <p>Watch our students share their journeys in their own words</p>  
+            </div>  
+            <div class="video-grid">  
+                <div class="video-card" data-aos="fade-up" data-aos-delay="100">  
+                    <div class="video-thumbnail">  
+                        <img src="https://picsum.photos/seed/video-testimonial-1/400/200.jpg" alt="Maria's Video Testimonial">  
+                        <div class="play-button">  
+                            <i class="fas fa-play"></i>  
+                        </div>  
+                    </div>  
+                    <div class="video-info">  
+                        <h3>Maria: From Teacher to Digital Nomad</h3>  
+                        <p>How Maria built a $50K/month automated business in 6 months</p>  
+                    </div>  
+                </div>  
+  
+                <div class="video-card" data-aos="fade-up" data-aos-delay="200">  
+                    <div class="video-thumbnail">  
+                        <img src="https://picsum.photos/seed/video-testimonial-2/400/200.jpg" alt="David's Video Testimonial">  
+                        <div class="play-button">  
+                            <i class="fas fa-play"></i>  
+                        </div>  
+                    </div>  
+                    <div class="video-info">  
+                        <h3>David: Scaling E-commerce with AI</h3>  
+                        <p>David shares his journey to $25K/month with automated systems</p>  
+                    </div>  
+                </div>  
+  
+                <div class="video-card" data-aos="fade-up" data-aos-delay="300">  
+                    <div class="video-thumbnail">  
+                        <img src="https://picsum.photos/seed/video-testimonial-3/400/200.jpg" alt="Sarah's Video Testimonial">  
+                        <div class="play-button">  
+                            <i class="fas fa-play"></i>  
+                        </div>  
+                    </div>  
+                    <div class="video-info">  
+                        <h3>Sarah: Complete Beginner Success</h3>  
+                        <p>How Sarah went from zero to $15K/month with no prior experience</p>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- CTA Section -->  
+    <section class="cta-section">  
+        <div class="container">  
+            <div class="cta-content" data-aos="fade-up">  
+                <h2>Ready to Write Your Success Story?</h2>  
+                <p>  
+                    Join thousands of entrepreneurs who have already transformed their businesses and lives with AI automation. Your success story starts here.  
+                </p>  
+                <a href="https://whop.com/digital-income-mastery-ai-a/digital-income-mastery-ai-a-07" target="_blank" class="btn btn-primary">  
+                    Start Your Journey - $100  
+                </a>  
+                <a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank" class="btn btn-secondary">  
+                    Try Free Module  
+                </a>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Footer -->  
+    <footer class="footer">  
+        <div class="footer-content">  
+            <div class="footer-section">  
+                <div class="footer-logo">  
+                    <i class="fas fa-robot"></i>  
+                    <span>Digital Income Mastery</span>  
+                </div>  
+                <p>Transform your income with AI-powered automation systems that work while you sleep. Join the revolution of smart entrepreneurs leveraging artificial intelligence for financial freedom.</p>  
+                <div class="footer-social">  
+                    <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                    <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
+                    <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
+                </div>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Quick Links</h4>  
+                <ul>  
+                    <li><a href="index.html">Home</a></li>  
+                    <li><a href="about.html">About Us</a></li>  
+                    <li><a href="course.html">Course Overview</a></li>  
+                    <li><a href="testimonials.html">Success Stories</a></li>  
+                </ul>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Resources</h4>  
+                <ul>  
+                    <li><a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank">Free Module</a></li>  
+                    <li><a href="#">AI Tools Directory</a></li>  
+                    <li><a href="#">Success Blueprint</a></li>  
+                    <li><a href="#">Community Forum</a></li>  
+                </ul>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Support</h4>  
+                <ul>  
+                    <li><a href="contact.html">Contact Us</a></li>  
+                    <li><a href="#">Help Center</a></li>  
+                    <li><a href="#">Privacy Policy</a></li>  
+                    <li><a href="#">Terms of Service</a></li>  
+                </ul>  
+            </div>  
+        </div>  
+        <div class="footer-bottom">  
+            <p>&copy; 2024 Digital Income Mastery. All rights reserved. | Empowering entrepreneurs through AI automation</p>  
+        </div>  
+    </footer>  
+  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+    <script>  
+        // Initialize AOS (Animate On Scroll)  
+        AOS.init({  
+            duration: 1000,  
+            once: true,  
+            offset: 100  
+        });  
+  
+        // Navbar scroll effect  
+        window.addEventListener('scroll', function() {  
+            const navbar = document.querySelector('.navbar');  
+            if (window.scrollY > 100) {  
+                navbar.style.background = 'rgba(10, 10, 10, 0.98)';  
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';  
+            } else {  
+                navbar.style.background = 'rgba(10, 10, 10, 0.95)';  
+                navbar.style.boxShadow = 'none';  
+            }  
+        });  
+  
+        // Smooth scrolling for navigation links  
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {  
+            anchor.addEventListener('click', function (e) {  
+                e.preventDefault();  
+                const target = document.querySelector(this.getAttribute('href'));  
+                if (target) {  
+                    target.scrollIntoView({  
+                        behavior: 'smooth',  
+                        block: 'start'  
+                    });  
+                }  
+            });  
+        });  
+  
+        // Video card interaction  
+        document.querySelectorAll('.video-card').forEach(card => {  
+            card.addEventListener('click', function() {  
+                const title = this.querySelector('h3').textContent;  
+                console.log('Video clicked:', title);  
+                alert('Video: ' + title + ' - This would open the actual video in a modal or new page');  
+            });  
+        });  
+  
+        // Testimonial card interaction  
+        document.querySelectorAll('.testimonial-card').forEach(card => {  
+            card.addEventListener('click', function() {  
+                const author = this.querySelector('h4').textContent;  
+                console.log('Testimonial clicked:', author);  
+            });  
+        });  
+  
+        // Stats animation on scroll  
+        const animateStats = () => {  
+            const stats = document.querySelectorAll('.stat-number');  
+            stats.forEach(stat => {  
+                const finalValue = stat.textContent;  
+                const isPlus = finalValue.includes('+');  
+                const isK = finalValue.includes('K');  
+                const isM = finalValue.includes('M');  
+                const isPercent = finalValue.includes('%');  
+                  
+                let numericValue = parseFloat(finalValue.replace(/[^0-9.]/g, ''));  
+                let currentValue = 0;  
+                const increment = numericValue / 50;  
+                  
+                const updateValue = () => {  
+                    currentValue += increment;  
+                    if (currentValue < numericValue) {  
+                        if (isM) {  
+                            stat.textContent = currentValue.toFixed(1) + 'M+';  
+                        } else if (isK) {  
+                            stat.textContent = Math.floor(currentValue) + 'K+';  
+                        } else if (isPercent) {  
+                            stat.textContent = Math.floor(currentValue) + '%';  
+                        } else if (isPlus) {  
+                            stat.textContent = Math.floor(currentValue).toLocaleString() + '+';  
+                        } else {  
+                            stat.textContent = Math.floor(currentValue).toLocaleString();  
+                        }  
+                        requestAnimationFrame(updateValue);  
+                    } else {  
+                        stat.textContent = finalValue;  
+                    }  
+                };  
+                  
+                // Start animation when element is in viewport  
+                const observer = new IntersectionObserver((entries) => {  
+                    entries.forEach(entry => {  
+                        if (entry.isIntersecting) {  
+                            updateValue();  
+                            observer.unobserve(entry.target);  
+                        }  
+                    });  
+                });  
+                  
+                observer.observe(stat);  
+            });  
+        };  
+  
+        animateStats();  
+  
+        // Add loading animation  
+        window.addEventListener('load', function() {  
+            document.body.classList.add('loaded');  
+        });  
+    </script>  
+</body>  
+</html>  
