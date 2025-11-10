@@ -1,0 +1,1433 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Contact Us - Digital Income Mastery: AI & Automation</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+    <style>  
+        * {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+        }  
+  
+        body {  
+            font-family: 'Inter', sans-serif;  
+            background-color: #0a0a0a;  
+            color: #ffffff;  
+            overflow-x: hidden;  
+        }  
+  
+        .container {  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 0 20px;  
+        }  
+  
+        /* Navigation */  
+        .navbar {  
+            position: fixed;  
+            top: 0;  
+            width: 100%;  
+            background: rgba(10, 10, 10, 0.95);  
+            backdrop-filter: blur(10px);  
+            z-index: 1000;  
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
+            transition: all 0.3s ease;  
+        }  
+  
+        .nav-container {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            padding: 1rem 2rem;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+        }  
+  
+        .nav-logo {  
+            display: flex;  
+            align-items: center;  
+            gap: 0.5rem;  
+            font-size: 1.5rem;  
+            font-weight: 700;  
+            color: #ffffff;  
+            animation: slideInLeft 1s ease-out;  
+        }  
+  
+        .nav-logo i {  
+            color: #3b82f6;  
+            font-size: 2rem;  
+            animation: pulse 2s infinite;  
+        }  
+  
+        .nav-menu {  
+            display: flex;  
+            list-style: none;  
+            gap: 2rem;  
+        }  
+  
+        .nav-menu a {  
+            color: #ffffff;  
+            text-decoration: none;  
+            font-weight: 500;  
+            transition: all 0.3s ease;  
+            position: relative;  
+        }  
+  
+        .nav-menu a::after {  
+            content: '';  
+            position: absolute;  
+            bottom: -5px;  
+            left: 0;  
+            width: 0;  
+            height: 2px;  
+            background: #3b82f6;  
+            transition: width 0.3s ease;  
+        }  
+  
+        .nav-menu a:hover::after,  
+        .nav-menu a.active::after {  
+            width: 100%;  
+        }  
+  
+        .nav-menu a:hover,  
+        .nav-menu a.active {  
+            color: #3b82f6;  
+        }  
+  
+        .nav-social {  
+            display: flex;  
+            gap: 1rem;  
+        }  
+  
+        .nav-social a {  
+            width: 40px;  
+            height: 40px;  
+            background: rgba(255, 255, 255, 0.1);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #ffffff;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+            animation: fadeInUp 1s ease-out 0.5s both;  
+        }  
+  
+        .nav-social a:hover {  
+            background: #3b82f6;  
+            transform: translateY(-3px) rotate(360deg);  
+        }  
+  
+        /* Hero Section */  
+        .hero {  
+            min-height: 60vh;  
+            position: relative;  
+            display: flex;  
+            align-items: center;  
+            margin-top: 80px;  
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);  
+            overflow: hidden;  
+        }  
+  
+        .hero::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+            right: 0;  
+            bottom: 0;  
+            background: url('https://picsum.photos/seed/contact-hero-bg/1920/800.jpg') center/cover;  
+            opacity: 0.1;  
+            animation: backgroundMove 20s ease-in-out infinite;  
+        }  
+  
+        .hero-content {  
+            text-align: center;  
+            max-width: 900px;  
+            margin: 0 auto;  
+            padding: 2rem;  
+            position: relative;  
+            z-index: 1;  
+        }  
+  
+        .hero-title {  
+            font-size: 4rem;  
+            font-weight: 900;  
+            line-height: 1.1;  
+            margin-bottom: 1.5rem;  
+            text-transform: uppercase;  
+            letter-spacing: 3px;  
+            background: linear-gradient(45deg, #ffffff, #3b82f6, #ffd700);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+            animation: titleGlow 3s ease-in-out infinite;  
+        }  
+  
+        .hero-subtitle {  
+            font-size: 1.4rem;  
+            line-height: 1.6;  
+            opacity: 0.9;  
+            animation: fadeInUp 1s ease-out 0.5s both;  
+        }  
+  
+        /* Contact Section */  
+        .contact-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%);  
+        }  
+  
+        .contact-content {  
+            display: grid;  
+            grid-template-columns: 1fr 1fr;  
+            gap: 4rem;  
+            align-items: start;  
+            max-width: 1000px;  
+            margin: 0 auto;  
+        }  
+  
+        .contact-info {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 20px;  
+            padding: 3rem;  
+            height: fit-content;  
+        }  
+  
+        .contact-info h3 {  
+            font-size: 2rem;  
+            font-weight: 900;  
+            margin-bottom: 2rem;  
+            color: #3b82f6;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+        }  
+  
+        .contact-item {  
+            display: flex;  
+            align-items: start;  
+            gap: 1rem;  
+            margin-bottom: 2rem;  
+            padding: 1rem;  
+            background: rgba(255, 255, 255, 0.03);  
+            border-radius: 10px;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .contact-item:hover {  
+            background: rgba(59, 130, 246, 0.1);  
+            transform: translateX(10px);  
+        }  
+  
+        .contact-icon {  
+            width: 50px;  
+            height: 50px;  
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            flex-shrink: 0;  
+            font-size: 1.2rem;  
+            color: #ffffff;  
+        }  
+  
+        .contact-text h4 {  
+            font-size: 1.2rem;  
+            font-weight: 700;  
+            margin-bottom: 0.3rem;  
+            color: #ffd700;  
+        }  
+  
+        .contact-text p {  
+            font-size: 1rem;  
+            opacity: 0.8;  
+            line-height: 1.5;  
+        }  
+  
+        .contact-form {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 20px;  
+            padding: 3rem;  
+        }  
+  
+        .contact-form h3 {  
+            font-size: 2rem;  
+            font-weight: 900;  
+            margin-bottom: 2rem;  
+            color: #ffd700;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+        }  
+  
+        .form-group {  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .form-group label {  
+            display: block;  
+            margin-bottom: 0.5rem;  
+            font-weight: 600;  
+            color: #ffffff;  
+            font-size: 0.95rem;  
+        }  
+  
+        .form-group input,  
+        .form-group textarea,  
+        .form-group select {  
+            width: 100%;  
+            padding: 1rem;  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.2);  
+            border-radius: 10px;  
+            color: #ffffff;  
+            font-size: 1rem;  
+            transition: all 0.3s ease;  
+            font-family: 'Inter', sans-serif;  
+        }  
+  
+        .form-group input:focus,  
+        .form-group textarea:focus,  
+        .form-group select:focus {  
+            outline: none;  
+            border-color: #3b82f6;  
+            background: rgba(59, 130, 246, 0.1);  
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2);  
+        }  
+  
+        .form-group textarea {  
+            resize: vertical;  
+            min-height: 120px;  
+        }  
+  
+        .form-row {  
+            display: grid;  
+            grid-template-columns: 1fr 1fr;  
+            gap: 1rem;  
+        }  
+  
+        .checkbox-group {  
+            display: flex;  
+            align-items: center;  
+            gap: 0.5rem;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .checkbox-group input[type="checkbox"] {  
+            width: auto;  
+            margin: 0;  
+        }  
+  
+        .checkbox-group label {  
+            margin: 0;  
+            font-weight: 400;  
+            font-size: 0.9rem;  
+            opacity: 0.8;  
+        }  
+  
+        /* FAQ Section */  
+        .faq-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
+        }  
+  
+        .faq-grid {  
+            max-width: 800px;  
+            margin: 4rem auto 0;  
+        }  
+  
+        .faq-item {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 15px;  
+            margin-bottom: 1rem;  
+            overflow: hidden;  
+        }  
+  
+        .faq-question {  
+            padding: 1.5rem;  
+            cursor: pointer;  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .faq-question:hover {  
+            background: rgba(59, 130, 246, 0.1);  
+        }  
+  
+        .faq-question h3 {  
+            font-size: 1.2rem;  
+            font-weight: 600;  
+            color: #ffffff;  
+        }  
+  
+        .faq-question i {  
+            color: #3b82f6;  
+            transition: transform 0.3s ease;  
+        }  
+  
+        .faq-answer {  
+            padding: 0 1.5rem;  
+            max-height: 0;  
+            overflow: hidden;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .faq-answer.active {  
+            padding: 0 1.5rem 1.5rem;  
+            max-height: 500px;  
+        }  
+  
+        .faq-answer p {  
+            padding: 1rem 0;  
+            line-height: 1.7;  
+            opacity: 0.9;  
+        }  
+  
+        .faq-item.active .faq-question i {  
+            transform: rotate(180deg);  
+        }  
+  
+        /* Map Section */  
+        .map-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(180deg, #16213e 0%, #0f3460 100%);  
+        }  
+  
+        .map-container {  
+            max-width: 1000px;  
+            margin: 0 auto;  
+            border-radius: 20px;  
+            overflow: hidden;  
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);  
+            height: 400px;  
+            position: relative;  
+        }  
+  
+        .map-placeholder {  
+            width: 100%;  
+            height: 100%;  
+            background: url('https://picsum.photos/seed/world-map-locations/1000/400.jpg') center/cover;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            position: relative;  
+        }  
+  
+        .map-overlay {  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+            right: 0;  
+            bottom: 0;  
+            background: rgba(10, 10, 10, 0.4);  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            flex-direction: column;  
+        }  
+  
+        .map-overlay h3 {  
+            font-size: 2rem;  
+            font-weight: 900;  
+            color: #ffffff;  
+            margin-bottom: 1rem;  
+            text-align: center;  
+        }  
+  
+        .map-overlay p {  
+            font-size: 1.2rem;  
+            opacity: 0.9;  
+            text-align: center;  
+            max-width: 600px;  
+        }  
+  
+        .location-markers {  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+            right: 0;  
+            bottom: 0;  
+        }  
+  
+        .location-marker {  
+            position: absolute;  
+            width: 20px;  
+            height: 20px;  
+            background: #3b82f6;  
+            border-radius: 50%;  
+            border: 3px solid #ffffff;  
+            animation: pulse 2s infinite;  
+            cursor: pointer;  
+        }  
+  
+        .location-marker:nth-child(1) { top: 30%; left: 20%; }  
+        .location-marker:nth-child(2) { top: 40%; left: 70%; }  
+        .location-marker:nth-child(3) { top: 60%; left: 40%; }  
+        .location-marker:nth-child(4) { top: 50%; left: 50%; }  
+        .location-marker:nth-child(5) { top: 35%; left: 80%; }  
+  
+        /* Office Hours Section */  
+        .hours-section {  
+            padding: 60px 20px;  
+            background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);  
+        }  
+  
+        .hours-content {  
+            max-width: 800px;  
+            margin: 0 auto;  
+            text-align: center;  
+        }  
+  
+        .hours-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));  
+            gap: 1.5rem;  
+            margin-top: 3rem;  
+        }  
+  
+        .hours-item {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 15px;  
+            padding: 1.5rem;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .hours-item:hover {  
+            transform: translateY(-10px);  
+            background: rgba(59, 130, 246, 0.1);  
+            border-color: #3b82f6;  
+        }  
+  
+        .hours-item h4 {  
+            font-size: 1.2rem;  
+            font-weight: 700;  
+            margin-bottom: 0.5rem;  
+            color: #ffd700;  
+        }  
+  
+        .hours-item p {  
+            font-size: 1rem;  
+            opacity: 0.9;  
+        }  
+  
+        .hours-item .status {  
+            display: inline-block;  
+            margin-top: 0.5rem;  
+            padding: 0.3rem 0.8rem;  
+            border-radius: 20px;  
+            font-size: 0.8rem;  
+            font-weight: 600;  
+            text-transform: uppercase;  
+        }  
+  
+        .status.open {  
+            background: rgba(34, 197, 94, 0.2);  
+            color: #22c55e;  
+        }  
+  
+        .status.closed {  
+            background: rgba(239, 68, 68, 0.2);  
+            color: #ef4444;  
+        }  
+  
+        /* CTA Section */  
+        .cta-section {  
+            padding: 80px 20px;  
+            background: linear-gradient(135deg, #16213e 0%, #0f3460 100%);  
+            text-align: center;  
+        }  
+  
+        .cta-content h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 1.5rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+        }  
+  
+        .cta-content p {  
+            font-size: 1.3rem;  
+            opacity: 0.9;  
+            margin-bottom: 2rem;  
+            max-width: 600px;  
+            margin-left: auto;  
+            margin-right: auto;  
+        }  
+  
+        /* Footer */  
+        .footer {  
+            background: #0a0a0a;  
+            padding: 4rem 0 2rem;  
+            border-top: 1px solid rgba(255, 255, 255, 0.1);  
+        }  
+  
+        .footer-content {  
+            display: grid;  
+            grid-template-columns: 2fr 1fr 1fr 1fr;  
+            gap: 2rem;  
+            margin-bottom: 3rem;  
+            max-width: 1200px;  
+            margin: 0 auto 3rem;  
+            padding: 0 20px;  
+        }  
+  
+        .footer-logo {  
+            display: flex;  
+            align-items: center;  
+            gap: 0.5rem;  
+            font-size: 1.8rem;  
+            font-weight: 700;  
+            color: #ffffff;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .footer-logo i {  
+            color: #3b82f6;  
+            font-size: 2rem;  
+        }  
+  
+        .footer-section p {  
+            opacity: 0.8;  
+            line-height: 1.7;  
+            margin-bottom: 1.5rem;  
+            font-size: 1.1rem;  
+        }  
+  
+        .footer-social {  
+            display: flex;  
+            gap: 1rem;  
+        }  
+  
+        .footer-social a {  
+            width: 45px;  
+            height: 45px;  
+            background: rgba(255, 255, 255, 0.1);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #ffffff;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .footer-social a:hover {  
+            background: #3b82f6;  
+            transform: translateY(-3px) rotate(360deg);  
+        }  
+  
+        .footer-section h4 {  
+            font-size: 1.3rem;  
+            font-weight: 700;  
+            margin-bottom: 1.5rem;  
+            color: #ffffff;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+        }  
+  
+        .footer-section ul {  
+            list-style: none;  
+        }  
+  
+        .footer-section ul li {  
+            margin-bottom: 0.8rem;  
+        }  
+  
+        .footer-section ul li a {  
+            color: #ffffff;  
+            opacity: 0.8;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+            font-size: 1rem;  
+        }  
+  
+        .footer-section ul li a:hover {  
+            opacity: 1;  
+            color: #3b82f6;  
+            transform: translateX(5px);  
+            display: inline-block;  
+        }  
+  
+        .footer-bottom {  
+            text-align: center;  
+            padding-top: 2rem;  
+            border-top: 1px solid rgba(255, 255, 255, 0.1);  
+            opacity: 0.8;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 2rem 20px 0;  
+        }  
+  
+        /* Buttons */  
+        .btn {  
+            display: inline-block;  
+            padding: 1.2rem 2.5rem;  
+            text-decoration: none;  
+            font-weight: 700;  
+            border-radius: 50px;  
+            transition: all 0.3s ease;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+            font-size: 0.9rem;  
+            position: relative;  
+            overflow: hidden;  
+            margin: 0.5rem;  
+        }  
+  
+        .btn::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: -100%;  
+            width: 100%;  
+            height: 100%;  
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);  
+            transition: left 0.5s;  
+        }  
+  
+        .btn:hover::before {  
+            left: 100%;  
+        }  
+  
+        .btn-primary {  
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
+            color: #ffffff;  
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);  
+            animation: pulse 2s infinite;  
+        }  
+  
+        .btn-primary:hover {  
+            transform: translateY(-3px);  
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.6);  
+        }  
+  
+        .btn-secondary {  
+            background: transparent;  
+            color: #ffffff;  
+            border: 2px solid #ffd700;  
+        }  
+  
+        .btn-secondary:hover {  
+            background: #ffd700;  
+            color: #000000;  
+            transform: translateY(-3px);  
+        }  
+  
+        .btn-submit {  
+            width: 100%;  
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
+            color: #ffffff;  
+            border: none;  
+            padding: 1.2rem 2.5rem;  
+            border-radius: 50px;  
+            font-weight: 700;  
+            font-size: 1rem;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+            cursor: pointer;  
+            transition: all 0.3s ease;  
+            position: relative;  
+            overflow: hidden;  
+        }  
+  
+        .btn-submit::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: -100%;  
+            width: 100%;  
+            height: 100%;  
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);  
+            transition: left 0.5s;  
+        }  
+  
+        .btn-submit:hover::before {  
+            left: 100%;  
+        }  
+  
+        .btn-submit:hover {  
+            transform: translateY(-3px);  
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.6);  
+        }  
+  
+        /* Responsive Design */  
+        @media (max-width: 768px) {  
+            .nav-menu {  
+                display: none;  
+            }  
+  
+            .nav-social {  
+                display: none;  
+            }  
+  
+            .hero-title {  
+                font-size: 2.5rem;  
+            }  
+  
+            .hero-subtitle {  
+                font-size: 1.1rem;  
+            }  
+  
+            .contact-content {  
+                grid-template-columns: 1fr;  
+                gap: 2rem;  
+            }  
+  
+            .form-row {  
+                grid-template-columns: 1fr;  
+            }  
+  
+            .hours-grid {  
+                grid-template-columns: 1fr;  
+            }  
+  
+            .footer-content {  
+                grid-template-columns: 1fr;  
+                gap: 2rem;  
+            }  
+  
+            .cta-content h2 {  
+                font-size: 2rem;  
+            }  
+        }  
+  
+        /* Animations */  
+        @keyframes fadeIn {  
+            from {  
+                opacity: 0;  
+            }  
+            to {  
+                opacity: 1;  
+            }  
+        }  
+  
+        @keyframes fadeInUp {  
+            from {  
+                opacity: 0;  
+                transform: translateY(30px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateY(0);  
+            }  
+        }  
+  
+        @keyframes slideInLeft {  
+            from {  
+                opacity: 0;  
+                transform: translateX(-50px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateX(0);  
+            }  
+        }  
+  
+        @keyframes slideInRight {  
+            from {  
+                opacity: 0;  
+                transform: translateX(50px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateX(0);  
+            }  
+        }  
+  
+        @keyframes pulse {  
+            0%, 100% {  
+                transform: scale(1);  
+            }  
+            50% {  
+                transform: scale(1.05);  
+            }  
+        }  
+  
+        @keyframes titleGlow {  
+            0%, 100% {  
+                filter: brightness(1);  
+            }  
+            50% {  
+                filter: brightness(1.2);  
+            }  
+        }  
+  
+        @keyframes backgroundMove {  
+            0%, 100% {  
+                transform: scale(1) translate(0, 0);  
+            }  
+            50% {  
+                transform: scale(1.1) translate(-5%, -5%);  
+            }  
+        }  
+  
+        /* Utility Classes */  
+        .text-gradient {  
+            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+  
+        .glass-effect {  
+            background: rgba(255, 255, 255, 0.05);  
+            backdrop-filter: blur(10px);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+        }  
+  
+        .section-header {  
+            text-align: center;  
+            margin-bottom: 4rem;  
+        }  
+  
+        .section-header h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 1rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+  
+        .section-header p {  
+            font-size: 1.2rem;  
+            opacity: 0.8;  
+            max-width: 600px;  
+            margin: 0 auto;  
+        }  
+  
+        /* Success Message */  
+        .success-message {  
+            display: none;  
+            background: rgba(34, 197, 94, 0.1);  
+            border: 1px solid rgba(34, 197, 94, 0.3);  
+            border-radius: 15px;  
+            padding: 1.5rem;  
+            margin-bottom: 2rem;  
+            text-align: center;  
+        }  
+  
+        .success-message.show {  
+            display: block;  
+            animation: fadeInUp 0.5s ease-out;  
+        }  
+  
+        .success-message h4 {  
+            color: #22c55e;  
+            font-size: 1.2rem;  
+            font-weight: 700;  
+            margin-bottom: 0.5rem;  
+        }  
+  
+        .success-message p {  
+            opacity: 0.9;  
+            margin: 0;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <!-- Navigation -->  
+    <nav class="navbar">  
+        <div class="nav-container">  
+            <div class="nav-logo">  
+                <i class="fas fa-robot"></i>  
+                <span>Digital Income Mastery</span>  
+            </div>  
+            <ul class="nav-menu">  
+                <li><a href="index.html">Home</a></li>  
+                <li><a href="about.html">About Us</a></li>  
+                <li><a href="course.html">Course</a></li>  
+                <li><a href="testimonials.html">Success Stories</a></li>  
+                <li><a href="blog.html">Blog</a></li>  
+                <li><a href="contact.html" class="active">Contact</a></li>  
+            </ul>  
+            <div class="nav-social">  
+                <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
+                <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
+            </div>  
+        </div>  
+    </nav>  
+  
+    <!-- Hero Section -->  
+    <section class="hero">  
+        <div class="hero-content">  
+            <h1 class="hero-title">Contact Us</h1>  
+            <p class="hero-subtitle">  
+                Get in touch with our team and start your journey to financial freedom through AI automation  
+            </p>  
+        </div>  
+    </section>  
+  
+    <!-- Contact Section -->  
+    <section class="contact-section">  
+        <div class="container">  
+            <div class="contact-content">  
+                <div class="contact-info" data-aos="fade-right">  
+                    <h3>Get In Touch</h3>  
+                      
+                    <div class="contact-item">  
+                        <div class="contact-icon">  
+                            <i class="fas fa-envelope"></i>  
+                        </div>  
+                        <div class="contact-text">  
+                            <h4>Email Support</h4>  
+                            <p>support@digitalincomemastery.com</p>  
+                            <p>Response within 24 hours</p>  
+                        </div>  
+                    </div>  
+  
+                    <div class="contact-item">  
+                        <div class="contact-icon">  
+                            <i class="fab fa-discord"></i>  
+                        </div>  
+                        <div class="contact-text">  
+                            <h4>Discord Community</h4>  
+                            <p>Join 5,000+ members</p>  
+                            <p>Real-time support and networking</p>  
+                        </div>  
+                    </div>  
+  
+                    <div class="contact-item">  
+                        <div class="contact-icon">  
+                            <i class="fas fa-calendar-alt"></i>  
+                        </div>  
+                        <div class="contact-text">  
+                            <h4>Book a Call</h4>  
+                            <p>Schedule 1-on-1 consultation</p>  
+                            <p>Personalized business strategy session</p>  
+                        </div>  
+                    </div>  
+  
+                    <div class="contact-item">  
+                        <div class="contact-icon">  
+                            <i class="fas fa-map-marker-alt"></i>  
+                        </div>  
+                        <div class="contact-text">  
+                            <h4>Global Presence</h4>  
+                            <p>Operating worldwide</p>  
+                            <p>Serving 127 countries</p>  
+                        </div>  
+                    </div>  
+                </div>  
+  
+                <div class="contact-form" data-aos="fade-left">  
+                    <h3>Send Message</h3>  
+                      
+                    <div class="success-message" id="successMessage">  
+                        <h4><i class="fas fa-check-circle"></i> Message Sent Successfully!</h4>  
+                        <p>Thank you for contacting us. We'll get back to you within 24 hours.</p>  
+                    </div>  
+  
+                    <form id="contactForm">  
+                        <div class="form-row">  
+                            <div class="form-group">  
+                                <label for="firstName">First Name *</label>  
+                                <input type="text" id="firstName" name="firstName" required>  
+                            </div>  
+                            <div class="form-group">  
+                                <label for="lastName">Last Name *</label>  
+                                <input type="text" id="lastName" name="lastName" required>  
+                            </div>  
+                        </div>  
+  
+                        <div class="form-group">  
+                            <label for="email">Email Address *</label>  
+                            <input type="email" id="email" name="email" required>  
+                        </div>  
+  
+                        <div class="form-group">  
+                            <label for="phone">Phone Number</label>  
+                            <input type="tel" id="phone" name="phone">  
+                        </div>  
+  
+                        <div class="form-group">  
+                            <label for="subject">Subject *</label>  
+                            <select id="subject" name="subject" required>  
+                                <option value="">Select a subject</option>  
+                                <option value="course-inquiry">Course Inquiry</option>  
+                                <option value="technical-support">Technical Support</option>  
+                                <option value="partnership">Partnership Opportunity</option>  
+                                <option value="media-inquiry">Media Inquiry</option>  
+                                <option value="general">General Question</option>  
+                            </select>  
+                        </div>  
+  
+                        <div class="form-group">  
+                            <label for="message">Message *</label>  
+                            <textarea id="message" name="message" required placeholder="Tell us how we can help you..."></textarea>  
+                        </div>  
+  
+                        <div class="checkbox-group">  
+                            <input type="checkbox" id="newsletter" name="newsletter">  
+                            <label for="newsletter">Subscribe to our newsletter for AI automation tips and updates</label>  
+                        </div>  
+  
+                        <div class="checkbox-group">  
+                            <input type="checkbox" id="terms" name="terms" required>  
+                            <label for="terms">I agree to the privacy policy and terms of service *</label>  
+                        </div>  
+  
+                        <button type="submit" class="btn-submit">  
+                            <i class="fas fa-paper-plane"></i> Send Message  
+                        </button>  
+                    </form>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- FAQ Section -->  
+    <section class="faq-section">  
+        <div class="container">  
+            <div class="section-header" data-aos="fade-up">  
+                <h2>Frequently Asked Questions</h2>  
+                <p>Quick answers to common questions</p>  
+            </div>  
+            <div class="faq-grid">  
+                <div class="faq-item" data-aos="fade-up">  
+                    <div class="faq-question">  
+                        <h3>How quickly do you respond to support inquiries?</h3>  
+                        <i class="fas fa-chevron-down"></i>  
+                    </div>  
+                    <div class="faq-answer">  
+                        <p>We typically respond to all support inquiries within 24 hours. For urgent matters, our Discord community provides immediate assistance from both our team and fellow students.</p>  
+                    </div>  
+                </div>  
+  
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="100">  
+                    <div class="faq-question">  
+                        <h3>Do you offer 1-on-1 coaching or consulting?</h3>  
+                        <i class="fas fa-chevron-down"></i>  
+                    </div>  
+                    <div class="faq-answer">  
+                        <p>Yes! We offer personalized 1-on-1 coaching sessions for students who want individualized guidance. These sessions focus on your specific business goals and help you implement AI automation strategies tailored to your needs.</p>  
+                    </div>  
+                </div>  
+  
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="200">  
+                    <div class="faq-question">  
+                        <h3>Can I get a refund if I'm not satisfied?</h3>  
+                        <i class="fas fa-chevron-down"></i>  
+                    </div>  
+                    <div class="faq-answer">  
+                        <p>Yes, we offer a 30-day money-back guarantee for all our courses. If you're not completely satisfied with your purchase, simply contact our support team within 30 days for a full refund.</p>  
+                    </div>  
+                </div>  
+  
+                <div class="faq-item" data-aos="fade-up" data-aos-delay="300">  
+                    <div class="faq-question">  
+                        <h3>Do you offer corporate or group training?</h3>  
+                        <i class="fas fa-chevron-down"></i>  
+                    </div>  
+                    <div class="faq-answer">  
+                        <p>Absolutely! We provide customized corporate training programs for teams and organizations. Contact us to discuss your specific requirements and we'll create a tailored training solution for your company.</p>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Map Section -->  
+    <section class="map-section">  
+        <div class="container">  
+            <div class="section-header" data-aos="fade-up">  
+                <h2>Global Community</h2>  
+                <p>Join entrepreneurs from around the world</p>  
+            </div>  
+            <div class="map-container" data-aos="fade-up" data-aos-delay="100">  
+                <div class="map-placeholder">  
+                    <div class="map-overlay">  
+                        <h3>Worldwide Presence</h3>  
+                        <p>Serving entrepreneurs across 127 countries with 24/7 support and community engagement</p>  
+                    </div>  
+                    <div class="location-markers">  
+                        <div class="location-marker" title="North America"></div>  
+                        <div class="location-marker" title="Asia Pacific"></div>  
+                        <div class="location-marker" title="Europe"></div>  
+                        <div class="location-marker" title="Africa"></div>  
+                        <div class="location-marker" title="South America"></div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Office Hours Section -->  
+    <section class="hours-section">  
+        <div class="container">  
+            <div class="hours-content" data-aos="fade-up">  
+                <h3>Support Availability</h3>  
+                <p>Our team is available to assist you during the following hours</p>  
+                <div class="hours-grid">  
+                    <div class="hours-item" data-aos="fade-up" data-aos-delay="100">  
+                        <h4>Monday - Friday</h4>  
+                        <p>9:00 AM - 6:00 PM EST</p>  
+                        <span class="status open">Open Now</span>  
+                    </div>  
+                    <div class="hours-item" data-aos="fade-up" data-aos-delay="200">  
+                        <h4>Saturday</h4>  
+                        <p>10:00 AM - 4:00 PM EST</p>  
+                        <span class="status open">Open Now</span>  
+                    </div>  
+                    <div class="hours-item" data-aos="fade-up" data-aos-delay="300">  
+                        <h4>Sunday</h4>  
+                        <p>Community Support Only</p>  
+                        <span class="status closed">Limited</span>  
+                    </div>  
+                    <div class="hours-item" data-aos="fade-up" data-aos-delay="400">  
+                        <h4>Discord Community</h4>  
+                        <p>24/7 Active Members</p>  
+                        <span class="status open">Always Open</span>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- CTA Section -->  
+    <section class="cta-section">  
+        <div class="container">  
+            <div class="cta-content" data-aos="fade-up">  
+                <h2>Ready to Transform Your Business?</h2>  
+                <p>  
+                    Don't wait to start your AI automation journey. Contact us today and take the first step toward financial freedom.  
+                </p>  
+                <a href="https://whop.com/digital-income-mastery-ai-a/digital-income-mastery-ai-a-07" target="_blank" class="btn btn-primary">  
+                    Enroll Now - $100  
+                </a>  
+                <a href="https://discord.gg/yc2ha9BU" target="_blank" class="btn btn-secondary">  
+                    Join Discord  
+                </a>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Footer -->  
+    <footer class="footer">  
+        <div class="footer-content">  
+            <div class="footer-section">  
+                <div class="footer-logo">  
+                    <i class="fas fa-robot"></i>  
+                    <span>Digital Income Mastery</span>  
+                </div>  
+                <p>Transform your income with AI-powered automation systems that work while you sleep. Join the revolution of smart entrepreneurs leveraging artificial intelligence for financial freedom.</p>  
+                <div class="footer-social">  
+                    <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                    <a href="https://instagram.com/fromzerotoprofit" target="_blank"><i class="fab fa-instagram"></i></a>  
+                    <a href="https://youtube.com/@zerotoprofitacademy" target="_blank"><i class="fab fa-youtube"></i></a>  
+                </div>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Quick Links</h4>  
+                <ul>  
+                    <li><a href="index.html">Home</a></li>  
+                    <li><a href="about.html">About Us</a></li>  
+                    <li><a href="course.html">Course Overview</a></li>  
+                    <li><a href="testimonials.html">Success Stories</a></li>  
+                </ul>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Resources</h4>  
+                <ul>  
+                    <li><a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank">Free Module</a></li>  
+                    <li><a href="#">AI Tools Directory</a></li>  
+                    <li><a href="#">Success Blueprint</a></li>  
+                    <li><a href="#">Community Forum</a></li>  
+                </ul>  
+            </div>  
+            <div class="footer-section">  
+                <h4>Support</h4>  
+                <ul>  
+                    <li><a href="contact.html">Contact Us</a></li>  
+                    <li><a href="#">Help Center</a></li>  
+                    <li><a href="#">Privacy Policy</a></li>  
+                    <li><a href="#">Terms of Service</a></li>  
+                </ul>  
+            </div>  
+        </div>  
+        <div class="footer-bottom">  
+            <p>&copy; 2024 Digital Income Mastery. All rights reserved. | Empowering entrepreneurs through AI automation</p>  
+        </div>  
+    </footer>  
+  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+    <script>  
+        // Initialize AOS (Animate On Scroll)  
+        AOS.init({  
+            duration: 1000,  
+            once: true,  
+            offset: 100  
+        });  
+  
+        // Navbar scroll effect  
+        window.addEventListener('scroll', function() {  
+            const navbar = document.querySelector('.navbar');  
+            if (window.scrollY > 100) {  
+                navbar.style.background = 'rgba(10, 10, 10, 0.98)';  
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';  
+            } else {  
+                navbar.style.background = 'rgba(10, 10, 10, 0.95)';  
+                navbar.style.boxShadow = 'none';  
+            }  
+        });  
+  
+        // Smooth scrolling for navigation links  
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {  
+            anchor.addEventListener('click', function (e) {  
+                e.preventDefault();  
+                const target = document.querySelector(this.getAttribute('href'));  
+                if (target) {  
+                    target.scrollIntoView({  
+                        behavior: 'smooth',  
+                        block: 'start'  
+                    });  
+                }  
+            });  
+        });  
+  
+        // Contact form submission  
+        document.getElementById('contactForm').addEventListener('submit', function(e) {  
+            e.preventDefault();  
+              
+            // Get form data  
+            const formData = new FormData(this);  
+            const data = Object.fromEntries(formData);  
+              
+            // Validate required fields  
+            const requiredFields = ['firstName', 'lastName', 'email', 'subject', 'message', 'terms'];  
+            let isValid = true;  
+              
+            requiredFields.forEach(field => {  
+                const input = document.getElementById(field);  
+                if (!input.value.trim()) {  
+                    isValid = false;  
+                    input.style.borderColor = '#ef4444';  
+                } else {  
+                    input.style.borderColor = '';  
+                }  
+            });  
+              
+            if (!isValid) {  
+                alert('Please fill in all required fields.');  
+                return;  
+            }  
+              
+            // Show success message  
+            const successMessage = document.getElementById('successMessage');  
+            successMessage.classList.add('show');  
+              
+            // Reset form  
+            this.reset();  
+              
+            // Hide success message after 5 seconds  
+            setTimeout(() => {  
+                successMessage.classList.remove('show');  
+            }, 5000);  
+              
+            // Log form data (in real implementation, this would be sent to a server)  
+            console.log('Form submitted:', data);  
+              
+            // Scroll to success message  
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });  
+        });  
+  
+        // FAQ accordion functionality  
+        document.querySelectorAll('.faq-question').forEach(question => {  
+            question.addEventListener('click', function() {  
+                const faqItem = this.parentElement;  
+                const answer = faqItem.querySelector('.faq-answer');  
+                const allItems = document.querySelectorAll('.faq-item');  
+                  
+                // Close all other FAQ items  
+                allItems.forEach(item => {  
+                    if (item !== faqItem) {  
+                        item.classList.remove('active');  
+                        item.querySelector('.faq-answer').classList.remove('active');  
+                    }  
+                });  
+                  
+                // Toggle current FAQ item  
+                faqItem.classList.toggle('active');  
+                answer.classList.toggle('active');  
+            });  
+        });  
+  
+        // Location marker interaction  
+        document.querySelectorAll('.location-marker').forEach(marker => {  
+            marker.addEventListener('click', function() {  
+                const title = this.getAttribute('title');  
+                console.log('Location clicked:', title);  
+                // In real implementation, this could show more info about the region  
+            });  
+        });  
+  
+        // Input field focus effects  
+        document.querySelectorAll('input, textarea, select').forEach(field => {  
+            field.addEventListener('focus', function() {  
+                this.parentElement.style.transform = 'scale(1.02)';  
+            });  
+              
+            field.addEventListener('blur', function() {  
+                this.parentElement.style.transform = 'scale(1)';  
+            });  
+        });  
+  
+        // Dynamic time-based status updates  
+        function updateSupportStatus() {  
+            const now = new Date();  
+            const day = now.getDay();  
+            const hours = now.getHours();  
+            const minutes = now.getMinutes();  
+            const estHours = hours - 5; // Convert to EST (simplified)  
+              
+            const statusElements = document.querySelectorAll('.status');  
+              
+            statusElements.forEach(status => {  
+                const parent = status.parentElement;  
+                const dayText = parent.querySelector('h4').textContent;  
+                  
+                if (dayText.includes('Monday - Friday')) {  
+                    if (estHours >= 9 && estHours < 18) {  
+                        status.textContent = 'Open Now';  
+                        status.className = 'status open';  
+                    } else {  
+                        status.textContent = 'Closed';  
+                        status.className = 'status closed';  
+                    }  
+                } else if (dayText.includes('Saturday')) {  
+                    if (estHours >= 10 && estHours < 16) {  
+                        status.textContent = 'Open Now';  
+                        status.className = 'status open';  
+                    } else {  
+                        status.textContent = 'Closed';  
+                        status.className = 'status closed';  
+                    }  
+                }  
+            });  
+        }  
+  
+        // Update status every minute  
+        updateSupportStatus();  
+        setInterval(updateSupportStatus, 60000);  
+  
+        // Add loading animation  
+        window.addEventListener('load', function() {  
+            document.body.classList.add('loaded');  
+        });  
+    </script>  
+</body>  
+</html>  
