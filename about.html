@@ -1,0 +1,1086 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>About Us - Digital Income Mastery: AI & Automation</title>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">  
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">  
+    <style>  
+        * {  
+            margin: 0;  
+            padding: 0;  
+            box-sizing: border-box;  
+        }  
+  
+        body {  
+            font-family: 'Inter', sans-serif;  
+            background-color: #0a0a0a;  
+            color: #ffffff;  
+            overflow-x: hidden;  
+        }  
+  
+        .container {  
+            max-width: 1200px;  
+            margin: 0 auto;  
+            padding: 0 20px;  
+        }  
+  
+        /* Navigation */  
+        .navbar {  
+            position: fixed;  
+            top: 0;  
+            width: 100%;  
+            background: rgba(10, 10, 10, 0.95);  
+            backdrop-filter: blur(10px);  
+            z-index: 1000;  
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);  
+            transition: all 0.3s ease;  
+        }  
+  
+        .nav-container {  
+            display: flex;  
+            justify-content: space-between;  
+            align-items: center;  
+            padding: 1rem 2rem;  
+            max-width: 1200px;  
+            margin: 0 auto;  
+        }  
+  
+        .nav-logo {  
+            display: flex;  
+            align-items: center;  
+            gap: 0.5rem;  
+            font-size: 1.5rem;  
+            font-weight: 700;  
+            color: #ffffff;  
+            animation: slideInLeft 1s ease-out;  
+        }  
+  
+        .nav-logo i {  
+            color: #3b82f6;  
+            font-size: 2rem;  
+            animation: pulse 2s infinite;  
+        }  
+  
+        .nav-menu {  
+            display: flex;  
+            list-style: none;  
+            gap: 2rem;  
+        }  
+  
+        .nav-menu a {  
+            color: #ffffff;  
+            text-decoration: none;  
+            font-weight: 500;  
+            transition: all 0.3s ease;  
+            position: relative;  
+        }  
+  
+        .nav-menu a::after {  
+            content: '';  
+            position: absolute;  
+            bottom: -5px;  
+            left: 0;  
+            width: 0;  
+            height: 2px;  
+            background: #3b82f6;  
+            transition: width 0.3s ease;  
+        }  
+  
+        .nav-menu a:hover::after,  
+        .nav-menu a.active::after {  
+            width: 100%;  
+        }  
+  
+        .nav-menu a:hover,  
+        .nav-menu a.active {  
+            color: #3b82f6;  
+        }  
+  
+        .nav-social {  
+            display: flex;  
+            gap: 1rem;  
+        }  
+  
+        .nav-social a {  
+            width: 40px;  
+            height: 40px;  
+            background: rgba(255, 255, 255, 0.1);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #ffffff;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+            animation: fadeInUp 1s ease-out 0.5s both;  
+        }  
+  
+        .nav-social a:hover {  
+            background: #3b82f6;  
+            transform: translateY(-3px) rotate(360deg);  
+        }  
+  
+        /* Hero Section */  
+        .hero {  
+            min-height: 60vh;  
+            position: relative;  
+            display: flex;  
+            align-items: center;  
+            margin-top: 80px;  
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);  
+            overflow: hidden;  
+        }  
+  
+        .hero::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: 0;  
+            right: 0;  
+            bottom: 0;  
+            background: url('https://picsum.photos/seed/about-hero-bg/1920/800.jpg') center/cover;  
+            opacity: 0.1;  
+            animation: backgroundMove 20s ease-in-out infinite;  
+        }  
+  
+        .hero-content {  
+            text-align: center;  
+            max-width: 800px;  
+            margin: 0 auto;  
+            padding: 2rem;  
+            position: relative;  
+            z-index: 1;  
+        }  
+  
+        .hero-title {  
+            font-size: 4rem;  
+            font-weight: 900;  
+            line-height: 1.1;  
+            margin-bottom: 1.5rem;  
+            text-transform: uppercase;  
+            letter-spacing: 3px;  
+            background: linear-gradient(45deg, #ffffff, #3b82f6, #60a5fa);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+            animation: titleGlow 3s ease-in-out infinite;  
+        }  
+  
+        .hero-subtitle {  
+            font-size: 1.3rem;  
+            line-height: 1.6;  
+            opacity: 0.9;  
+            max-width: 600px;  
+            margin-left: auto;  
+            margin-right: auto;  
+            animation: fadeInUp 1s ease-out 0.5s both;  
+        }  
+  
+        /* About Story Section */  
+        .about-story {  
+            padding: 6rem 0;  
+            background: linear-gradient(180deg, #111111 0%, #1a1a1a 100%);  
+            position: relative;  
+        }  
+  
+        .about-content {  
+            display: grid;  
+            grid-template-columns: 1fr 1fr;  
+            gap: 4rem;  
+            align-items: center;  
+        }  
+  
+        .about-text h2 {  
+            font-size: 3.5rem;  
+            font-weight: 900;  
+            margin-bottom: 2rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+  
+        .about-text p {  
+            font-size: 1.2rem;  
+            opacity: 0.9;  
+            line-height: 1.7;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .about-image {  
+            position: relative;  
+            overflow: hidden;  
+            border-radius: 20px;  
+        }  
+  
+        .about-image img {  
+            width: 100%;  
+            border-radius: 20px;  
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);  
+            transition: transform 0.3s ease;  
+        }  
+  
+        .about-image:hover img {  
+            transform: scale(1.05);  
+        }  
+  
+        /* Video Section */  
+        .video-section {  
+            padding: 6rem 0;  
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
+            position: relative;  
+        }  
+  
+        .video-container {  
+            max-width: 900px;  
+            margin: 0 auto;  
+            text-align: center;  
+        }  
+  
+        .video-title {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 1rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+  
+        .video-subtitle {  
+            font-size: 1.2rem;  
+            opacity: 0.9;  
+            margin-bottom: 3rem;  
+            max-width: 600px;  
+            margin-left: auto;  
+            margin-right: auto;  
+        }  
+  
+        .video-wrapper {  
+            position: relative;  
+            border-radius: 20px;  
+            overflow: hidden;  
+            box-shadow: 0 25px 60px rgba(59, 130, 246, 0.3);  
+            background: #000;  
+            aspect-ratio: 16/9;  
+        }  
+  
+        .video-placeholder {  
+            width: 100%;  
+            height: 100%;  
+            background: url('https://picsum.photos/seed/ai-automation-video/900/506.jpg') center/cover;  
+            position: relative;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+        }  
+  
+        .video-play-button {  
+            width: 100px;  
+            height: 100px;  
+            background: rgba(59, 130, 246, 0.9);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            cursor: pointer;  
+            transition: all 0.3s ease;  
+            animation: pulse 2s infinite;  
+        }  
+  
+        .video-play-button:hover {  
+            transform: scale(1.1);  
+            background: #3b82f6;  
+        }  
+  
+        .video-play-button i {  
+            font-size: 3rem;  
+            color: #ffffff;  
+            margin-left: 5px;  
+        }  
+  
+        /* Mission Section */  
+        .mission-section {  
+            padding: 6rem 0;  
+            background: linear-gradient(180deg, #16213e 0%, #0f3460 100%);  
+            position: relative;  
+        }  
+  
+        .mission-content {  
+            text-align: center;  
+            max-width: 800px;  
+            margin: 0 auto;  
+        }  
+  
+        .mission-title {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 2rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+        }  
+  
+        .mission-text {  
+            font-size: 1.3rem;  
+            opacity: 0.9;  
+            line-height: 1.7;  
+            margin-bottom: 3rem;  
+        }  
+  
+        .mission-cards {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));  
+            gap: 2rem;  
+            margin-top: 4rem;  
+        }  
+  
+        .mission-card {  
+            background: rgba(255, 255, 255, 0.05);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+            border-radius: 20px;  
+            padding: 2rem;  
+            text-align: center;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .mission-card:hover {  
+            transform: translateY(-10px);  
+            border-color: #3b82f6;  
+            background: rgba(59, 130, 246, 0.1);  
+        }  
+  
+        .mission-icon {  
+            width: 80px;  
+            height: 80px;  
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            margin: 0 auto 1.5rem;  
+            font-size: 2rem;  
+            color: #ffffff;  
+            animation: iconFloat 3s ease-in-out infinite;  
+        }  
+  
+        .mission-card h3 {  
+            font-size: 1.5rem;  
+            font-weight: 700;  
+            margin-bottom: 1rem;  
+        }  
+  
+        .mission-card p {  
+            opacity: 0.9;  
+            line-height: 1.6;  
+        }  
+  
+        /* Team Section */  
+        .team-section {  
+            padding: 6rem 0;  
+            background: linear-gradient(180deg, #0f3460 0%, #1a1a2e 100%);  
+            position: relative;  
+        }  
+  
+        .team-grid {  
+            display: grid;  
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));  
+            gap: 3rem;  
+            margin-top: 3rem;  
+        }  
+  
+        .team-member {  
+            text-align: center;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .team-member:hover {  
+            transform: translateY(-10px);  
+        }  
+  
+        .member-image {  
+            width: 200px;  
+            height: 200px;  
+            border-radius: 50%;  
+            margin: 0 auto 1.5rem;  
+            overflow: hidden;  
+            border: 4px solid #3b82f6;  
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.3);  
+            transition: all 0.3s ease;  
+        }  
+  
+        .member-image:hover {  
+            transform: scale(1.05);  
+            box-shadow: 0 15px 40px rgba(59, 130, 246, 0.5);  
+        }  
+  
+        .member-image img {  
+            width: 100%;  
+            height: 100%;  
+            object-fit: cover;  
+        }  
+  
+        .member-name {  
+            font-size: 1.5rem;  
+            font-weight: 700;  
+            margin-bottom: 0.5rem;  
+        }  
+  
+        .member-role {  
+            color: #3b82f6;  
+            font-weight: 600;  
+            margin-bottom: 1rem;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+        }  
+  
+        .member-bio {  
+            opacity: 0.9;  
+            line-height: 1.6;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .member-social {  
+            display: flex;  
+            justify-content: center;  
+            gap: 1rem;  
+        }  
+  
+        .member-social a {  
+            width: 40px;  
+            height: 40px;  
+            background: rgba(255, 255, 255, 0.1);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #ffffff;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .member-social a:hover {  
+            background: #3b82f6;  
+            transform: translateY(-3px) rotate(360deg);  
+        }  
+  
+        /* CTA Section */  
+        .cta-section {  
+            padding: 6rem 0;  
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);  
+            text-align: center;  
+        }  
+  
+        .cta-content h2 {  
+            font-size: 3rem;  
+            font-weight: 900;  
+            margin-bottom: 1.5rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+        }  
+  
+        .cta-content p {  
+            font-size: 1.3rem;  
+            opacity: 0.9;  
+            margin-bottom: 2rem;  
+            max-width: 600px;  
+            margin-left: auto;  
+            margin-right: auto;  
+        }  
+  
+        /* Footer */  
+        .footer {  
+            background: #0a0a0a;  
+            padding: 4rem 0 2rem;  
+            border-top: 1px solid rgba(255, 255, 255, 0.1);  
+        }  
+  
+        .footer-content {  
+            display: grid;  
+            grid-template-columns: 2fr 1fr 1fr 1fr;  
+            gap: 2rem;  
+            margin-bottom: 3rem;  
+        }  
+  
+        .footer-logo {  
+            display: flex;  
+            align-items: center;  
+            gap: 0.5rem;  
+            font-size: 1.8rem;  
+            font-weight: 700;  
+            color: #ffffff;  
+            margin-bottom: 1.5rem;  
+        }  
+  
+        .footer-logo i {  
+            color: #3b82f6;  
+            font-size: 2rem;  
+        }  
+  
+        .footer-section p {  
+            opacity: 0.8;  
+            line-height: 1.7;  
+            margin-bottom: 1.5rem;  
+            font-size: 1.1rem;  
+        }  
+  
+        .footer-social {  
+            display: flex;  
+            gap: 1rem;  
+        }  
+  
+        .footer-social a {  
+            width: 45px;  
+            height: 45px;  
+            background: rgba(255, 255, 255, 0.1);  
+            border-radius: 50%;  
+            display: flex;  
+            align-items: center;  
+            justify-content: center;  
+            color: #ffffff;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+        }  
+  
+        .footer-social a:hover {  
+            background: #3b82f6;  
+            transform: translateY(-3px) rotate(360deg);  
+        }  
+  
+        .footer-section h4 {  
+            font-size: 1.3rem;  
+            font-weight: 700;  
+            margin-bottom: 1.5rem;  
+            color: #ffffff;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+        }  
+  
+        .footer-section ul {  
+            list-style: none;  
+        }  
+  
+        .footer-section ul li {  
+            margin-bottom: 0.8rem;  
+        }  
+  
+        .footer-section ul li a {  
+            color: #ffffff;  
+            opacity: 0.8;  
+            text-decoration: none;  
+            transition: all 0.3s ease;  
+            font-size: 1rem;  
+        }  
+  
+        .footer-section ul li a:hover {  
+            opacity: 1;  
+            color: #3b82f6;  
+            transform: translateX(5px);  
+            display: inline-block;  
+        }  
+  
+        .footer-bottom {  
+            text-align: center;  
+            padding-top: 2rem;  
+            border-top: 1px solid rgba(255, 255, 255, 0.1);  
+            opacity: 0.8;  
+        }  
+  
+        /* Buttons */  
+        .btn {  
+            display: inline-block;  
+            padding: 1.2rem 2.5rem;  
+            text-decoration: none;  
+            font-weight: 700;  
+            border-radius: 50px;  
+            transition: all 0.3s ease;  
+            text-transform: uppercase;  
+            letter-spacing: 1px;  
+            font-size: 0.9rem;  
+            position: relative;  
+            overflow: hidden;  
+        }  
+  
+        .btn::before {  
+            content: '';  
+            position: absolute;  
+            top: 0;  
+            left: -100%;  
+            width: 100%;  
+            height: 100%;  
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);  
+            transition: left 0.5s;  
+        }  
+  
+        .btn:hover::before {  
+            left: 100%;  
+        }  
+  
+        .btn-primary {  
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);  
+            color: #ffffff;  
+            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);  
+            animation: pulse 2s infinite;  
+        }  
+  
+        .btn-primary:hover {  
+            transform: translateY(-3px);  
+            box-shadow: 0 12px 35px rgba(59, 130, 246, 0.6);  
+        }  
+  
+        .btn-secondary {  
+            background: transparent;  
+            color: #ffffff;  
+            border: 2px solid #ffffff;  
+        }  
+  
+        .btn-secondary:hover {  
+            background: #ffffff;  
+            color: #0a0a0a;  
+            transform: translateY(-3px);  
+        }  
+  
+        /* Responsive Design */  
+        @media (max-width: 768px) {  
+            .nav-menu {  
+                display: none;  
+            }  
+  
+            .nav-social {  
+                display: none;  
+            }  
+  
+            .hero-title {  
+                font-size: 2.5rem;  
+            }  
+  
+            .about-content {  
+                grid-template-columns: 1fr;  
+                gap: 2rem;  
+            }  
+  
+            .mission-cards {  
+                grid-template-columns: 1fr;  
+            }  
+  
+            .team-grid {  
+                grid-template-columns: 1fr;  
+            }  
+  
+            .footer-content {  
+                grid-template-columns: 1fr;  
+                gap: 2rem;  
+            }  
+  
+            .about-text h2,  
+            .video-title,  
+            .mission-title,  
+            .cta-content h2 {  
+                font-size: 2rem;  
+            }  
+        }  
+  
+        /* Animations */  
+        @keyframes fadeIn {  
+            from {  
+                opacity: 0;  
+            }  
+            to {  
+                opacity: 1;  
+            }  
+        }  
+  
+        @keyframes fadeInUp {  
+            from {  
+                opacity: 0;  
+                transform: translateY(30px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateY(0);  
+            }  
+        }  
+  
+        @keyframes slideInLeft {  
+            from {  
+                opacity: 0;  
+                transform: translateX(-50px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateX(0);  
+            }  
+        }  
+  
+        @keyframes slideInRight {  
+            from {  
+                opacity: 0;  
+                transform: translateX(50px);  
+            }  
+            to {  
+                opacity: 1;  
+                transform: translateX(0);  
+            }  
+        }  
+  
+        @keyframes pulse {  
+            0%, 100% {  
+                transform: scale(1);  
+            }  
+            50% {  
+                transform: scale(1.05);  
+            }  
+        }  
+  
+        @keyframes titleGlow {  
+            0%, 100% {  
+                filter: brightness(1);  
+            }  
+            50% {  
+                filter: brightness(1.2);  
+            }  
+        }  
+  
+        @keyframes iconFloat {  
+            0%, 100% {  
+                transform: translateY(0);  
+            }  
+            50% {  
+                transform: translateY(-10px);  
+            }  
+        }  
+  
+        @keyframes backgroundMove {  
+            0%, 100% {  
+                transform: scale(1) translate(0, 0);  
+            }  
+            50% {  
+                transform: scale(1.1) translate(-5%, -5%);  
+            }  
+        }  
+  
+        /* Utility Classes */  
+        .text-gradient {  
+            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+  
+        .glass-effect {  
+            background: rgba(255, 255, 255, 0.05);  
+            backdrop-filter: blur(10px);  
+            border: 1px solid rgba(255, 255, 255, 0.1);  
+        }  
+  
+        .section-header {  
+            text-align: center;  
+            margin-bottom: 4rem;  
+        }  
+  
+        .section-header h2 {  
+            font-size: 3.5rem;  
+            font-weight: 900;  
+            margin-bottom: 1rem;  
+            text-transform: uppercase;  
+            letter-spacing: 2px;  
+            background: linear-gradient(45deg, #ffffff, #3b82f6);  
+            background-clip: text;  
+            -webkit-background-clip: text;  
+            -webkit-text-fill-color: transparent;  
+        }  
+  
+        .section-header p {  
+            font-size: 1.3rem;  
+            opacity: 0.8;  
+            max-width: 600px;  
+            margin: 0 auto;  
+        }  
+    </style>  
+</head>  
+<body>  
+    <!-- Navigation -->  
+    <nav class="navbar">  
+        <div class="nav-container">  
+            <div class="nav-logo">  
+                <i class="fas fa-robot"></i>  
+                <span>Digital Income Mastery</span>  
+            </div>  
+            <ul class="nav-menu">  
+                <li><a href="index.html">Home</a></li>  
+                <li><a href="about.html" class="active">About Us</a></li>  
+                <li><a href="course.html">Course</a></li>  
+                <li><a href="testimonials.html">Success Stories</a></li>  
+                <li><a href="blog.html">Blog</a></li>  
+                <li><a href="contact.html">Contact</a></li>  
+            </ul>  
+            <div class="nav-social">  
+                <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>  
+                <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>  
+                <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>  
+            </div>  
+        </div>  
+    </nav>  
+  
+    <!-- Hero Section -->  
+    <section class="hero">  
+        <div class="hero-content">  
+            <h1 class="hero-title">About Us</h1>  
+            <p class="hero-subtitle">  
+                We're pioneering the future of income generation through AI and automation, empowering entrepreneurs worldwide to achieve financial freedom.  
+            </p>  
+        </div>  
+    </section>  
+  
+    <!-- About Story Section -->  
+    <section class="about-story">  
+        <div class="container">  
+            <div class="about-content">  
+                <div class="about-text" data-aos="fade-right">  
+                    <h2>Our Story</h2>  
+                    <p>  
+                        Founded in 2023, Digital Income Mastery emerged from a simple yet powerful vision: to democratize AI-powered income generation. Our founder, a former tech executive, discovered the transformative potential of AI automation while building multiple successful businesses.  
+                    </p>  
+                    <p>  
+                        After seeing friends and colleagues struggle with traditional business models, we made it our mission to create accessible, practical training that anyone could use to build automated income streams. Today, we've helped thousands of students worldwide achieve financial independence through AI.  
+                    </p>  
+                    <p>  
+                        Our approach combines cutting-edge technology with proven business strategies, ensuring our students not only learn the tools but understand how to apply them strategically for maximum impact.  
+                    </p>  
+                </div>  
+                <div class="about-image" data-aos="fade-left">  
+                    <img src="https://picsum.photos/seed/about-story-image/600/400.jpg" alt="Our Story">  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Video Section -->  
+    <section class="video-section">  
+        <div class="container">  
+            <div class="video-container" data-aos="fade-up">  
+                <h2 class="video-title">Watch Our Story</h2>  
+                <p class="video-subtitle">  
+                    Discover how we're revolutionizing income generation through AI and automation  
+                </p>  
+                <div class="video-wrapper">  
+                    <div class="video-placeholder">  
+                        <div class="video-play-button" onclick="alert('Video player would launch here. This is a placeholder for your mini video about our journey and mission.')">  
+                            <i class="fas fa-play"></i>  
+                        </div>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Mission Section -->  
+    <section class="mission-section">  
+        <div class="container">  
+            <div class="mission-content">  
+                <h2 class="mission-title text-gradient">Our Mission</h2>  
+                <p class="mission-text">  
+                    We're committed to empowering entrepreneurs with the knowledge and tools to build sustainable, automated income streams using artificial intelligence.  
+                </p>  
+                <div class="mission-cards">  
+                    <div class="mission-card" data-aos="fade-up">  
+                        <div class="mission-icon">  
+                            <i class="fas fa-graduation-cap"></i>  
+                        </div>  
+                        <h3>Education</h3>  
+                        <p>Providing comprehensive, accessible training on AI automation and income generation strategies</p>  
+                    </div>  
+                    <div class="mission-card" data-aos="fade-up" data-aos-delay="100">  
+                        <div class="mission-icon">  
+                            <i class="fas fa-users"></i>  
+                        </div>  
+                        <h3>Community</h3>  
+                        <p>Building a supportive network of AI entrepreneurs sharing knowledge and success</p>  
+                    </div>  
+                    <div class="mission-card" data-aos="fade-up" data-aos-delay="200">  
+                        <div class="mission-icon">  
+                            <i class="fas fa-lightbulb"></i>  
+                        </div>  
+                        <h3>Innovation</h3>  
+                        <p>Continuously evolving our curriculum with the latest AI technologies and strategies</p>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Team Section -->  
+    <section class="team-section">  
+        <div class="container">  
+            <div class="section-header">  
+                <h2>Meet Our Team</h2>  
+                <p>The experts behind your success</p>  
+            </div>  
+            <div class="team-grid">  
+                <div class="team-member" data-aos="fade-up">  
+                    <div class="member-image">  
+                        <img src="https://picsum.photos/seed/founder-alex/400/400.jpg" alt="Alex Chen">  
+                    </div>  
+                    <h3 class="member-name">Alex Chen</h3>  
+                    <p class="member-role">Founder & CEO</p>  
+                    <p class="member-bio">  
+                        Former tech executive with 15+ years in AI and automation. Built multiple 7-figure businesses using AI systems.  
+                    </p>  
+                    <div class="member-social">  
+                        <a href="#"><i class="fab fa-linkedin"></i></a>  
+                        <a href="#"><i class="fab fa-twitter"></i></a>  
+                    </div>  
+                </div>  
+                <div class="team-member" data-aos="fade-up" data-aos-delay="100">  
+                    <div class="member-image">  
+                        <img src="https://picsum.photos/seed/ai-expert-sarah/400/400.jpg" alt="Sarah Johnson">  
+                    </div>  
+                    <h3 class="member-name">Sarah Johnson</h3>  
+                    <p class="member-role">AI Strategy Director</p>  
+                    <p class="member-bio">  
+                        PhD in Machine Learning with expertise in practical AI applications for business automation and scaling.  
+                    </p>  
+                    <div class="member-social">  
+                        <a href="#"><i class="fab fa-linkedin"></i></a>  
+                        <a href="#"><i class="fab fa-twitter"></i></a>  
+                    </div>  
+                </div>  
+                <div class="team-member" data-aos="fade-up" data-aos-delay="200">  
+                    <div class="member-image">  
+                        <img src="https://picsum.photos/seed/marketing-director-mike/400/400.jpg" alt="Mike Rodriguez">  
+                    </div>  
+                    <h3 class="member-name">Mike Rodriguez</h3>  
+                    <p class="member-role">Marketing Director</p>  
+                    <p class="member-bio">  
+                        Digital marketing expert specializing in AI-powered customer acquisition and retention strategies.  
+                    </p>  
+                    <div class="member-social">  
+                        <a href="#"><i class="fab fa-linkedin"></i></a>  
+                        <a href="#"><i class="fab fa-twitter"></i></a>  
+                    </div>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- CTA Section -->  
+    <section class="cta-section">  
+        <div class="container">  
+            <div class="cta-content" data-aos="fade-up">  
+                <h2>Ready to Start Your AI Journey?</h2>  
+                <p>  
+                    Join thousands of successful entrepreneurs who have transformed their income with our proven AI automation systems.  
+                </p>  
+                <div class="cta-buttons">  
+                    <a href="course.html" class="btn btn-primary">  
+                        Enroll Now  
+                    </a>  
+                    <a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank" class="btn btn-secondary">  
+                        Try Free Module  
+                    </a>  
+                </div>  
+            </div>  
+        </div>  
+    </section>  
+  
+    <!-- Footer -->  
+    <footer class="footer">  
+        <div class="container">  
+            <div class="footer-content">  
+                <div class="footer-section">  
+                    <div class="footer-logo">  
+                        <i class="fas fa-robot"></i>  
+                        <span>Digital Income Mastery</span>  
+                    </div>  
+                    <p>Transform your income with AI-powered automation systems that work while you sleep. Join the revolution of smart entrepreneurs leveraging artificial intelligence for financial freedom.</p>  
+                    <div class="footer-social">  
+                        <a href="https://discord.gg/yc2ha9BU" target="_blank"><i class="fab fa-discord"></i></a>  
+                        <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>  
+                        <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>  
+                        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>  
+                        <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>  
+                    </div>  
+                </div>  
+                <div class="footer-section">  
+                    <h4>Quick Links</h4>  
+                    <ul>  
+                        <li><a href="course.html">Course Overview</a></li>  
+                        <li><a href="testimonials.html">Success Stories</a></li>  
+                        <li><a href="blog.html">Blog</a></li>  
+                        <li><a href="about.html">About Us</a></li>  
+                    </ul>  
+                </div>  
+                <div class="footer-section">  
+                    <h4>Resources</h4>  
+                    <ul>  
+                        <li><a href="https://whop.com/digital-income-mastery-ai-a/ai-mindset-foundation" target="_blank">Free Module</a></li>  
+                        <li><a href="#">AI Tools Directory</a></li>  
+                        <li><a href="#">Success Blueprint</a></li>  
+                        <li><a href="#">Community Forum</a></li>  
+                    </ul>  
+                </div>  
+                <div class="footer-section">  
+                    <h4>Support</h4>  
+                    <ul>  
+                        <li><a href="contact.html">Contact Us</a></li>  
+                        <li><a href="#">Help Center</a></li>  
+                        <li><a href="#">Privacy Policy</a></li>  
+                        <li><a href="#">Terms of Service</a></li>  
+                    </ul>  
+                </div>  
+            </div>  
+            <div class="footer-bottom">  
+                <p>&copy; 2024 Digital Income Mastery. All rights reserved. | Empowering entrepreneurs through AI automation</p>  
+            </div>  
+        </div>  
+    </footer>  
+  
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>  
+    <script>  
+        // Initialize AOS (Animate On Scroll)  
+        AOS.init({  
+            duration: 1000,  
+            once: true,  
+            offset: 100  
+        });  
+  
+        // Navbar scroll effect  
+        window.addEventListener('scroll', function() {  
+            const navbar = document.querySelector('.navbar');  
+            if (window.scrollY > 100) {  
+                navbar.style.background = 'rgba(10, 10, 10, 0.98)';  
+                navbar.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.3)';  
+            } else {  
+                navbar.style.background = 'rgba(10, 10, 10, 0.95)';  
+                navbar.style.boxShadow = 'none';  
+            }  
+        });  
+  
+        // Smooth scrolling for navigation links  
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {  
+            anchor.addEventListener('click', function (e) {  
+                e.preventDefault();  
+                const target = document.querySelector(this.getAttribute('href'));  
+                if (target) {  
+                    target.scrollIntoView({  
+                        behavior: 'smooth',  
+                        block: 'start'  
+                    });  
+                }  
+            });  
+        });  
+  
+        // Add loading animation  
+        window.addEventListener('load', function() {  
+            document.body.classList.add('loaded');  
+        });  
+    </script>  
+</body>  
+</html>  
